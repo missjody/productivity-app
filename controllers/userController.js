@@ -16,8 +16,14 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
+        let newUser = new db.User({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+        });
+        newUser.password = newUser.generateHash(req.body.password);
         db.User
-            .create(req.body)
+            .create(newUser)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
