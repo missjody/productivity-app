@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Pomodor from "./pages/Pomodor";
+// import Calendar from "./pages/Calendar";
+import Signup from "./components/SignUp/index";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
@@ -10,12 +12,16 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path={["/", "/pomodor"]}>
+          <Route exact path={["/signup", "/signup"]}>
+            <Signup />
+          </Route>
+          <Route exact path={["/pomodor", "/pomodor"]}>
             <Pomodor />
           </Route>
-          {/* <Route exact path="/books/:id">
-            <Detail />
+          {/* <Route exact path={["/calendar", "/calendar"]}>
+            <Calendar />
           </Route> */}
+
           <Route>
             <NoMatch />
           </Route>
