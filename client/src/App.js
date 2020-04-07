@@ -1,33 +1,37 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Pomodor from "./pages/Pomodor";
 // import Calendar from "./pages/Calendar";
-import Signup from "./components/SignUp/index";
+import SignUpLogin from "./components/Login";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
+import userContext from './utils/userContext';
 
 function App() {
-  return (
+  const[user, setUser] = useState();
+  return ( 
     <Router>
-      <div>
+      <userContext.Provider value={{user: user, setUser: setUser}}> 
+      {/* // @Keeley - This is where we tie user and goal I think... ^^^ */}
         <Nav />
+        <div className="page">
         <Switch>
-          <Route exact path={["/signup", "/signup"]}>
-            <Signup />
+          <Route exact path="/signup">
+            <SignUpLogin />
           </Route>
-          <Route exact path={["/pomodor", "/pomodor"]}>
+          <Route exact path="/pomodor">
             <Pomodor />
           </Route>
-          {/* <Route exact path={["/calendar", "/calendar"]}>
+          {/* <Route exact path="/calendar">
             <Calendar />
           </Route> */}
-
           <Route>
             <NoMatch />
           </Route>
         </Switch>
-      </div>
-    </Router>
+        </div>
+  </userContext.Provider>
+    </Router> 
   );
 }
 

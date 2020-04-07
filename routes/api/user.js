@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const userController = require("../../controllers/userController");
 const db = require("../../models");
+const passport = require('../../config/passport');
 
 // /api/user - get all users
 router.route("/")
@@ -9,6 +10,10 @@ router.route("/")
 // /api/user/signup - Post a new user with hashed password
 router.route("/signup")
     .post(userController.create)
+
+router.post("/login", passport.authenticate('local'),(req,res)=>{
+        res.json(req.user)
+    })
 
 // Matches with ":id"
 router

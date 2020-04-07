@@ -17,8 +17,6 @@ export default {
   saveUsers: function (userData) {
     return axios.post("/api/user", userData);
   },
-  // user signup
-  signup: function (signupInfo) {
-    return axios.post("/api/user/signup", signupInfo);
-  }
+  // user signup / login
+  loginSignup: ({username, password, email, login}) => login ? axios.post('/api/user/login', {username:username, password:password}) : axios.post('/api/user/signup', {username:username, password:password, email:email})
 };

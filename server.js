@@ -13,19 +13,17 @@ const user = require('./routes/api/user');
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-// Add routes, both API and view
-app.use(routes);
 
-// Connect to the Mongo DB
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/surata");
-
-app.use(session({ secret: "piano-cat", store: new MongoStore({ mongooseConnection: dbConnection }), resave: true, saveUninitialized: true }));
+app.use(session({ secret: "piano-cat", store: new MongoStore({ url: process.env.MONGODB_URI || 'mongodb://localhost/surata', ttl: 24*3600 }), resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
-app.use(passport.session());
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/surata', {useNewUrlParser:true, useFindAndModify:false})
+app.use(routes);
 
 // Routes
 app.use('/user', user)
