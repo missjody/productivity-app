@@ -1,54 +1,50 @@
-  
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { useState, useContext } from 'react'
+import userContext from '../../utils/userContext';
+import {useHistory} from 'react-router-dom';
+import API from '../../utils/API'
 
-class Signup extends Component {
-	constructor() {
-		super()
-		this.state = {
+export default ()=>{
+	let history = useHistory();
+	 const [loginState, setLoginState] = useState({
 			username: '',
 			password: '',
-            email:''
-		}
-		this.handleSubmit = this.handleSubmit.bind(this)
-		this.handleChange = this.handleChange.bind(this)
-	}
-	handleChange(event) {
-		this.setState({
+			email:'',
+			login: 0
+		})
+
+		const {user, setUser} = useContext(userContext)
+
+	const handleChange = event => {
+		setLoginState({
+			...loginState,
 			[event.target.name]: event.target.value
 		})
 	}
-	handleSubmit(event) {
+
+	const handleSubmit= event => {
 		console.log('sign-up handleSubmit, username: ')
-		console.log(this.state.username)
+		console.log(loginState.username)
 		event.preventDefault()
 
 		//request to server to add a new username/password
-		axios.post('/user/', {
-			username: this.state.username,
-			password: this.state.password,
-			email: this.state.email
-		})
+		API.loginSignup(loginState)
 			.then(response => {
 				console.log(response)
-				if (!response.data.errmsg) {
-					console.log('successful signup')
-					this.setState({ //redirect to login page
-						redirectTo: '/login'
-					})
-				} else {
-					console.log('username already taken')
-				}
+				response.err ? console.log(response.msg):
+				setUser(response.data);
+				history.push("/")
 			}).catch(error => {
-				console.log('signup error: ')
 				console.log(error)
 			})
 	}
 
-render() {
 	return (
 		<div className="SignupForm">
-			<h4>Sign up</h4>
+			<h4>{loginState.login ? 'Log In' : 'Sign up'}</h4>
+
+			<button onClick={()=>setLoginState({...loginState, login: !loginState.login})}>
+				{loginState.login ? 'New user? Sign up now!' : 'Already have an account? Log In!'}
+			</button>
 			<form className="form-horizontal">
 				<div className="form-group">
 					<div className="col-1 col-ml-auto">
@@ -60,8 +56,8 @@ render() {
 							id="username"
 							name="username"
 							placeholder="Username"
-							value={this.state.username}
-							onChange={this.handleChange}
+							value={loginState.username}
+							onChange={handleChange}
 						/>
 					</div>
 				</div>
@@ -74,12 +70,12 @@ render() {
 							placeholder="password"
 							type="password"
 							name="password"
-							value={this.state.password}
-							onChange={this.handleChange}
+							value={loginState.password}
+							onChange={handleChange}
 						/>
 					</div>
 				</div>
-				<div className="form-group">
+				{loginState.login ? "" : <div className="form-group">
 					<div className="col-1 col-ml-auto">
 						<label className="form-label" htmlFor="email">email: </label>
 					</div>
@@ -88,23 +84,20 @@ render() {
 							placeholder="email"
 							type="email"
 							name="email"
-							value={this.state.email}
-							onChange={this.handleChange}
+							value={loginState.email}
+							onChange={handleChange}
 						/>
 					</div>
-				</div>
+				</div>}
 				<div className="form-group ">
 					<div className="col-7"></div>
 					<button
 						className="btn btn-primary col-1 col-mr-auto"
-						onClick={this.handleSubmit}
+						onClick={(e)=>handleSubmit(e)}
 						type="submit"
-					>Sign up</button>
+					>{loginState.login ? 'Log In': 'Sign up'}</button>
 				</div>
 			</form>
 		</div>
 	)
 }
-}
-
-export default Signup
