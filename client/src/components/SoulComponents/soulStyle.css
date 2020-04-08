@@ -1,0 +1,28 @@
+/* // section for breathing test
+// Imitates breathing: 
+// 1s: beath in
+// 2s: breath out
+// 3s-4s:dont't breath
+// then repeat infinitly */
+@keyframes breath {
+  0%  { opacity: 0; transform: scale3d(1, 1, 1); }
+  25% { opacity: 1; transform: scale3d(1.5, 1.5, 1); }
+  50% { opacity: 0; transform: scale3d(1, 1, 1); }
+}
+
+#testCSS, #testGSAP {
+  position: absolute;
+  top: 10px;
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+#testCSS {
+  left: 40px;
+  background: red;
+  animation: breath 4s infinite linear;
+}
+#testGSAP {
+  left: 250px;
+  background: green;
+}
