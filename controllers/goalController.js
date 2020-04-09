@@ -48,6 +48,57 @@ module.exports = {
                 res.status(400).json(err);
             });
     },
+    updateTask: function (req, res) {
+        db.Goal
+            .findOneAndUpdate({ "_id": req.body._id }, // Filter
+                { $push: { Tasks: req.body.Tasks } }, // Update
+                { new: true }
+            )
+            .then(dbModel => {
+                console.log(dbModel)
+                res.json(dbModel);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
+    },
+    completeTask: function (req, res) {
+        console.log("task ID: ", req.body)
+        console.log("return: ", req.body.Tasks[0].completed)
+        db.Goal
+            .update(
+                {},
+                { $set: { "Tasks.$[complete].complete": req.body.Tasks[0].completed } },
+                {
+                    arrayFilters: [{ "complete._id": { $eq: req.body._id } }],
+                    multi: true
+                })
+            .then(dbModel => {
+                console.log(dbModel)
+                res.json(dbModel);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
+    },
+    removeTask: function (req, res) {
+        console.log("task ID: ", req.body._id)
+        // console.log("return: ", req.body.Tasks[0].completed)
+        db.Goal
+            .update(
+                {},
+                { $pull: { Tasks: { "_id": { $eq: req.body._id } } } },
+                {
+                    multi: true
+                })
+            .then(dbModel => {
+                console.log(dbModel)
+                res.json(dbModel);
+            })
+            .catch(err => {
+                res.status(400).json(err);
+            });
+    },
     remove: function (req, res) {
         db.Goal
             .findById({ _id: req.params.id })

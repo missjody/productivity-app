@@ -20,6 +20,10 @@ const goalSchema = new Schema({
             targetDate: {
                 type: Date,
                 default: () => new Date(+new Date() + 3 * 24 * 60 * 60 * 1000)
+            },
+            complete: {
+                type: Boolean,
+                default: false
             }
         }
     ]
