@@ -4,13 +4,13 @@ import React, { Component } from 'react';
 class SongSelector extends Component {
   render() {
     let songArray = this.props.songs;
-    console.log("songArray", this.props.songs)
+    // console.log("songArray", this.props.songs)
     let options = songArray.map((song, index) =>
       <button key={index} value={index}>
         {song.title}
       </button>
     );
-    console.log("Options", options)
+    // console.log("Options", options)
 
     return (
       // <label>

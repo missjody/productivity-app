@@ -10,14 +10,13 @@ const control = (text, clickHandler) => {
   return (
 
 
-    <div className="row">
+    <Row>
       <button>
         <a href="#" onClick={onClick}>
           {text}
         </a>
       </button>
-    </div>
-
+    </Row>
   );
 }
 
