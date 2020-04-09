@@ -4,6 +4,7 @@ import Pomodor from "./pages/Pomodor";
 // import Calendar from "./pages/Calendar";
 import SignUpLogin from "./components/Login";
 import NoMatch from "./pages/NoMatch";
+import Goals from "./pages/Goals";
 import Nav from "./components/Nav";
 import Soul from "./pages/Soul";
 import userContext from './utils/userContext';
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route exact path="/pomodor">
               <Pomodor />
+            </Route>
+            <Route exact path="/goals">
+              <Goals />
             </Route>
             {/* <Route exact path="/calendar">
             <Calendar />
