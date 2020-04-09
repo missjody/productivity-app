@@ -1,1 +1,1 @@
-export { default } from "./GoalList";
+export { default } from "./TaskForm";

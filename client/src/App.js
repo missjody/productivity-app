@@ -11,13 +11,14 @@ import userContext from './utils/userContext';
 
 function App() {
   const [user, setUser] = useState();
+  const [goals, setGoals] = useState([{goal:'',Tasks:[]}])
   return (
     <Router>
-      <userContext.Provider value={{ user: user, setUser: setUser }}>
+        <Switch>
+      <userContext.Provider value={{ user: user, setUser: setUser, setGoals:setGoals, goals:goals}}>
         {/* // @Keeley - This is where we tie user and goal I think... ^^^ */}
         <Nav />
         <div className="page">
-        <Switch>
           <Route exact path={["/","/signup"]}>
             <SignUpLogin />
           </Route>
@@ -36,9 +37,9 @@ function App() {
             <Route>
               <NoMatch />
             </Route>
-          </Switch>
         </div>
       </userContext.Provider>
+          </Switch>
     </Router>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, Link } from "react";
 import userContext from '../../utils/userContext'
 
 function Nav() {
