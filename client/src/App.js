@@ -17,13 +17,13 @@ function App() {
         {/* // @Keeley - This is where we tie user and goal I think... ^^^ */}
         <Nav />
         <div className="page">
-          <Switch>
-            <Route exact path="/signup">
-              <SignUpLogin />
-            </Route>
-            <Route exact path="/pomodor">
-              <Pomodor />
-            </Route>
+        <Switch>
+          <Route exact path={["/","/signup"]}>
+            <SignUpLogin />
+          </Route>
+          <Route exact path="/pomodor">
+            <Pomodor />
+          </Route>
             <Route exact path="/goals">
               <Goals />
             </Route>
