@@ -9,7 +9,7 @@ function Nav() {
         {user ? `Hi ${user.username}, Welcome To ` : ""} Surată
       </a>
       <ul className="right hide-on-med-and-down">
-        <li><a href="#">My Goals</a></li>
+        <li><a href="/goals">My Goals</a></li>
         <li><a href="#">My Plan</a></li>
         <li><a href="/pomodor">My Time</a></li>
         <li><a href="/mysoul">My Soul</a></li>
