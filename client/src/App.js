@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Pomodor from "./pages/Pomodor";
-// import Calendar from "./pages/Calendar";
+import Calendar from "./components/Calendar";
 import SignUpLogin from "./components/Login";
 import NoMatch from "./pages/NoMatch";
 import Goals from "./pages/Goals";
@@ -27,9 +27,9 @@ function App() {
             <Route exact path="/goals">
               <Goals />
             </Route>
-            {/* <Route exact path="/calendar">
-            <Calendar />
-          </Route> */}
+            <Route exact path="/calendar">
+              <Calendar />
+            </Route>
             <Route exact path="/mysoul">
               <Soul />
             </Route>
