@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Sound from 'react-sound';
 import PlayerControls from './PlayerControls';
 import SongSelector from './SongSelector';
+import Breathing from "./Breathing";
 import songs from './songs';
 import { Col, Row, Container } from "../Grid";
 
@@ -44,22 +45,8 @@ class SoulComponent extends Component {
     });
   }
 
-  // renderCurrentSong() {
-  //   return (
-  //     <div className="container">
-
-  //       <div className="row">
-  //         <p>
-  //           Current song {this.state.currentSong.title}. Song is {this.getStatusText()}
-  //         </p>
-  //       </div>
-  //     </div>
-  //   );
-  // }
 
   render() {
-    // const { loop } = this.state;
-
     return (
       <Container>
         <Row>
@@ -69,20 +56,17 @@ class SoulComponent extends Component {
               selectedSong={this.state.currentSong}
               onSongSelected={this.handleSongSelected}
             />
-            {/* {this.state.currentSong && this.renderCurrentSong()} */}
           </Col>
 
           <Col size="md-12">
             <div>
               <PlayerControls
                 playStatus={this.state.playStatus}
-                // loop={loop}
                 onPlay={() => this.setState({ playStatus: Sound.status.PLAYING })}
                 onPause={() => this.setState({ playStatus: Sound.status.PAUSED })}
                 onResume={() => this.setState({ playStatus: Sound.status.PLAYING })}
                 onStop={() => this.setState({ playStatus: Sound.status.STOPPED, position: 0 })}
                 onSeek={position => this.setState({ position })}
-                // onToggleLoop={e => this.setState({ loop: e.target.checked })}
                 duration={this.state.currentSong ? this.state.currentSong.duration : 0}
                 position={this.state.position}
               />
@@ -92,7 +76,6 @@ class SoulComponent extends Component {
                     url={this.state.currentSong.url}
                     playStatus={this.state.playStatus}
                     position={this.state.position}
-                    // loop={loop}
                     onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
                     onLoad={() => console.log('Loaded')}
                     onPlaying={({ position }) => this.setState({ position })}
@@ -106,7 +89,6 @@ class SoulComponent extends Component {
                       url={this.state.currentSong.url}
                       playStatus={this.state.playStatus}
                       playFromPosition={this.state.position}
-                      // loop={loop}
                       onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
                       onLoad={() => console.log('Loaded')}
                       onPlaying={({ position }) => console.log('Position', position)}
@@ -120,6 +102,14 @@ class SoulComponent extends Component {
             </div>
           </Col>
         </Row>
+
+        <Row>
+          <Col size="md-12">
+            <Breathing
+              playStatus={this.state.playStatus} />
+          </Col>
+        </Row>
+
       </Container>
 
     );
