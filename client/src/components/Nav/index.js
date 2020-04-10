@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import {Link} from "react-router-dom"
+import { Link , Redirect} from "react-router-dom"
 import userContext from '../../utils/userContext'
 
 function Nav() {
-  const { user } = useContext(userContext)
+  const { user, goals } = useContext(userContext);
+  console.log(goals)
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <Link className="navbar-brand" to="/">
