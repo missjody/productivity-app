@@ -9,7 +9,7 @@ import TaskForm from "../TaskForm/TaskForm"
 export default function GoalList(props) {
     return (
         <div className="goal" >
-            <h5><b>Goal: {props.goal}</b></h5>
+            <h5><b>Goal: {props.goal}</b>   <button onClick={() => props.deleteGoal(props.goalId)}>I give up</button></h5>
             <TaskForm tasks={props.tasks} goalId={props.goalId} loadGoals={props.loadGoals} formObject={props.formObject} handleTaskFormSubmit={props.handleTaskFormSubmit} handleInputChange={props.handleInputChange} />
         </div >
     )

@@ -15,5 +15,13 @@ router
     .get(goalController.findById)
     .put(goalController.updateTask)
     .delete(goalController.remove);
+// Matches with "/api/goal/task/:id"
+router
+    .route("/task/:id")
+    .put(goalController.completeTask)
+
+router
+    .route("/task-remove/:id")
+    .put(goalController.removeTask)
 
 module.exports = router;
