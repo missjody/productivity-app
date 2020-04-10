@@ -45,9 +45,6 @@ class PlayerControls extends Component {
             {controls.pause && control('Pause', this.props.onPause)}
             {controls.resume && control('Resume', this.props.onResume)}
           </ul>
-
-          {/* Loop?:
-        <input type="checkbox" checked={this.props.loop} onChange={this.props.onToggleLoop} /> */}
         </div>
       </Row>
 
