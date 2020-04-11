@@ -1,3 +1,6 @@
+body {
+ background: #FFF5E8;
+}
 
 #breathCircle {
   width: 6.25rem;
@@ -6,4 +9,39 @@
   background: #85DCB9;
   border-radius: 50%;
   margin: 0 auto;
+}
+
+.button {
+  background: #C38D9E;
+  color: #23282F;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: .15rem;
+}
+
+.dynamic {
+  color: #23282F;
+  margin: 0 auto;
+}
+
+h3, h5, hr {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #39A67A;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.25rem;
+  color: #8C8A81;
+  padding: 0.15rem;
+}
+
+.boldP {
+  font-weight: bold;
+  text-align:center;
+}
+
+.songOptions {
+  text-align:center;
 }

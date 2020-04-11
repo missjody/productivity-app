@@ -11,12 +11,10 @@ const Breathing = (props) => {
 
   let status = props.playStatus == "PLAYING";
 
-  console.log("STATUS", status);
-
   useEffect(() => {
     const b = breathing;
     const tl = new TimelineMax({ repeat: -1, repeatDelay: 2 });
-    tl.to(b, 3, { opacity: 1, scale: 2.5, ease: Power0.ease, repeat: 1, yoyo: true, paused: false }); //paused: true
+    tl.to(b, 3, { opacity: 1, scale: 4, ease: Power0.ease, repeat: 1, yoyo: true, paused: false }); //paused: true
   }, []);
 
 

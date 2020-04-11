@@ -8,17 +8,7 @@ const Soul = () => {
 
   return (
     <div>
-
-      <Container>
-
-        <Row>
-          <Col size="md-12">
-            <SoulComponent />
-          </Col>
-        </Row>
-
-      </Container>
-
+      <SoulComponent />
     </div>
   )
 }
