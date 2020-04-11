@@ -10,29 +10,6 @@ function TaskForm(props) {
     // const [goal, setGoal] = useState([])
     const [formObject, setFormObject] = useState({})
 
-    // Load all books and store them with setBooks
-    // useEffect(() => {
-    //     console.log(props)
-    //     // loadGoals()
-    // }, [])
-
-    // Loads all books and sets them to books
-    // function loadGoals() {
-    //     console.log("Making the call from another page")
-    //     API.getGoals()
-    //         .then(res =>
-    //             setTask(res.data)
-    //         )
-    //         .catch(err => console.log(err));
-    // };
-
-    // Deletes a book from the database with a given id, then reloads books from the db
-    // function deleteBook(id) {
-    //     API.deleteBook(id)
-    //         .then(res => loadBooks())
-    //         .catch(err => console.log(err));
-    // }
-
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
         const { name, value } = event.target;
@@ -59,6 +36,56 @@ function TaskForm(props) {
                 .catch(err => console.log(err));
         }
     };
+    const finishTask = (item) => {
+
+        // console.log("here", item)
+        var GoalId = props.goalId;
+        var TaskId = item._id;
+        var pastTask = {
+            name: item.name,
+            createdAt: item.createdAt,
+            targetDate: item.targetDate,
+            completed: !item.complete,
+            _id: item._id
+        };
+        // console.log("Past Task: ", pastTask)
+        // console.log("what is the opposite? ", item.completed === true ? false : true)
+        // console.log("what is the opposite? ", pastTask.completed, item.complete)
+        // console.log("task", task)
+        API.completeTask(GoalId, {
+            _id: TaskId,
+            Tasks: [{
+                ...pastTask
+            }]
+        })
+
+            .then(() => props.loadGoals())
+            .catch(err => console.log(err));
+    }
+    const removeTask = (item) => {
+
+        // console.log("here", item)
+        var GoalId = props.goalId;
+        var TaskId = item._id;
+        var pastTask = {
+            name: item.name,
+            createdAt: item.createdAt,
+            targetDate: item.targetDate,
+            completed: item.complete,
+            _id: item._id
+        };
+        // console.log("Past Task: ", pastTask)
+        // console.log("task", task)
+        API.removeTask(GoalId, {
+            _id: TaskId,
+            Tasks: [{
+                ...pastTask
+            }]
+        })
+
+            .then(() => props.loadGoals())
+            .catch(err => console.log(err));
+    }
 
     return (
         <div>
@@ -81,9 +108,15 @@ function TaskForm(props) {
 
             <div className="row">
                 {props.tasks.map(item => {
-                    console.log("Items: ", item.name)
+                    // console.log(item.name)
                     return (
-                        <p>{item.name}</p>
+                        <div>
+                            <p>{item.name}</p>
+                            <p>{item.createdAt}</p>
+                            <p>{item.complete ? 'true' : 'false'}</p>
+                            <div onClick={() => finishTask(item)}><i className="material-icons">check_circle</i></div>
+                            <div onClick={() => removeTask(item)}><i className="material-icons">delete</i></div>
+                        </div>
                     )
                 })}
             </div>
