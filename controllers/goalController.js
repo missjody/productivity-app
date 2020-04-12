@@ -1,6 +1,7 @@
 const db = require("../models");
 const userModel = require("../controllers/userController")
 
+
 // Defining methods for the GoalsController
 module.exports = {
     findAll: function (req, res) {

@@ -16,7 +16,6 @@ function App() {
     <Router>
         <Switch>
       <userContext.Provider value={{ user: user, setUser: setUser, setGoals:setGoals, goals:goals}}>
-        {/* // @Keeley - This is where we tie user and goal I think... ^^^ */}
         <Nav />
         <div className="page">
           <Route exact path={["/","/signup"]}>

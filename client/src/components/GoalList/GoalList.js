@@ -7,6 +7,8 @@ import { PromiseProvider } from 'mongoose';
 import TaskForm from "../TaskForm/TaskForm"
 
 export default function GoalList(props) {
+    const {goals} = useContext(userContext);
+    console.log (goals)
     return (
         <div className="goal" >
             <h5><b>Goal: {props.goal}</b>   <button onClick={() => props.deleteGoal(props.goalId)}>I give up</button></h5>
