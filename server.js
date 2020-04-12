@@ -3,7 +3,7 @@ var session = require("express-session");
 var passport = require("./config/passport");
 const mongoose = require("mongoose");
 const morgan = require('morgan');
-const dbConnection = require('./models'); 
+const dbConnection = require('./models');
 const MongoStore = require('connect-mongo')(session);
 const routes = require("./routes");
 const app = express();
@@ -19,10 +19,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(session({ secret: "piano-cat", store: new MongoStore({ url: process.env.MONGODB_URI || 'mongodb://localhost/surata', ttl: 24*3600 }), resave: true, saveUninitialized: true }));
+app.use(session({ secret: "piano-cat", store: new MongoStore({ url: process.env.MONGODB_URI || 'mongodb://localhost/surata', ttl: 24 * 3600 }), resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
+app.use(passport.session()); // calls the deserializeUser
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/surata', {useNewUrlParser:true, useFindAndModify:false})
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/surata', { useNewUrlParser: true, useFindAndModify: false })
 app.use(routes);
 
 // Routes

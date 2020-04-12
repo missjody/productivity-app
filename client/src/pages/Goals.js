@@ -1,16 +1,14 @@
-import React, { useState, useEffect,useContext } from "react";
-import Jumbotron from "../components/Jumbotron";
+import React, { useState, useEffect } from "react";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import GoalList from "../components/GoalList";
-import userContext from '../utils/userContext'
+import GoalList from "../components/GoalList"
+import "./Goals.css"
+// import moment from 'moment';
 
 function Goals() {
     // Setting our component's initial state
     const [goal, setGoal] = useState([])
-    const [task, setTask] = useState([])
+    const [targetDate, setTargetDate] = useState([])
     const [formObject, setFormObject] = useState({})
-    const{setGoals} = useContext(userContext)
 
     // Load all books and store them with setBooks
     useEffect(() => {
@@ -19,14 +17,10 @@ function Goals() {
 
     // Loads all books and sets them to books
     function loadGoals() {
-        console.log("Making the call")
+        // console.log("Making the call")
         API.getGoals()
-            .then(res =>{
-                console.log(res.data)
-                setGoal(res.data);
-                setGoals(res.data)
-            }
-                
+            .then(res =>
+                setGoal(res.data)
             )
             .catch(err => console.log(err));
     };
@@ -50,10 +44,12 @@ function Goals() {
         event.preventDefault();
         if (formObject.goal) {
             API.saveGoal({
-                goal: formObject.goal
+                goal: formObject.goal,
+                targetDate: formObject.targetDate
             })
                 .then(() => setFormObject({
-                    goal: ""
+                    goal: "",
+                    targetDate: ""
                 }))
                 .then(() => loadGoals())
                 .catch(err => console.log(err));
@@ -62,26 +58,32 @@ function Goals() {
 
     return (
         <div className="container">
-            <h1>Set a new goal</h1>
-            <form>
-                <input
-                    onChange={handleInputChange}
-                    name="goal"
-                    placeholder="goal"
-                    value={formObject.goal}
-
-                />
-                <button
-                    disabled={!(formObject.goal)}
-                    onClick={handleFormSubmit}
-                >
-                    Submit Goal
-                    </button>
-            </form>
-
+            <div className="row">
+                <div className="col s12">
+                    <h2>Set a new goal</h2>
+                    <form>
+                        <div className="row" >
+                            <div className="col s12 m7">
+                                <input
+                                    onChange={handleInputChange}
+                                    name="goal"
+                                    placeholder="Enter a new goal"
+                                    value={formObject.goal} />
+                            </div>
+                            <div className="col s12 m5">
+                                <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "200px", margin: "0px 10px" }} />
+                                <button className="btn teal darken-2"
+                                    disabled={!(formObject.goal)}
+                                    onClick={handleFormSubmit}>
+                                    Submit Goal</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div className="row">
                 {goal.map(goals => {
-                    console.log(goals.Tasks)
+                    // console.log(goals.Tasks)
                     return <GoalList goal={goals.goal} tasks={goals.Tasks} key={goals.goal} goalId={goals._id} loadGoals={loadGoals} deleteGoal={deleteGoal} />
                 })}
             </div>
