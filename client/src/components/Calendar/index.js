@@ -10,6 +10,7 @@ const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
 const DnDtasks = withDragAndDrop(Tasks);
 
+
 export default () => {
     const {goals} = useContext(userContext);
     const [modGoals, setModGoals] = useState(goals);
@@ -54,13 +55,7 @@ export default () => {
     }
 
     return(
-        <>
-        <div className="Tasks">
-            <DnDtasks
-            events={calendarEvent.events}
-            />
-    
-        </div>
+
         <div className="Calendar">
             <DnDCalendar
                 defaultDate = { moment().toDate() }
@@ -73,51 +68,6 @@ export default () => {
                 style = {{ height: "100vh" }}
             />
         </div>
-        </>
+    
     )
 }
-
-// class CalendarEvent extends Component {
-//     state = {
-//       events: [
-//         {
-//           start: moment().toDate(),
-//           end: moment()
-//             .add(1, "days")
-//             .toDate(),
-//           title: "Some title"
-//         }
-//       ]
-//     };
-  
-//     onEventResize = (type, { event, start, end, allDay }) => {
-//       this.setState(state => {
-//         state.events[0].start = start;
-//         state.events[0].end = end;
-//         return { events: state.events };
-//       });
-//     };
-  
-//     onEventDrop = ({ event, start, end, allDay }) => {
-//       console.log(start);
-//     };
-  
-//     render() {
-//       return (
-//         <div className="CalendarEvent">
-//           <DnDCalendar
-//             defaultDate={moment().toDate()}
-//             defaultView="month"
-//             events={this.state.events}
-//             localizer={localizer}
-//             onEventDrop={this.onEventDrop}
-//             onEventResize={this.onEventResize}
-//             resizable
-//             style={{ height: "100vh" }}
-//           />
-//         </div>
-//       );
-//     }
-//   }
-  
-//   export default CalendarEvent;yy

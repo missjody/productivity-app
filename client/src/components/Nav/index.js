@@ -16,7 +16,7 @@ function Nav() {
         <li><Link to="/pomodor">My Time</Link></li>
         <li><Link to="/mysoul">My Soul</Link></li>
         <li><Link to="#">My Food</Link></li>
-        <li><Link to="/signup">{user ? 'Log Out' : 'Sign Up/Log In'}</Link></li>
+        <li><Link to="/signup" >{user ? 'Log Out' : 'Sign Up/Log In'}</Link></li>
       </ul>
     </nav>
   );
