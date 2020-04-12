@@ -3,8 +3,11 @@ import Sound from 'react-sound';
 import PlayerControls from './PlayerControls';
 import SongSelector from './SongSelector';
 import Breathing from "./Breathing";
+
 import songs from './songs';
 import { Col, Row, Container } from "../Grid";
+
+
 
 class SoulComponent extends Component {
   constructor(props) {
@@ -14,23 +17,12 @@ class SoulComponent extends Component {
       controlled: true,
       currentSong: songs[0],
       position: 0,
-      // loop: false,
       playStatus: Sound.status.STOPPED
     };
   }
 
-  getStatusText() {
-    switch (this.state.playStatus) {
-      case Sound.status.PLAYING:
-        return 'playing';
-      case Sound.status.PAUSED:
-        return 'paused';
-      case Sound.status.STOPPED:
-        return 'stopped';
-      default:
-        return '(unknown)';
-    }
-  }
+
+
 
   // is passed song, sets it to currentSong
   // could change to a hook for currentSong, setCurrentSong
@@ -45,7 +37,6 @@ class SoulComponent extends Component {
     });
   }
 
-
   render() {
     return (
       <Container>
@@ -55,6 +46,7 @@ class SoulComponent extends Component {
               songs={songs}
               selectedSong={this.state.currentSong}
               onSongSelected={this.handleSongSelected}
+              playStatus={this.state.playStatus}
             />
           </Col>
 
@@ -66,9 +58,8 @@ class SoulComponent extends Component {
                 onPause={() => this.setState({ playStatus: Sound.status.PAUSED })}
                 onResume={() => this.setState({ playStatus: Sound.status.PLAYING })}
                 onStop={() => this.setState({ playStatus: Sound.status.STOPPED, position: 0 })}
-                onSeek={position => this.setState({ position })}
-                duration={this.state.currentSong ? this.state.currentSong.duration : 0}
                 position={this.state.position}
+
               />
               {this.state.currentSong && (
                 this.state.controlled ? (

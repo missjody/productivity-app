@@ -7,24 +7,26 @@ const control = (text, clickHandler) => {
     ev.preventDefault();
     clickHandler();
   };
+
   return (
-
-
     <Row>
-      <button>
+      <button className="waves-effect waves-light btn-small button">
         <a href="#" onClick={onClick}>
-          {text}
+          <p className="dynamic">{text}</p>
         </a>
       </button>
-    </Row>
+    </Row >
   );
 }
+
 
 class PlayerControls extends Component {
 
   render() {
-    return <div>{this.renderControls()}</div>;
+    return (<div>{this.renderControls()}</div>);
   }
+
+
 
   renderControls() {
     const controls = {
