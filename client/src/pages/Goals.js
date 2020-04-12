@@ -1,19 +1,16 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import GoalList from "../components/GoalList";
-import userContext from '../utils/userContext';
+import GoalList from "../components/GoalList"
 
 function Goals() {
     // Setting our component's initial state
+    const [goal, setGoal] = useState([])
     const [task, setTask] = useState([])
     const [formObject, setFormObject] = useState({})
 
-    const {goals, setGoals} = useContext(userContext);
     // Load all books and store them with setBooks
-
-    console.log(goals)
     useEffect(() => {
         loadGoals()
     }, [])
@@ -23,18 +20,17 @@ function Goals() {
         console.log("Making the call")
         API.getGoals()
             .then(res =>
-               { console.log(res.data)
-                setGoals(res.data)}
+                setGoal(res.data)
             )
             .catch(err => console.log(err));
     };
 
     // Deletes a book from the database with a given id, then reloads books from the db
-    // function deleteBook(id) {
-    //     API.deleteBook(id)
-    //         .then(res => loadBooks())
-    //         .catch(err => console.log(err));
-    // }
+    function deleteGoal(id) {
+        API.deleteGoal(id)
+            .then(res => loadGoals())
+            .catch(err => console.log(err));
+    }
 
     // Handles updating component state when the user types into the input field
     function handleInputChange(event) {
@@ -78,9 +74,9 @@ function Goals() {
             </form>
 
             <div className="row">
-                {goals.map(goal => {
-                    console.log(goal.Tasks)
-                    return <GoalList goal={goal.goal} tasks={goal.Tasks} key={goal.goal} goalId={goal._id} loadGoals={loadGoals} />
+                {goal.map(goals => {
+                    console.log(goals.Tasks)
+                    return <GoalList goal={goals.goal} tasks={goals.Tasks} key={goals.goal} goalId={goals._id} loadGoals={loadGoals} deleteGoal={deleteGoal} />
                 })}
             </div>
         </div >

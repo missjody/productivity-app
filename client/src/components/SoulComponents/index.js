@@ -41,14 +41,14 @@ class SoulComponent extends Component {
     return (
       <Container>
         <Row>
-          <Col size="md-12">
-            <SongSelector
-              songs={songs}
-              selectedSong={this.state.currentSong}
-              onSongSelected={this.handleSongSelected}
-              playStatus={this.state.playStatus}
-            />
-          </Col>
+
+          <SongSelector
+            songs={songs}
+            selectedSong={this.state.currentSong}
+            onSongSelected={this.handleSongSelected}
+            playStatus={this.state.playStatus}
+          />
+
 
           <Col size="md-12">
             <div>

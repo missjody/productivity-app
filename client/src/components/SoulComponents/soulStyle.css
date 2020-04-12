@@ -1,3 +1,5 @@
+/* UPDATE CLASS VS ID NAMING CONVENTIONS */
+
 body {
  background: #FFF5E8;
 }
@@ -25,7 +27,7 @@ body {
   margin: 0 auto;
 }
 
-h3, h5, hr {
+h1, h3, h5, hr {
   font-family: 'Josefin Sans', sans-serif;
   color: #39A67A;
 }
@@ -33,15 +35,61 @@ h3, h5, hr {
 p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.25rem;
-  color: #8C8A81;
+  color: #23282F;
   padding: 0.15rem;
 }
 
 .boldP {
   font-weight: bold;
   text-align:center;
+  font-family: 'Aleo', serif;
+  margin-top: -45px;
+  margin-left: -45px;
+  margin-right: -45px;
+  color: #164964;
 }
 
 .songOptions {
   text-align:center;
+}
+
+.soul-image {
+  width: 42.666rem;
+  margin-top: -50px;
+}
+
+.parent {
+  position: relative;
+}
+
+.button-child {
+    position: absolute;
+    margin-top: 75px;
+    left: auto;
+    right: 425px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #164964;
+}
+
+.child {
+  position: absolute;
+  margin-top: -75px;
+  left: auto;
+  right: -120px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #164964;
+}
+
+.quote {
+  position: absolute;
+  margin-top: 125px;
+  right: auto;
+  left: 15px;
+  padding: .75rem;
+  font-family: 'Aleo', serif;
+  color: #FFF5E8;
+}
+
+.test {
+  margin-top: 50px;
 }
