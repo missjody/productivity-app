@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import API from "../utils/API";
 import GoalList from "../components/GoalList"
 import "./Goals.css"
+import userContext from '../utils/userContext'
 // import moment from 'moment';
 
 
@@ -10,6 +11,7 @@ function Goals() {
     const [goal, setGoal] = useState([])
     const [targetDate, setTargetDate] = useState([])
     const [formObject, setFormObject] = useState({})
+    const { setGoals } = useContext(userContext)
 
     // Load all books and store them with setBooks
     useEffect(() => {
@@ -22,6 +24,7 @@ function Goals() {
         API.getGoals()
             .then(res => {
                 setGoal(res.data)
+                setGoals(res.data)
             })
             .catch(err => console.log(err));
     };

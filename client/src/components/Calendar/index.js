@@ -1,4 +1,4 @@
-import React, { useEffect, useState , useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from 'moment';
 import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
@@ -12,9 +12,9 @@ const DnDtasks = withDragAndDrop(Tasks);
 
 
 export default () => {
-    const {goals} = useContext(userContext);
+    const { goals } = useContext(userContext);
     const [modGoals, setModGoals] = useState(goals);
-    console.log(goals)
+    console.log("Goals from calendar page: ", goals)
     let [calendarEvent, setCalendarEvent] = useState({
         events: [
             {
@@ -23,17 +23,21 @@ export default () => {
                 title: "Build this thingy!"
             }
         ]
-    }) 
-    
-    useEffect(()=>{
+    })
+
+    useEffect(() => {
         console.log(goals)
         const tasks = [];
-        goals.map(goal=> goal.Tasks.map(a=> {tasks.push({title:a.name, start: moment().toDate(),
-            end: moment().toDate()})}))
-        const tasksWID = tasks.map((a,i)=> {return {...a, id:i}})
+        goals.map(goal => goal.Tasks.map(a => {
+            tasks.push({
+                title: a.name, start: moment().toDate(),
+                end: moment().toDate()
+            })
+        }))
+        const tasksWID = tasks.map((a, i) => { return { ...a, id: i } })
 
-        setCalendarEvent({events:tasksWID})
-    },[goals])
+        setCalendarEvent({ events: tasksWID })
+    }, [goals])
 
     const onEventResize = ({ event, start, end, allDay }) => {
         let newEvents = calendarEvent.events;
@@ -45,29 +49,29 @@ export default () => {
 
     }
 
-   const onEventDrop = ({ event, start, end, allDay }) => {
-       let newEvents = calendarEvent.events;
+    const onEventDrop = ({ event, start, end, allDay }) => {
+        let newEvents = calendarEvent.events;
         newEvents[event.id].start = start;
         newEvents[event.id].end = end;
-    setCalendarEvent({
-        events: newEvents
-    })
+        setCalendarEvent({
+            events: newEvents
+        })
     }
 
-    return(
+    return (
 
         <div className="Calendar">
             <DnDCalendar
-                defaultDate = { moment().toDate() }
-                defaultView = "month"
-                localizer = { localizer }
-                events = { calendarEvent.events }
-                onEventDrop = { onEventDrop }
-                onEventResize = { onEventResize }
+                defaultDate={moment().toDate()}
+                defaultView="month"
+                localizer={localizer}
+                events={calendarEvent.events}
+                onEventDrop={onEventDrop}
+                onEventResize={onEventResize}
                 resizable
-                style = {{ height: "100vh" }}
+                style={{ height: "100vh" }}
             />
         </div>
-    
+
     )
 }
