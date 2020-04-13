@@ -12,8 +12,7 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     findById: function (req, res) {
-        console.log("req: ", req.user)
-        console.log("req.user", req.user)
+        // console.log("req.user", req.user)
         db.Goal
             .find({ author: req.user._id })
             .sort({ date: -1 })
@@ -22,9 +21,7 @@ module.exports = {
     },
     create: function (req, res) {
         req.body.author = req.user._id
-        console.log("req._passport req._passport._id", req.user)
-        // console.log(req._passport.session.user._id)
-        console.log("req.user", req._passport.serializers, req._passport.session.user, req.data)
+        // console.log("req._passport req._passport._id", req.user)
         db.Goal.create(req.body)
             .then((dbModel) => {
                 res.json(dbModel);
