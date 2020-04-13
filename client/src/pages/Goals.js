@@ -1,9 +1,11 @@
+
 import React, { useState, useEffect,useContext } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import GoalList from "../components/GoalList";
 import userContext from '../utils/userContext'
+
 
 function Goals() {
     // Setting our component's initial state
@@ -21,12 +23,13 @@ function Goals() {
     function loadGoals() {
         console.log("Making the call")
         API.getGoals()
+
             .then(res =>{
                 console.log(res.data)
                 setGoal(res.data);
                 setGoals(res.data)
             }
-                
+
             )
             .catch(err => console.log(err));
     };
