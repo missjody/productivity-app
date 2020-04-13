@@ -33,7 +33,7 @@ router.post(
             username: req.user.username,
             _id: req.user._id
         };
-        res.send(userInfo);
+        res.json(req.user);
     }
 );
 
