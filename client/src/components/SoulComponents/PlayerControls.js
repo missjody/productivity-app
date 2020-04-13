@@ -9,13 +9,11 @@ const control = (text, clickHandler) => {
   };
 
   return (
-    <Row>
-      <button className="waves-effect waves-light btn-small button">
-        <a href="#" onClick={onClick}>
-          <p className="dynamic">{text}</p>
-        </a>
-      </button>
-    </Row >
+    <button className="waves-effect waves-light btn-small button">
+      <a href="#" onClick={onClick}>
+        <p className="dynamic">{text}</p>
+      </a>
+    </button>
   );
 }
 
@@ -40,8 +38,8 @@ class PlayerControls extends Component {
 
 
       <Row>
-        <div>
-          <ul>
+        <div className="buttton-parent">
+          <ul className="button-child">
             {controls.play && control('Play', this.props.onPlay)}
             {controls.stop && control('Stop', this.props.onStop)}
             {controls.pause && control('Pause', this.props.onPause)}
