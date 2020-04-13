@@ -20,13 +20,8 @@ function Goals() {
     function loadGoals() {
         // console.log("Making the call")
         API.getGoals()
-
-            .then(res =>
+            .then(res => {
                 setGoal(res.data)
-            .then(res =>{
-                console.log(res.data)
-                setGoal(res.data);
-                setGoals(res.data)
             })
             .catch(err => console.log(err));
     };
