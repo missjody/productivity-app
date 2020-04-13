@@ -11,23 +11,23 @@ const usersSchema = new Schema({
     password: {
         type: String,
         unique: false,
-        validate: {
-            validator: function (v) {
-                return /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/.test(v);
-            },
-            message: (props) => `${props.value} is not a valid password`,
-        },
+        // validate: {
+        //     validator: function (v) {
+        //         return /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,})/.test(v);
+        //     },
+        //     message: (props) => `${props.value} is not a valid password`,
+        // },
         required: [true, "password is required"],
     },
     email: {
         type: String,
         required: true,
-        validate: {
-            validator: function (v) {
-                return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(v);
-            },
-            message: (props) => `${props.value} is not a valid email`,
-        },
+        // validate: {
+        //     validator: function (v) {
+        //         return /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(v);
+        //     },
+        //     message: (props) => `${props.value} is not a valid email`,
+        // },
     },
     createdAt: {
         type: Date,
@@ -48,6 +48,17 @@ usersSchema.methods.generateHash = function (password) {
 usersSchema.methods.validPassword = function (password, encrypted) {
     return bcrypt.compareSync(password, encrypted);
 };
+
+
+// Define schema methods
+// usersSchema.methods = {
+//     checkPassword: function (inputPassword) {
+//         return bcrypt.compareSync(inputPassword, this.password);
+//     },
+//     hashPassword: plainTextPassword => {
+//         return bcrypt.hashSync(plainTextPassword, 10);
+//     }
+// };
 
 const User = mongoose.model("User", usersSchema);
 

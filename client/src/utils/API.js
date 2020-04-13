@@ -42,6 +42,9 @@ export default {
   saveUsers: function (userData) {
     return axios.post("/api/user", userData);
   },
+  logout: function () {
+    return axios.post("/api/user/logout");
+  },
   // user signup / login
   loginSignup: ({ username, password, email, login }) => login ? axios.post('/api/user/login', { username: username, password: password }) : axios.post('/api/user/signup', { username: username, password: password, email: email })
 };

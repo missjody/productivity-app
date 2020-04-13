@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
-import { PromiseProvider } from "mongoose";
+// import Tasks from "../Tasks/Tasks"
+
 // import "./TaksForm.css"
 
 function TaskForm(props) {
     // Setting our component's initial state
     const [task, setTask] = useState([])
     // const [goal, setGoal] = useState([])
+    const [targetDate, setTargetDate] = useState([])
     const [formObject, setFormObject] = useState({})
 
     // Handles updating component state when the user types into the input field
@@ -20,16 +21,19 @@ function TaskForm(props) {
     // Then reload books from the database
     function handleTaskFormSubmit(event) {
         event.preventDefault();
+        console.log("from task from", props.tasks)
         var GoalId = event.target.attributes.getNamedItem('data-name').value;
         if (formObject.task) {
             API.saveTask(GoalId, {
                 _id: GoalId,
                 Tasks: [{
-                    name: formObject.task
+                    name: formObject.task,
+                    targetDate: formObject.targetDate
                 }]
             })
                 .then(() => setFormObject({
-                    task: ""
+                    task: "",
+                    targetDate: ""
                 }))
                 .then(() => props.loadGoals())
 
@@ -89,33 +93,30 @@ function TaskForm(props) {
 
     return (
         <div>
-            <form>
-                <input
-                    onChange={handleInputChange}
-                    name="task"
-                    placeholder="Add a Task to get started"
-                    value={formObject.task}
-
-                />
-                <br />
-                <button
-                    disabled={!(formObject.task)}
-                    onClick={handleTaskFormSubmit}
-                    data-name={props.goalId}
-                >Add a Task
-                    </button>
-            </form>
-
+            <div className="row">
+                <form>
+                    <input
+                        style={{ width: "60%" }}
+                        onChange={handleInputChange}
+                        name="task"
+                        placeholder="Add a Task to get started"
+                        value={formObject.task} />
+                    <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "22%", margin: "0px 20px" }}></input>
+                    <button className="btn-small"
+                        disabled={!(formObject.task)}
+                        onClick={handleTaskFormSubmit}
+                        data-name={props.goalId}>Add a Task</button>
+                </form>
+            </div>
             <div className="row">
                 {props.tasks.map(item => {
-                    // console.log(item.name)
+                    // console.log(key = { item.name })
                     return (
-                        <div>
-                            <p>{item.name}</p>
-                            <p>{item.createdAt}</p>
-                            <p>{item.complete ? 'true' : 'false'}</p>
-                            <div onClick={() => finishTask(item)}><i className="material-icons">check_circle</i></div>
-                            <div onClick={() => removeTask(item)}><i className="material-icons">delete</i></div>
+                        <div className="row">
+                            <div className="col s12">
+                                <h6 key={item._id} style={{ color: item.complete ? '#43a047' : 'black' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
+                                {/* <p>{item.targetDate}</p> */}
+                            </div>
                         </div>
                     )
                 })}
