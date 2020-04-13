@@ -94,6 +94,7 @@ function TaskForm(props) {
     return (
         <div>
             <div className="row">
+                <h6>Add a Task to get started</h6>
                 <form>
                     <input
                         style={{ width: "60%" }}
@@ -110,13 +111,9 @@ function TaskForm(props) {
             </div>
             <div className="row">
                 {props.tasks.map(item => {
-                    // console.log(key = { item.name })
                     return (
-                        <div className="row">
-                            <div className="col s12">
-                                <h6 key={item._id} style={{ color: item.complete ? '#43a047' : 'black' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
-                                {/* <p>{item.targetDate}</p> */}
-                            </div>
+                        <div className="col s12" style={{ borderBottom: "2px solid green" }}>
+                            <h6 key={item._id} style={{ color: item.complete ? '#43a047' : 'black' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
                         </div>
                     )
                 })}

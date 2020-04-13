@@ -18,7 +18,6 @@ router.get("/", (req, res, next) => {
 router.route("/signup")
     .post(userController.create)
 
-
 router.post(
     "/login",
     function (req, res, next) {
@@ -46,9 +45,10 @@ router.post("/logout", (req, res) => {
         res.send({ msg: "no user to log out" });
     }
 });
-// router.post("/login", passport.authenticate('local'), (req, res) => {
-//     res.json(req.user)
-// })
+
+router.post("/login", passport.authenticate('local'), (req, res) => {
+    res.json(req.user)
+})
 
 // Matches with ":id"
 router
