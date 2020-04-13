@@ -4,6 +4,7 @@ import GoalList from "../components/GoalList"
 import "./Goals.css"
 // import moment from 'moment';
 
+
 function Goals() {
     // Setting our component's initial state
     const [goal, setGoal] = useState([])
@@ -19,9 +20,14 @@ function Goals() {
     function loadGoals() {
         // console.log("Making the call")
         API.getGoals()
+
             .then(res =>
                 setGoal(res.data)
-            )
+            .then(res =>{
+                console.log(res.data)
+                setGoal(res.data);
+                setGoals(res.data)
+            })
             .catch(err => console.log(err));
     };
 
