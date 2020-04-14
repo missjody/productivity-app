@@ -1,33 +1,33 @@
-.container {
+/* .container {
     padding:20px;
-}
-.btn:disabled,
+} */
+/* .btn:disabled,
 button[disabled] {
     background-color: aqua;
-}
-.pt10 {
+} */
+/* .pt10 {
     padding: 0px 10px;
 }
 .padding20 {
     padding: 20px !important;
     margin: 30px;
-}
-.button {
+} */
+/* .button {
     background: #C38D9E;
     color: #23282F;
     margin: 0.35rem;
     /* font-size: 1.25rem; */
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif;
     padding-top: .15rem;
-  }
-  h1, h2, h3, h5, h6, hr {
+  }  */
+  /* h1, h2, h3, h5, h6, hr {
     font-family: 'Josefin Sans', sans-serif;
     color: #39A67A;
-  }
+  } */
   
-  p {
+  /* p {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.25rem;
     color: #8C8A81;
     padding: 0.15rem;
-  }
+  } */

@@ -40,7 +40,9 @@
       background-color: darkgray;
     } */
   
-    .collapse {
+
+    /* Not Previously commented out */
+    /* .collapse {
       display: none
     }
   
@@ -61,4 +63,4 @@
       overflow: hidden;
       position: relative;
     }
-  
+   */

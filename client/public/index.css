@@ -1,22 +1,273 @@
+/* Overall stays the same */
+body {
+  background: #FFF5e8;
+ }
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #4B575A;
+}
+
+/* Navigation Bar CSS */
 nav {
     padding: 0 40px;
-    background: #E27D60;
+    background:#E59D89;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+}
+
+nav ul a, nav a {
+    color: #164964;
 }
 
 .page {
-    margin: 50px;
+    margin: 3.125rem;
+}
+
+.button {
+  background: #e59d89;
+  color: #4B575A;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: .15rem;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #FF8781;
+}
+
+h1, h2, h3, h4, h5, hr {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #164964;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.25rem;
+  color: #164964;
+  padding: 0.15rem;
+}
+
+.boldP {
+  font-weight: bold;
+  text-align:center;
+  font-family: 'Aleo', serif;
+  margin-top: -2.8rem;
+  margin-left: -2.8rem;
+  margin-right: -2.8rem;
+  color: #164964;
+}
+
+/* Sign In styling */
+
+
+
+/* My Goals styling */
+
+/* Goals styling */
+
+.blue {
+  background-color: #b47f89 !important;
+}
+
+.blue.lighten-4 {
+  background-color: #F6e1A9 !important;
+}
+
+.buttonGold {
+  background: #deb25c;
+  color: #4B575A;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: .15rem;
+}
+
+.containerGoal {
+  padding:1.25rem;
+}
+
+.padding20 {
+  padding: 1.25rem !important;
+  margin: 1.875rem;
+}
+
+.pt10 {
+  padding: 0px 10px;
+}
+
+/* Goal List styling */
+
+.goalList {
+  border: 2px solid #b47f89;
+  padding: 0rem 0.625rem;
+  margin: 1.25rem 0.625rem;
+}
+
+/* Task Form styling */
+
+.goal {
+  border: 0.125rem solid green;
+  padding: 0.313rem;
+  /* margin: 20px 0px; */
+}
+
+/* Collapsible styling */
+
+.collapse {
+  display: none
+}
+
+.collapse.in {
+  display: block
+}
+
+.determinate {
+  width: 0;
+  transition: width 1s ease-in-out;
+  padding: .5rem;
+  position: relative;
+  color: #fff;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.progress {
+  min-height: 2.25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* My Plan Styling */
+
+.Calendar {
+  background-color: #DEB25C;
+  /* border: 1px solid #DEB25C !important; */
+}
+
+/* .rbc-day-bg + .rbc-day-bg {
+  border: 1px solid #DEB25C !important;
+} */
+
+.rbc-off-range-bg {
+  background: #74A9B6 !important;
+  
+}
+
+.rbc-today {
+  background-color: #9ce5db !important;
+}
+
+.rbc-toolbar button {
+  /* border: 1px solid #DEB25C !important; */
+  font-family: 'Josefin Sans', sans-serif;
+  color: #4B575A;
+}
+
+/* .rbc-header + .rbc-header {
+  border: 1px solid #DEB25C !important;
+} */
+
+/* .rbc-month-view {
+  border: 1px solid #DEB25C !important;
+} */
+
+button.rbc-active {
+  background-color: #DEB25C !important;
+}
+
+.rbc-event {
+  background-color: #b47f89 !important;
 }
 
 
-.button {
-    background: #76C2C9;
-    color: #23282F;
-    margin: 0.25rem;
-    font-size: 1.25rem;
-    font-family: 'Josefin Sans', sans-serif;
-    padding-top: .15rem;
-  }
+/* .rbc-time-content > * + * > * {
+  border: 1px solid #DEB25C !important;
+} */
 
-  .btn:hover, .btn-large:hover, .btn-small:hover {
-    background-color: #FABDCE;
-  }
+/* My Time styling */
+
+.buttonPom {
+  background: #8fc870;
+  color: #4B575A;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: .15rem;
+}
+
+/* My Soul styling */
+
+#breathCircle {
+  width: 6.25rem;
+  height: 6.25rem;
+  opacity: 0;
+  background: #85CBC0;
+  border-radius: 50%;
+  margin: -36rem auto auto auto;
+}
+
+.dynamic {
+  color: #23282F;
+  margin: 0 auto;
+}
+
+.fade {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.songOptions {
+  text-align:center;
+}
+
+.soul-image {
+  width: 42.666rem;
+  margin-top: -3.15rem;
+}
+
+.parent {
+  position: relative;
+}
+
+.button-child {
+    position: absolute;
+    margin-top: -2rem;
+    /* left: auto; */
+    /* right: 225px; */
+    font-family: 'Josefin Sans', sans-serif;
+    color: #4B575A;
+}
+
+.child {
+  position: absolute;
+  margin-top: -5.5rem;
+  left: auto;
+  right: -8.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #164964;
+}
+
+.quote {
+  position: absolute;
+  margin-top: 7.813rem;
+  right: auto;
+  left: 0.938rem;
+  padding: .75rem;
+  font-family: 'Aleo', serif;
+  color: #FFF5e8;
+}
+
+.test {
+  margin-top: 3.188rem;
+}
+
+
+@media screen and (max-width: 865px) { 
+ .child {
+   right: 60px;
+ }
+} 
