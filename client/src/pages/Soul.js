@@ -7,7 +7,7 @@ import { Container, Row, Col } from "../components/Grid";
 const Soul = () => {
 
   return (
-    <div>
+    <div className="test">
       <SoulComponent />
     </div>
   )

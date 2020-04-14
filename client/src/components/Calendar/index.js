@@ -100,6 +100,5 @@ export default () => {
                 style={{ height: "100vh" }}
             />
         </div>
-
     )
 }

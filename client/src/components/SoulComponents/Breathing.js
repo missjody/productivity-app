@@ -19,7 +19,7 @@ const Breathing = (props) => {
 
 
   return (
-    < div className="test">
+    < div >
       < div id="breathCircle" ref={el => breathing = el} style={status ? { display: "block" } : { display: "none" }}></div >
     </div >
   )

@@ -38,15 +38,17 @@ class PlayerControls extends Component {
 
 
       <Row>
-        <div className="buttton-parent">
-          <ul className="button-child">
-            {controls.play && control('Play', this.props.onPlay)}
-            {controls.stop && control('Stop', this.props.onStop)}
-            {controls.pause && control('Pause', this.props.onPause)}
-            {controls.resume && control('Resume', this.props.onResume)}
-          </ul>
-        </div>
-      </Row>
+        <div className="col s12 m6 offset-m4 l4 offset-l5">
+          <div className="parent">
+            <ul className="button-child">
+              {controls.play && control('Play', this.props.onPlay)}
+              {controls.stop && control('Stop', this.props.onStop)}
+              {controls.pause && control('Pause', this.props.onPause)}
+              {controls.resume && control('Resume', this.props.onResume)}
+            </ul>
+          </div>
+        </div >
+      </Row >
 
 
     );
