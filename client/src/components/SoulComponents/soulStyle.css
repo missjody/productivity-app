@@ -10,11 +10,14 @@ body {
   opacity: 0;
   background: #85DCB9;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: 150px auto auto auto;
+    
 }
 
+
+
 .button {
-  background: #C38D9E;
+  background: #76C2C9;
   color: #23282F;
   margin: 0.25rem;
   font-size: 1.25rem;
@@ -22,14 +25,18 @@ body {
   padding-top: .15rem;
 }
 
+.btn:hover, .btn-large:hover, .btn-small:hover {
+  background-color: #FABDCE;
+}
+
 .dynamic {
   color: #23282F;
   margin: 0 auto;
 }
 
-h1, h3, h5, hr {
+h1, h3, h4, h5, hr {
   font-family: 'Josefin Sans', sans-serif;
-  color: #39A67A;
+  color: #164964;
 }
 
 p {
@@ -49,6 +56,13 @@ p {
   color: #164964;
 }
 
+.fade {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .songOptions {
   text-align:center;
 }
@@ -64,9 +78,9 @@ p {
 
 .button-child {
     position: absolute;
-    margin-top: 75px;
-    left: auto;
-    right: 425px;
+    margin-top: 10rem;
+    /* left: auto; */
+    /* right: 225px; */
     font-family: 'Josefin Sans', sans-serif;
     color: #164964;
 }
@@ -91,5 +105,14 @@ p {
 }
 
 .test {
-  margin-top: 50px;
+  margin-top: 51px;
 }
+
+
+@media screen and (max-width: 865px) { 
+ .child {
+   right: 60px;
+ }
+} 
+
+

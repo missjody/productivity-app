@@ -6,6 +6,7 @@ import SignUpLogin from "./components/Login";
 import NoMatch from "./pages/NoMatch";
 import Goals from "./pages/Goals";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import NoAuth from "./components/NoAuth/NoAuth";
 import Soul from "./pages/Soul";
 import userContext from './utils/userContext';
