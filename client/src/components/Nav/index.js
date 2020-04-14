@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom"
 import userContext from '../../utils/userContext'
 import API from "../../utils/API"
 
-function Nav() {
+function Nav(props) {
   const { user, goals } = useContext(userContext);
   console.log(goals)
   const handleLogout = () => {
@@ -11,6 +11,8 @@ function Nav() {
       window.location.assign("/");
     });
   };
+  // console.log("Propsuser: ", props.username)
+  // ${user.username}
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <Link className="navbar-brand" to="/">
@@ -22,8 +24,9 @@ function Nav() {
         <li><Link to="/pomodor">My Time</Link></li>
         <li><Link to="/mysoul">My Soul</Link></li>
         <li><Link to="#">My Food</Link></li>
-        <li><Link to="/signup" >{user ? 'Log Out' : 'Sign Up/Log In'}</Link></li>
-        <li><a className="nav-link" onClick={handleLogout}>Logout</a></li>
+        {/* <li><Link to="/signup" >{user ? 'Log Out' : 'Sign Up/Log In'}</Link></li> */}
+        {props.isLoggedIn ? (<li><a className="nav-link" onClick={handleLogout}>Logout</a></li>) : (<li><Link to="/signup" >Sign Up/Log In</Link></li>)}
+        {/* <li><a className="nav-link" onClick={handleLogout}>Logout</a></li> */}
       </ul>
     </nav>
   );

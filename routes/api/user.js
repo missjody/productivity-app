@@ -17,6 +17,8 @@ router.get("/", (req, res, next) => {
 // /api/user/signup - Post a new user with hashed password
 router.route("/signup")
     .post(userController.create)
+router.route("/populated")
+    .get(userController.findAll)
 
 // router.post(
 //     "/login",
