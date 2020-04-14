@@ -103,7 +103,7 @@ function TaskForm(props) {
                         placeholder="Add a Task to get started"
                         value={formObject.task} />
                     <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "22%", margin: "0px 20px" }}></input>
-                    <button className="btn-small"
+                    <button className="btn-small buttonGold"
                         disabled={!(formObject.task)}
                         onClick={handleTaskFormSubmit}
                         data-name={props.goalId}>Add a Task</button>
@@ -112,8 +112,8 @@ function TaskForm(props) {
             <div className="row">
                 {props.tasks.map(item => {
                     return (
-                        <div className="col s12" style={{ borderBottom: "2px solid green" }}>
-                            <h6 key={item._id} style={{ color: item.complete ? '#43a047' : 'black' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
+                        <div className="col s12" style={{ borderBottom: "2px solid #8a8158" }}>
+                            <h6 key={item._id} style={{ color: item.complete ? '#8a8158' : '#164964' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
                         </div>
                     )
                 })}

@@ -40,7 +40,7 @@ export default () => {
 		<div className="SignupForm">
 			<h4>{loginState.login ? 'Log In' : 'Sign up'}</h4>
 
-			<button className="button" onClick={() => setLoginState({ ...loginState, login: !loginState.login })}>
+			<button className="btn btn-primary button" onClick={() => setLoginState({ ...loginState, login: !loginState.login })}>
 				{loginState.login ? 'New user? Sign up now!' : 'Already have an account? Log In!'}
 			</button>
 			<form className="form-horizontal">

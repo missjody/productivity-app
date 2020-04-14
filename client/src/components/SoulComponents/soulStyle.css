@@ -1,24 +1,21 @@
-/* UPDATE CLASS VS ID NAMING CONVENTIONS */
-
+/* Styling for the My Soul page */
+/* 
 body {
- background: #FFF5E8;
+ background: #9cE5DB;
 }
 
 #breathCircle {
   width: 6.25rem;
   height: 6.25rem;
   opacity: 0;
-  background: #85DCB9;
+  background: #85CBC0;
   border-radius: 50%;
-  margin: 150px auto auto auto;
-    
+  margin: -36rem auto auto auto;
 }
 
-
-
 .button {
-  background: #76C2C9;
-  color: #23282F;
+  background: #E59D89;
+  color: #4B575A;
   margin: 0.25rem;
   font-size: 1.25rem;
   font-family: 'Josefin Sans', sans-serif;
@@ -26,7 +23,7 @@ body {
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
-  background-color: #FABDCE;
+  background-color: #FF8781;
 }
 
 .dynamic {
@@ -69,7 +66,7 @@ p {
 
 .soul-image {
   width: 42.666rem;
-  margin-top: -50px;
+  margin-top: -4.75rem;
 }
 
 .parent {
@@ -78,10 +75,10 @@ p {
 
 .button-child {
     position: absolute;
-    margin-top: 10rem;
+    margin-top: -2rem;
     /* left: auto; */
     /* right: 225px; */
-    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Josefin Sans', sans-serif;
     color: #164964;
 }
 
@@ -101,7 +98,7 @@ p {
   left: 15px;
   padding: .75rem;
   font-family: 'Aleo', serif;
-  color: #FFF5E8;
+  color: #9cE5DB;
 }
 
 .test {
@@ -114,5 +111,5 @@ p {
    right: 60px;
  }
 } 
-
+ */ 
 

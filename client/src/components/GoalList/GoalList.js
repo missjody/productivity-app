@@ -31,8 +31,8 @@ export default function GoalList(props) {
 
     }
     return (
-        <div className="goal">
-            <h5><b>Goal: {props.goal}</b>   <button className="btn" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
+        <div className="goalList">
+            <h5><b>Goal: {props.goal}</b>   <button className="btn btn-primary buttonGold" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
             <p>Click the progress bar to add tasks</p>
             <Collapsible percentage={percentage} tasks={props.tasks} goalId={props.goalId} loadGoals={props.loadGoals} formObject={props.formObject} handleTaskFormSubmit={props.handleTaskFormSubmit} handleInputChange={props.handleInputChange} />
             {/* <div className="progress">

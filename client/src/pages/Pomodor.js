@@ -22,7 +22,7 @@ class LongBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Long Break</p>
-        <button type="button" className="btn" onClick={this.props.longBreak}>10 minutes</button>
+        <button type="button" className="btn buttonPom" onClick={this.props.longBreak}>10 minutes</button>
       </div>
     );
   }
@@ -36,7 +36,7 @@ class Session extends React.Component {
     return (
       <div className="col s4">
         <p>Session</p>
-        <button type="button" className="btn" onClick={this.props.session}>25 minutes</button>
+        <button type="button" className="btn buttonPom" onClick={this.props.session}>25 minutes</button>
       </div>
     );
   }
@@ -51,7 +51,7 @@ class ShortBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Short Break</p>
-        <button type="button" className="btn" onClick={this.props.shortBreak}>5 minutes</button>
+        <button type="button" className="btn buttonPom" onClick={this.props.shortBreak}>5 minutes</button>
       </div>
     );
   }
@@ -65,7 +65,7 @@ class StartButton extends React.Component {
   render() {
     return (
       <div style={{ marginRight: 5 }}>
-        <button className="btn" onClick={this.props.startCountDown}>Start</button>
+        <button className="btn buttonPom" onClick={this.props.startCountDown}>Start</button>
       </div>
     );
   }
@@ -75,7 +75,7 @@ class StopButton extends React.Component {
   render() {
     return (
       <div style={{ marginRight: 5, marginLeft: 30 }}>
-        <button className="btn" onClick={this.props.stopCountDown}>Stop</button>
+        <button className="btn buttonPom" onClick={this.props.stopCountDown}>Stop</button>
       </div>
     );
   }
