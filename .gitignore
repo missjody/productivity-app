@@ -6,7 +6,8 @@ client/node_modules
 
 # testing
 /coverage
-
+package-lock.json
+client/package-lock.json
 # production
 /build
 

@@ -17,9 +17,13 @@ const goalSchema = new Schema({
                 type: Date,
                 default: Date.now
             },
+            startDate: {
+                type: Date,
+                default: Date.now
+            },
             targetDate: {
                 type: Date,
-                default: () => new Date(+new Date() + 3 * 24 * 60 * 60 * 1000)
+                default: () => new Date(+new Date())
             },
             complete: {
                 type: Boolean,
