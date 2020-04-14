@@ -19,6 +19,8 @@ router
 router
     .route("/task/:id")
     .put(goalController.completeTask)
+    
+router.route('/taskupdate/:id').put(goalController.updateTaskDate)
 
 router
     .route("/task-remove/:id")

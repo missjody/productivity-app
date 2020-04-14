@@ -33,9 +33,7 @@ function App() {
             <Route exact path="/mysoul">
               <Soul />
             </Route>
-            <Route>
-              <NoMatch />
-            </Route>
+            {/* <Route component={NoMatch}/> */}
         </div>
       </userContext.Provider>
           </Switch>

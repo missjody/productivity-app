@@ -64,6 +64,12 @@ module.exports = {
                 res.status(400).json(err);
             });
     },
+    updateTaskDate: function(req,res){
+        console.log(req.body.data)
+        console.log(req.body.data._id)
+        db.Goal.updateOne({"_id": req.params.id, "Tasks._id": req.body.data._id}, {$set: {"Tasks.$": req.body.data}})
+        .then(data => console.log(data))
+    },
     completeTask: function (req, res) {
         console.log("task ID: ", req.body)
         console.log("return: ", req.body.Tasks[0].completed)
