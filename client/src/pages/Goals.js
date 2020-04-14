@@ -12,10 +12,30 @@ function Goals() {
     const [targetDate, setTargetDate] = useState([])
     const [formObject, setFormObject] = useState({})
     const { setGoals } = useContext(userContext)
+    const { goals } = useContext(userContext);
+    const { user, setUser } = useContext(userContext)
+    console.log("user and goals", user, goals)
+
+
+    const [loginState, setLoginState] = useState({
+        username: '',
+        password: '',
+        email: '',
+        login: 0
+    })
+
 
     // Load all books and store them with setBooks
     useEffect(() => {
         loadGoals()
+        API.loginSignup(loginState)
+            .then(response => {
+                console.log(response)
+                response.err ? console.log(response.msg) :
+                    setUser(response.data);
+            }).catch(error => {
+                console.log(error)
+            })
     }, [])
 
     // Loads all books and sets them to books
