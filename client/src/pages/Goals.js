@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import GoalList from "../components/GoalList"
+import GoalList from "../components/GoalList";
+import userContext from '../utils/userContext'
 
 function Goals() {
     // Setting our component's initial state
     const [goal, setGoal] = useState([])
     const [task, setTask] = useState([])
     const [formObject, setFormObject] = useState({})
+    const { setGoals } = useContext(userContext)
 
     // Load all books and store them with setBooks
     useEffect(() => {
@@ -19,8 +21,12 @@ function Goals() {
     function loadGoals() {
         console.log("Making the call")
         API.getGoals()
-            .then(res =>
-                setGoal(res.data)
+            .then(res => {
+                console.log(res.data)
+                setGoal(res.data);
+                setGoals(res.data)
+            }
+
             )
             .catch(err => console.log(err));
     };

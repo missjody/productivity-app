@@ -6,25 +6,26 @@ import SignUpLogin from "./components/Login";
 import NoMatch from "./pages/NoMatch";
 import Goals from "./pages/Goals";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import Soul from "./pages/Soul";
 import userContext from './utils/userContext';
 
 function App() {
   const [user, setUser] = useState();
-  const [goals, setGoals] = useState([{goal:'',Tasks:[]}])
+  const [goals, setGoals] = useState([{ goal: '', Tasks: [] }])
   return (
     <Router>
-        <Switch>
-      <userContext.Provider value={{ user: user, setUser: setUser, setGoals:setGoals, goals:goals}}>
-        {/* // @Keeley - This is where we tie user and goal I think... ^^^ */}
-        <Nav />
-        <div className="page">
-          <Route exact path={["/","/signup"]}>
-            <SignUpLogin />
-          </Route>
-          <Route exact path="/pomodor">
-            <Pomodor />
-          </Route>
+      <Switch>
+        <userContext.Provider value={{ user: user, setUser: setUser, setGoals: setGoals, goals: goals }}>
+          {/* // @Keeley - This is where we tie user and goal I think... ^^^ */}
+          <Nav />
+          <div className="page">
+            <Route exact path={["/", "/signup"]}>
+              <SignUpLogin />
+            </Route>
+            <Route exact path="/pomodor">
+              <Pomodor />
+            </Route>
             <Route exact path="/goals">
               <Goals />
             </Route>
@@ -37,9 +38,10 @@ function App() {
             <Route>
               <NoMatch />
             </Route>
-        </div>
-      </userContext.Provider>
-          </Switch>
+          </div>
+        </userContext.Provider>
+      </Switch>
+      <Footer />
     </Router>
   );
 }

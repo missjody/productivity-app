@@ -1,6 +1,22 @@
 nav {
     padding: 0 40px;
+    background: #E27D60;
 }
+
 .page {
     margin: 50px;
 }
+
+
+.button {
+    background: #76C2C9;
+    color: #23282F;
+    margin: 0.25rem;
+    font-size: 1.25rem;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: .15rem;
+  }
+
+  .btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #FABDCE;
+  }
