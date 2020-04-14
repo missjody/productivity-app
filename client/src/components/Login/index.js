@@ -22,8 +22,6 @@ export default () => {
 	}
 
 	const handleSubmit = event => {
-		console.log('sign-up handleSubmit, username: ')
-		console.log(loginState.username)
 		event.preventDefault()
 
 		//request to server to add a new username/password
@@ -32,7 +30,7 @@ export default () => {
 				console.log(response)
 				response.err ? console.log(response.msg) :
 					setUser(response.data);
-				history.push("/")
+				history.push("/goals")
 			}).catch(error => {
 				console.log(error)
 			})
