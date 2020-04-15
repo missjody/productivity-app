@@ -162,7 +162,31 @@ class Pomodoro extends React.Component {
   render() {
     return (
       <div>
-        <div className="row" style={{ paddingTop: 100, paddingLeft: 100 }}>
+
+        <div className="row">
+          <div className="col s-8 push-s4 parent">
+            <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long a task will take to complete by recording how you utilize your time."<br />
+            --Francesco Cirillo</h5>
+            <img src="./images/phone.png" className="time-image" />
+            <h1 className="time-child">Live for each moment</h1>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col s-8 push-s4">
+            <p>In the 1980s Francesco Cirillo developed the Pomodoro Technique.</p>
+            <p>Per his website, the instructions are:<br />
+            1) Decide on your task.<br />
+            2) Set the timer.<br />
+            3) Focus on the task.<br />
+            4) Stop when the timer rings and put a checkmark on a piece of paper.<br />
+            5) If you have fewer than four checkmarks, take a short break, then go to step 2. <br />
+            6) After 4 checks take a longer break, and reset.</p>
+          </div>
+        </div>
+
+
+        <div className="row" style={{ paddingLeft: 100 }}>
           <div></div>
           <ShortBreak shortBreak={this.shortBreak} />
           <Session session={this.session} />
