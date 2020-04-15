@@ -18,12 +18,6 @@ export default () => {
     const [modGoals, setModGoals] = useState(goals);
     console.log("Goals from calendar page: ", goals);
     useEffect(() => {
-        // API.getGoals()
-        //     .then(res => {
-        //         console.log(res.data)
-        //     })
-        //     .catch(err => console.log(err));
-    
         console.log(goals)
         const tasks = [];
         goals.map(goal => goal.Tasks.map(a => {
@@ -75,6 +69,7 @@ export default () => {
     }
     
     const onEventDrop = ({ event, start, end }) => {
+
         let newEvents = calendarEvent.events;
         newEvents[event.id].start = start;
         newEvents[event.id].end = end;
@@ -87,7 +82,6 @@ export default () => {
     }
 
     return (
-
         <div className="Calendar">
             <DnDCalendar
                 defaultDate={moment().toDate()}
