@@ -1,5 +1,5 @@
 const db = require("../models");
-
+const passport = require('../config/passport')
 // Defining methods for the userController
 module.exports = {
     findAll: function (req, res) {
@@ -25,7 +25,9 @@ module.exports = {
         newUser.password = newUser.generateHash(req.body.password);
         db.User
             .create(newUser)
-            .then(dbModel => res.json(dbModel))
+            .then(dbModel => 
+               res.redirect(307, '/api/user/login'))
+                // res.json(dbModel)})
             .catch(err => res.status(422).json(err));
     },
     update: function (req, res) {

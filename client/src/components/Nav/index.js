@@ -24,9 +24,7 @@ function Nav(props) {
         <li><Link to="/pomodor">My Time</Link></li>
         <li><Link to="/mysoul">My Soul</Link></li>
         {/* <li><Link to="#">My Food</Link></li> */}
-        {/* <li><Link to="/signup" >{user ? 'Log Out' : 'Sign Up/Log In'}</Link></li> */}
         {props.isLoggedIn ? (<li><a className="nav-link" onClick={handleLogout}>Logout</a></li>) : (<li><Link to="/signup" >Sign Up/Log In</Link></li>)}
-        {/* <li><a className="nav-link" onClick={handleLogout}>Logout</a></li> */}
       </ul>
     </nav>
   );

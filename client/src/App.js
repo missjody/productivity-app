@@ -24,15 +24,25 @@ function App() {
         if (res.data.user) {
           console.log("who are you?", res.data.user)
           setIsLoggedIn(true)
+          loadGoals()
         }
       })
       .catch(e => {
         console.log('error', e)
       })
-  })
+  },[])
+
+  const loadGoals =()=>{
+     API.getGoals()
+      .then(res => {
+          setGoals(res.data)
+      })
+      .catch(err => console.log(err));
+  }
   return (
     <Router>
-      <userContext.Provider value={{ user: user, setUser: setUser, setGoals: setGoals, goals: goals }}>
+      <userContext.Provider value={{ user: user, setUser: setUser, setGoals: setGoals, goals: goals, 
+        loadGoals: loadGoals, setIsLoggedIn: setIsLoggedIn }}>
         <Nav isLoggedIn={isLoggedIn} />
         <div className="page">
           <Switch>

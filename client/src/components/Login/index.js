@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react'
 import userContext from '../../utils/userContext';
-import { useHistory } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import API from '../../utils/API'
 
 export default () => {
-	let history = useHistory();
+	// let history = useHistory();
 	const [loginState, setLoginState] = useState({
 		username: '',
 		password: '',
@@ -12,7 +12,7 @@ export default () => {
 		login: 0
 	})
 
-	const { user, setUser } = useContext(userContext)
+	const { user, setUser, setIsLoggedIn } = useContext(userContext)
 
 	const handleChange = event => {
 		setLoginState({
@@ -30,14 +30,14 @@ export default () => {
 				console.log(response)
 				response.err ? console.log(response.msg) :
 					setUser(response.data);
-				history.push("/goals")
+					setIsLoggedIn(true)
 			}).catch(error => {
 				console.log(error)
 			})
 	}
 
 	return (
-		<div className="SignupForm">
+		user ? <Redirect to="/goals"/> : <div className="SignupForm">
 			<h4>{loginState.login ? 'Log In' : 'Sign up'}</h4>
 
 			<button className="btn btn-primary button" onClick={() => setLoginState({ ...loginState, login: !loginState.login })}>

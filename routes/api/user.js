@@ -49,6 +49,7 @@ router.post("/logout", (req, res) => {
 });
 
 router.post("/login", passport.authenticate('local'), (req, res) => {
+    console.log('logging in...')
     res.json(req.user)
 })
 

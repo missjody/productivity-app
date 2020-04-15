@@ -13,6 +13,7 @@ module.exports = {
     },
     findById: function (req, res) {
         // console.log("req.user", req.user)
+        console.log('NWA Straight outta compton')
         db.Goal
             .find({ author: req.user._id })
             .sort({ date: -1 })
@@ -21,7 +22,6 @@ module.exports = {
     },
     create: function (req, res) {
         req.body.author = req.user._id
-        // console.log("req._passport req._passport._id", req.user)
         db.Goal.create(req.body)
             .then((dbModel) => {
                 res.json(dbModel);
@@ -91,7 +91,6 @@ module.exports = {
     },
     removeTask: function (req, res) {
         console.log("task ID: ", req.body._id)
-        // console.log("return: ", req.body.Tasks[0].completed)
         db.Goal
             .update(
                 {},
