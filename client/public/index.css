@@ -65,6 +65,23 @@ p {
 
 /* My Goals styling */
 
+
+/* Goal Image */
+
+.goal-image {
+  width: 52rem;
+  margin-top: -4.28rem;
+}
+
+.goal-child {
+  position: absolute;
+  margin-top: -10.5rem;
+  left: -10.5rem;
+  right: auto;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #cbad4c;
+}
+
 /* Goals styling */
 
 .blue {
@@ -73,6 +90,11 @@ p {
 
 .blue.lighten-4 {
   background-color: #F6e1A9 !important;
+}
+
+.btn.disabled, .disabled.btn-large, .disabled.btn-small, .btn-floating.disabled, .btn-large.disabled, .btn-small.disabled, .btn-flat.disabled, .btn:disabled, .btn-large:disabled, .btn-small:disabled, .btn-floating:disabled, .btn-large:disabled, .btn-small:disabled, .btn-flat:disabled, .btn[disabled], .btn-large[disabled], .btn-small[disabled], .btn-floating[disabled], .btn-large[disabled], .btn-small[disabled], .btn-flat[disabled] {
+  background-color: #7a7376 !important;
+  color: #4b575A !important;
 }
 
 .buttonGold {
@@ -87,6 +109,19 @@ p {
 .containerGoal {
   padding:1.25rem;
 }
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  border-bottom: 1px solid #cbad4c;
+  font-family: 'Aleo', serif;
+}
+
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #cbad4c;
+  -webkit-box-shadow: 0 1px 0 0 #cbad4c;
+  box-shadow: 0 1px 0 0 #cbad4c;
+}
+
 
 .padding20 {
   padding: 1.25rem !important;
@@ -142,13 +177,13 @@ p {
 /* My Plan Styling */
 
 .Calendar {
-  background-color: #DEB25C;
-  /* border: 1px solid #DEB25C !important; */
+  background-color: #e27d60;
+  border: 1px solid #0a818c !important;
 }
 
-/* .rbc-day-bg + .rbc-day-bg {
-  border: 1px solid #DEB25C !important;
-} */
+.rbc-day-bg + .rbc-day-bg {
+  border: 1px solid #0a818c !important;
+}
 
 .rbc-off-range-bg {
   background: #74A9B6 !important;
@@ -156,35 +191,39 @@ p {
 }
 
 .rbc-today {
-  background-color: #9ce5db !important;
+  background-color: #deb25c !important;
 }
 
 .rbc-toolbar button {
-  /* border: 1px solid #DEB25C !important; */
+  border: 1px solid #0a818c !important;
   font-family: 'Josefin Sans', sans-serif;
   color: #4B575A;
 }
 
-/* .rbc-header + .rbc-header {
-  border: 1px solid #DEB25C !important;
-} */
+.rbc-header + .rbc-header {
+  border: 1px solid #0a818c !important;
+}
 
-/* .rbc-month-view {
-  border: 1px solid #DEB25C !important;
-} */
+.rbc-month-view , .rbc-header, .rbc-month-row ,
+.rbc-time-content, .rbc-time-header, .rbc-overflowing, .rbc-day-slot, .rbc-time-slot,
+.rbc-time-view, .rbc-timeslot-group, .rbc-time-header-content, 
+.rbc-agenda-view table.rbc-agenda-table {
+  border: 1px solid #0a818c !important;
+}
 
-button.rbc-active {
+.rbc-toolbar button:active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button.rbc-active:focus, button.rbc-active {
   background-color: #DEB25C !important;
 }
 
 .rbc-event {
-  background-color: #b47f89 !important;
+  background-color: #0a818c !important;
+  color: #ffcb5c !important;
 }
 
 
-/* .rbc-time-content > * + * > * {
-  border: 1px solid #DEB25C !important;
-} */
+.rbc-time-content > * + * > * {
+  border: 1px solid #0a818c !important;
+}
 
 /* My Time styling */
 
@@ -195,6 +234,30 @@ button.rbc-active {
   font-size: 1.25rem;
   font-family: 'Josefin Sans', sans-serif;
   padding-top: .15rem;
+}
+
+.time-child {
+  position: absolute;
+  margin-top: -5.5rem;
+  left: -26rem;
+  right: auto;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #e05d55;
+}
+
+.time-image {
+  width: 42.666rem;
+  margin-top: -3.15rem;
+}
+
+.time-quote {
+  position: absolute;
+  margin-top: 10.75rem;
+  right: auto;
+  left: 0.938rem;
+  padding: .75rem;
+  font-family: 'Aleo', serif;
+  color: #FFF5e8;
 }
 
 /* My Soul styling */
