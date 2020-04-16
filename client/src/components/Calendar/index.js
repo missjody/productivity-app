@@ -7,6 +7,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import userContext from "../../utils/userContext";
 import Tasks from '../Tasks';
 import API from '../../utils/API'
+import './index.css'
 const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
 const DnDtasks = withDragAndDrop(Tasks);
@@ -90,8 +91,8 @@ export default () => {
                 events={calendarEvent.events}
                 onEventDrop={onEventDrop}
                 onEventResize={onEventResize}
-                resizable
-                style={{ height: "100vh" }}
+                // resizable
+                style={{ height: "70vh" }}
             />
         </div>
     )
