@@ -3,6 +3,10 @@ body {
   background: #FFF5e8;
  }
 
+ .btn-floating, .btn-floating:hover {
+   background-color: #e59d89;
+ }
+
 html {
   font-family: 'Josefin Sans', sans-serif;
   color: #4B575A;
@@ -16,21 +20,40 @@ nav {
     font-size: 2rem;
 }
 
-nav ul a, nav a {
+nav ul a, nav a, nav .brand-logo {
     color: #164964;
 }
+
+/* #slide-out {
+  display: block";
+} */
+
+/* Side Nav */
+
+.sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
+.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
+  color: #164964 !important;
+  background-color: #E59D89 !important;
+}
+
+
+/* Overall Style  */
 
 .page {
     margin: 3.125rem;
 }
 
 .button {
-  background: #e59d89;
+  background-color: #e59d89;
   color: #4B575A;
   margin: 0.25rem;
   font-size: 1.25rem;
   font-family: 'Josefin Sans', sans-serif;
   padding-top: .15rem;
+  
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
@@ -61,7 +84,15 @@ p {
 
 /* Sign In styling */
 
+button:focus {
+  outline: none;
+  background-color: #e59d89;
+}
 
+.sign-image {
+  width: 35rem;
+  margin-top: -3rem;
+}
 
 /* My Goals styling */
 
@@ -69,17 +100,29 @@ p {
 /* Goal Image */
 
 .goal-image {
-  width: 52rem;
-  margin-top: -4.28rem;
+  width: 42.666rem;
+  margin-top: -7.5rem;
 }
 
 .goal-child {
   position: absolute;
-  margin-top: -10.5rem;
-  left: -10.5rem;
+  margin-top: -5.5rem;
+  left: -10rem;
   right: auto;
   font-family: 'Josefin Sans', sans-serif;
   color: #cbad4c;
+}
+
+.goal-quote {
+  background-color:rgba(0, 0, 0, 0.5);
+  position: absolute;
+  margin-top: 4rem;
+  margin-right: .75rem;
+  right: auto;
+  left: .85rem;
+  padding: .75rem;
+  font-family: 'Aleo', serif;
+  color: #FFF5e8;
 }
 
 /* Goals styling */
@@ -98,12 +141,16 @@ p {
 }
 
 .buttonGold {
-  background: #deb25c;
+  background-color: #deb25c;
   color: #4B575A;
   margin: 0.25rem;
   font-size: 1.25rem;
   font-family: 'Josefin Sans', sans-serif;
   padding-top: .15rem;
+
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
 }
 
 .containerGoal {
@@ -194,10 +241,14 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   background-color: #deb25c !important;
 }
 
+.rbc-toolbar {
+  color: white !important;
+}
+
 .rbc-toolbar button {
   border: 1px solid #0a818c !important;
   font-family: 'Josefin Sans', sans-serif;
-  color: #4B575A;
+  color: white !important;
 }
 
 .rbc-header + .rbc-header {
@@ -217,7 +268,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 .rbc-event {
   background-color: #0a818c !important;
-  color: #ffcb5c !important;
+  color: white !important;
 }
 
 
@@ -228,36 +279,52 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 /* My Time styling */
 
 .buttonPom {
-  background: #8fc870;
+  background-color: #8fc870;
   color: #4B575A;
   margin: 0.25rem;
   font-size: 1.25rem;
   font-family: 'Josefin Sans', sans-serif;
   padding-top: .15rem;
+  
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
+}
+
+.pomPad {
+  padding-left: 1rem;
+   padding-top: .25rem;
 }
 
 .time-child {
   position: absolute;
   margin-top: -5.5rem;
-  left: -26rem;
-  right: auto;
+  left: auto;
+  right: -16rem;
   font-family: 'Josefin Sans', sans-serif;
-  color: #e05d55;
+  color: rgb(189, 198, 201);
 }
 
 .time-image {
-  width: 42.666rem;
+  width: 41 rem;
   margin-top: -3.15rem;
 }
 
 .time-quote {
+  background-color:rgba(0, 0, 0, 0.5);
   position: absolute;
-  margin-top: 10.75rem;
+  margin-top: 15rem;
   right: auto;
   left: 0.938rem;
   padding: .75rem;
   font-family: 'Aleo', serif;
   color: #FFF5e8;
+  margin-right: .75rem;
+}
+
+.timer {
+  font-size: 100px;
+  margin-left: -5rem;
 }
 
 /* My Soul styling */
@@ -315,8 +382,10 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 }
 
 .quote {
+  background-color:rgba(0, 0, 0, 0.5);
   position: absolute;
   margin-top: 7.813rem;
+  margin-right: .75rem;
   right: auto;
   left: 0.938rem;
   padding: .75rem;
@@ -329,8 +398,90 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 }
 
 
+/* @Media set up */
+
+@media screen and (max-width: 1045px) {
+ .goal-quote {
+   margin-top:-1rem;
+ }
+}
+
 @media screen and (max-width: 865px) { 
  .child {
    right: 60px;
  }
 } 
+
+@media screen and (max-width: 768px) {
+  .goal-quote {
+    margin-top:-5rem;
+  }
+
+  .goal-child {
+    left: 2rem;
+    right: auto;
+  }
+
+  .time-child {
+    position: absolute;
+    margin-top: -5.5rem;
+    left: auto;
+    right: -5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #e27d60;
+  }
+
+}
+
+ @media screen and (max-width: 690px) {
+  .goal-quote, .time-quote {
+    display: none;
+  }
+
+
+
+  .goal-child{
+    /* left: -6rem;
+    right: auto; */
+    font-size: 3rem;
+  }
+ }
+
+@media screen and (max-width: 425px) {
+  .goal-quote {
+    display: none;
+  }
+
+  .goal-child {
+    left: 1rem;
+    right: auto;
+    font-size: 2rem;
+  }
+
+  .time-child {
+    left: auto;
+    right: -3rem;
+    font-size: 2.5rem;
+  }
+
+  .page {
+    margin: 3.125rem 0.125rem 3.125rem 0.125rem;
+  }
+ 
+
+  .timer {
+  font-size: 100px;
+  margin-left: -9rem;
+  }
+
+  .pomPad {
+    padding-left: auto;
+     padding-top: auto;
+  }
+
+  /* p {
+    font-size: 1rem;
+  } */
+
+  
+}

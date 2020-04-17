@@ -30,18 +30,22 @@ export default () => {
 				console.log(response)
 				response.err ? console.log(response.msg) :
 					setUser(response.data);
-					setIsLoggedIn(true)
+				setIsLoggedIn(true)
 			}).catch(error => {
 				console.log(error)
 			})
 	}
 
 	return (
-		user ? <Redirect to="/goals"/> : <div className="SignupForm">
+		user ? <Redirect to="/goals" /> : <div className="SignupForm">
+			<div className="col s-8 parent">
+				<img src="./images/keyboard.png" className="sign-image responsive-img" />
+			</div>
 			<h4>{loginState.login ? 'Log In' : 'Sign up'}</h4>
 
 			<button className="btn btn-primary button" onClick={() => setLoginState({ ...loginState, login: !loginState.login })}>
-				{loginState.login ? 'New user? Sign up now!' : 'Already have an account? Log In!'}
+				{loginState.login ? 'Sign up now!' : 'Log In!'}
+				{/* shortened to help button on mobile => 'New user? Sign up now!' : 'Already have an account? Log In!' */}
 			</button>
 			<form className="form-horizontal">
 				<div className="form-group">

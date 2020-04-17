@@ -40,7 +40,7 @@ class SongSelector extends Component {
               <Row>
                 <div className="col s-8 pull-s1 parent">
                   <h5 className="quote" >"Meditation brings many benefits: It refreshes us, helps us settle into what’s happening now, makes us wiser and gentler, helps us cope in a world that overloads us with information and communication, and more."<br />--Gayathri Sooraj</h5>
-                  <img src="./images/soul1.png" className="soul-image" />
+                  <img src="./images/soul1.png" className="soul-image responsive-img" />
                   <h1 className="child">My Soul</h1>
                 </div>
               </Row>

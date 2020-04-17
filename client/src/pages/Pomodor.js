@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row } from "../components/Grid";
 
 class Timer extends React.Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
-        <h1 style={{ fontSize: 100 }}>{this.props.time}:{this.props.seconds}</h1>
+        <h1 className="timer">{this.props.time}:{this.props.seconds}</h1>
       </div>
     );
   }
@@ -64,9 +65,9 @@ class StartButton extends React.Component {
 
   render() {
     return (
-      <div style={{ marginRight: 5 }}>
-        <button className="btn buttonPom" onClick={this.props.startCountDown}>Start</button>
-      </div>
+      // <div style={{ marginRight: 5 }}>
+      <button className="btn buttonPom" onClick={this.props.startCountDown}>Start</button>
+      // </div>
     );
   }
 }
@@ -74,9 +75,9 @@ class StartButton extends React.Component {
 class StopButton extends React.Component {
   render() {
     return (
-      <div style={{ marginRight: 5, marginLeft: 30 }}>
-        <button className="btn buttonPom" onClick={this.props.stopCountDown}>Stop</button>
-      </div>
+      // <div style={{ marginRight: 5, marginLeft: 30 }}>
+      <button className="btn buttonPom" onClick={this.props.stopCountDown}>Stop</button>
+      // </div>
     );
   }
 }
@@ -161,50 +162,58 @@ class Pomodoro extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="test">
+        <div className="container">
 
-        <div className="row">
-          <div className="col s-8 push-s4 parent">
-            <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long a task will take to complete by recording how you utilize your time."<br />
+          <div>
+
+            <Row>
+              <div className="col s-8 pull-s1 parent">
+                <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long a task will take to complete by recording how you utilize your time."<br />
             --Francesco Cirillo</h5>
-            <img src="./images/phone.png" className="time-image" />
-            <h1 className="time-child">Live for each moment</h1>
-          </div>
-        </div>
+                <img src="./images/phone.png" className="time-image responsive-img" />
+                <h1 className="time-child">Live for each moment</h1>
+              </div>
+            </Row>
 
-        <div className="row">
-          <div className="col s-8 push-s4">
-            <p>In the 1980s Francesco Cirillo developed the Pomodoro Technique.</p>
-            <p>Per his website, the instructions are:<br />
+            <Row>
+              <div className="col s-8 pull-s1">
+                <p>In the 1980s Francesco Cirillo developed the Pomodoro Technique.</p>
+                <p>Per his website, the instructions are:<br />
             1) Decide on your task.<br />
             2) Set the timer.<br />
             3) Focus on the task.<br />
             4) Stop when the timer rings and put a checkmark on a piece of paper.<br />
             5) If you have fewer than four checkmarks, take a short break, then go to step 2. <br />
             6) After 4 checks take a longer break, and reset.</p>
-          </div>
-        </div>
+              </div>
+            </Row>
 
 
-        <div className="row" style={{ paddingLeft: 100 }}>
-          <div></div>
-          <ShortBreak shortBreak={this.shortBreak} />
-          <Session session={this.session} />
-          <LongBreak longBreak={this.longBreak} />
-        </div>
-        <div className="row" style={{ paddingLeft: 50 }}>
-          <div className="col s4"></div>
-          <div className="col s4">
-            <Timer time={this.state.time} seconds={this.state.seconds} />
+            <div className="row pomPad">
+              <div></div>
+              <ShortBreak shortBreak={this.shortBreak} />
+              <Session session={this.session} />
+              <LongBreak longBreak={this.longBreak} />
+            </div>
+            <div className="row pomPad">
+              {/* <div className="col s4"></div> */}
+
+              <div></div>
+              <div className="col s4">
+                <StartButton startCountDown={this.startCountDown} />
+              </div>
+              <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
+              <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
+            </div>
+            <div className="row">&nbsp;</div>
+            {/* <div className="row" style={{ paddingLeft: 100 }}>
+              <div className="col s4"></div>
+            </div> */}
           </div>
-        </div>
-        <div className="row">&nbsp;</div>
-        <div className="row" style={{ paddingLeft: 100 }}>
-          <div className="col s4"></div>
-          <StopButton stopCountDown={this.stopCountDown} />
-          <StartButton startCountDown={this.startCountDown} />
         </div>
       </div>
+
     );
   }
 }
