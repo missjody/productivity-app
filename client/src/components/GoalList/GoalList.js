@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 // import API from '../../utils/API'
+import { Col, Row } from "../Grid";
 import "./GoalList.css"
 import TaskForm from "../TaskForm/TaskForm"
 import Collapsible from "../collapsible/collapsible"
@@ -31,15 +32,20 @@ export default function GoalList(props) {
 
     }
     return (
-        <div className="goalList">
-            <h5><b>Goal: {props.goal}</b>   <button className="btn btn-primary buttonGold" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
-            <p>Click the progress bar to add tasks</p>
-            <Collapsible percentage={percentage} tasks={props.tasks} goalId={props.goalId} loadGoals={props.loadGoals} formObject={props.formObject} handleTaskFormSubmit={props.handleTaskFormSubmit} handleInputChange={props.handleInputChange} />
-            {/* <div className="progress">
+        <Col size="sm-12 l-12">
+            <Row>
+                <div className="goalList">
+                    <h5><b>Goal: {props.goal}</b>   <button className="btn btn-primary buttonGold" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
+                    <p>Click the progress bar to add tasks</p>
+                    <Collapsible percentage={percentage} tasks={props.tasks} goalId={props.goalId} loadGoals={props.loadGoals} formObject={props.formObject} handleTaskFormSubmit={props.handleTaskFormSubmit} handleInputChange={props.handleInputChange} />
+                    {/* <div className="progress">
                 <div className="determinate" style={{ width: percentage(props.tasks) }}>{percentage(props.tasks)}</div>
             </div>
             <h5><b>Goal: {props.goal}</b>   <button onClick={() => props.deleteGoal(props.goalId)}>I give up</button></h5>
             <TaskForm tasks={props.tasks} goalId={props.goalId} loadGoals={props.loadGoals} formObject={props.formObject} handleTaskFormSubmit={props.handleTaskFormSubmit} handleInputChange={props.handleInputChange} /> */}
-        </div >
+                </div >
+
+            </Row>
+        </Col>
     )
 }
