@@ -1,44 +1,19 @@
-/* Overall stays the same */
+/************************ 
+Index CSS
+************************/
+
 body {
   background: #FFF5e8;
- }
+}
 
- .btn-floating, .btn-floating:hover {
-   background-color: #e59d89;
- }
+.btn-floating, .btn-floating:hover {
+  background-color: #e59d89;
+}
 
 html {
   font-family: 'Josefin Sans', sans-serif;
   color: #4B575A;
 }
-
-/* Navigation Bar CSS */
-nav {
-    padding: 0 40px;
-    background:#E59D89;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2rem;
-}
-
-nav ul a, nav a, nav .brand-logo {
-    color: #164964;
-}
-
-
-/* #slide-out {
-  display: block";
-} */
-
-/* Side Nav */
-
-.sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
-.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
-  color: #164964 !important;
-  background-color: #E59D89 !important;
-}
-
-
-/* Overall Style  */
 
 .page {
     margin: 3.125rem;
@@ -83,14 +58,42 @@ p {
   color: #164964;
 }
 
-/* Home Page styling */
+/************************
+ Navigation Bar CSS 
+************************/
+
+nav {
+    padding: 0 40px;
+    background:#E59D89;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+}
+
+nav ul a, nav a, nav .brand-logo {
+    color: #164964;
+}
+
+/* Side Nav */
+
+.sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
+.sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
+  color: #164964 !important;
+  background-color: #E59D89 !important;
+}
+
+/************************ 
+  Home Page styling 
+************************/
+
 .home-image {    
   width: 20rem;
   margin-top: 11rem;
   margin-left: 15%;
 }
 
-/* Sign In styling */
+/************************
+   Sign In styling 
+************************/
 
 button:focus {
   outline: none;
@@ -107,8 +110,10 @@ button:focus {
   margin-bottom: 3.5rem;
 }
 
-/* My Goals styling */
 
+/************************ 
+  My Goals styling 
+************************/
 
 /* Goal Image */
 
@@ -234,7 +239,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   position: relative;
 }
 
-/* My Plan Styling */
+/************************
+   My Plan Styling 
+************************/
 
 .Calendar {
   background-color: #e27d60;
@@ -290,7 +297,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   border: 1px solid #0a818c !important;
 }
 
-/* My Time styling */
+/************************
+   My Time styling 
+************************/
 
 .buttonPom {
   background-color: #8fc870;
@@ -341,7 +350,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   margin-left: -5rem;
 }
 
-/* My Soul styling */
+/************************
+   My Soul styling 
+************************/
 
 #breathCircle {
   width: 6.25rem;
@@ -380,8 +391,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 .button-child {
     position: absolute;
     margin-top: -2rem;
-    /* left: auto; */
-    /* right: 225px; */
     font-family: 'Josefin Sans', sans-serif;
     color: #4B575A;
 }
@@ -412,7 +421,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 }
 
 
-/* @Media set up */
+/************************ 
+  @Media set up
+************************/
 
 @media screen and (max-width: 1024px) {
  .goal-quote {
@@ -457,11 +468,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     left: auto;
     right: -10rem;
     font-family: 'Josefin Sans', sans-serif;
-    /* color: #e27d60; */
   }
-
-  
-
 }
    
 @media screen and (max-width: 425px) {
@@ -474,6 +481,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   .dyn-button {
     margin-left: 10rem;
   }
+
   .child {
     color: #e27d60;
     right: auto;
@@ -514,14 +522,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
      padding-top: auto;
   }
 
-
-
+  .Calendar {
+    position: relative;
 }
 
-@media only screen and (max-width: 425px){
-  .Calendar {
-      width: 120%!important;
-      position: relative;
-      left: -10%;
-  }
 }
