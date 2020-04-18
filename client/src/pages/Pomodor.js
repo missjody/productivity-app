@@ -169,7 +169,7 @@ class Pomodoro extends React.Component {
 
             <Row>
               <div className="col s-8 pull-s1 parent">
-                <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long a task will take to complete by recording how you utilize your time."<br />
+                <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
             --Francesco Cirillo</h5>
                 <img src="./images/phone.png" className="time-image responsive-img" />
                 <h1 className="time-child">Live for each moment</h1>
@@ -190,23 +190,26 @@ class Pomodoro extends React.Component {
             </Row>
 
 
-            <div className="row pomPad">
-              <div></div>
-              <ShortBreak shortBreak={this.shortBreak} />
-              <Session session={this.session} />
-              <LongBreak longBreak={this.longBreak} />
-            </div>
-            <div className="row pomPad">
-              {/* <div className="col s4"></div> */}
+            <div className="goalList">
 
-              <div></div>
-              <div className="col s4">
-                <StartButton startCountDown={this.startCountDown} />
+              <div className="row pomPad">
+                <div></div>
+                <ShortBreak shortBreak={this.shortBreak} />
+                <Session session={this.session} />
+                <LongBreak longBreak={this.longBreak} />
               </div>
-              <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
-              <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
+              <div className="row pomPad">
+                {/* <div className="col s4"></div> */}
+
+                <div></div>
+                <div className="col s4">
+                  <StartButton startCountDown={this.startCountDown} />
+                </div>
+                <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
+                <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
+              </div>
+              <div className="row">&nbsp;</div>
             </div>
-            <div className="row">&nbsp;</div>
             {/* <div className="row" style={{ paddingLeft: 100 }}>
               <div className="col s4"></div>
             </div> */}

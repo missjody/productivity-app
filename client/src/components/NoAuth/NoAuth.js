@@ -7,7 +7,7 @@ import Login from "../Login"
 function NoAuth() {
     return (
         <div>
-            <h1>Please Login or Signup!!</h1>
+            <h1 id="noAuth">Please Login or Signup!!</h1>
             <Login />
         </div>
     )
