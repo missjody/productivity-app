@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import API from "../../utils/API";
-// import Tasks from "../Tasks/Tasks"
-
-// import "./TaksForm.css"
 
 function TaskForm(props) {
     // Setting our component's initial state
-    const [task, setTask] = useState([])
-    // const [goal, setGoal] = useState([])
-    const [targetDate, setTargetDate] = useState([])
     const [formObject, setFormObject] = useState({})
 
     // Handles updating component state when the user types into the input field
@@ -17,8 +11,7 @@ function TaskForm(props) {
         setFormObject({ ...formObject, [name]: value })
     };
 
-    // When the form is submitted, use the API.saveBook method to save the book data
-    // Then reload books from the database
+    // Add Task and rerender page 
     function handleTaskFormSubmit(event) {
         event.preventDefault();
         console.log("from task from", props.tasks)
@@ -42,20 +35,18 @@ function TaskForm(props) {
     };
     const finishTask = (item) => {
 
-        // console.log("here", item)
+        console.log("here", item)
         var GoalId = props.goalId;
         var TaskId = item._id;
         var pastTask = {
             name: item.name,
             createdAt: item.createdAt,
             targetDate: item.targetDate,
-            completed: !item.complete,
-            _id: item._id
+            complete: !item.complete,
+            _id: item._id,
+            completeTime: new Date()
         };
-        // console.log("Past Task: ", pastTask)
-        // console.log("what is the opposite? ", item.completed === true ? false : true)
-        // console.log("what is the opposite? ", pastTask.completed, item.complete)
-        // console.log("task", task)
+
         API.completeTask(GoalId, {
             _id: TaskId,
             Tasks: [{
@@ -75,11 +66,9 @@ function TaskForm(props) {
             name: item.name,
             createdAt: item.createdAt,
             targetDate: item.targetDate,
-            completed: item.complete,
+            complete: item.complete,
             _id: item._id
         };
-        // console.log("Past Task: ", pastTask)
-        // console.log("task", task)
         API.removeTask(GoalId, {
             _id: TaskId,
             Tasks: [{
