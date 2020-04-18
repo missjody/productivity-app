@@ -6,8 +6,8 @@ import SignUpLogin from "./components/Login";
 import NoMatch from "./pages/NoMatch";
 import Goals from "./pages/Goals";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import NoAuth from "./components/NoAuth/NoAuth";
+import HomePage from "./pages/HomePage";
 import Soul from "./pages/Soul";
 import userContext from './utils/userContext';
 import API from './utils/API';
@@ -30,23 +30,28 @@ function App() {
       .catch(e => {
         console.log('error', e)
       })
-  },[])
+  }, [])
 
-  const loadGoals =()=>{
-     API.getGoals()
+  const loadGoals = () => {
+    API.getGoals()
       .then(res => {
-          setGoals(res.data)
+        setGoals(res.data)
       })
       .catch(err => console.log(err));
   }
   return (
     <Router>
-      <userContext.Provider value={{ user: user, setUser: setUser, setGoals: setGoals, goals: goals, 
-        loadGoals: loadGoals, setIsLoggedIn: setIsLoggedIn }}>
+      <userContext.Provider value={{
+        user: user, setUser: setUser, setGoals: setGoals, goals: goals,
+        loadGoals: loadGoals, setIsLoggedIn: setIsLoggedIn
+      }}>
         <Nav isLoggedIn={isLoggedIn} />
         <div className="page">
           <Switch>
-            <Route exact path={["/", "/signup"]}>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route exact path="/signup">
               <SignUpLogin />
             </Route>
             <Route exact path="/pomodor">

@@ -24,6 +24,7 @@ nav ul a, nav a, nav .brand-logo {
     color: #164964;
 }
 
+
 /* #slide-out {
   display: block";
 } */
@@ -82,6 +83,13 @@ p {
   color: #164964;
 }
 
+/* Home Page styling */
+.home-image {    
+  width: 20rem;
+  margin-top: 11rem;
+  margin-left: 15%;
+}
+
 /* Sign In styling */
 
 button:focus {
@@ -92,6 +100,11 @@ button:focus {
 .sign-image {
   width: 35rem;
   margin-top: -3rem;
+}
+
+#noAuth {
+  margin-top: .5rem;
+  margin-bottom: 3.5rem;
 }
 
 /* My Goals styling */
@@ -300,26 +313,26 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   position: absolute;
   margin-top: -5.5rem;
   left: auto;
-  right: -16rem;
+  right: -3.5rem;
   font-family: 'Josefin Sans', sans-serif;
   color: rgb(189, 198, 201);
 }
 
 .time-image {
-  width: 41 rem;
   margin-top: -3.15rem;
+  height: 65%;
+  width: 65%;
 }
 
 .time-quote {
   background-color:rgba(0, 0, 0, 0.5);
   position: absolute;
-  margin-top: 15rem;
-  right: auto;
-  left: 0.938rem;
+  margin-top: 7rem;
+  right:13.5rem;
+  left: .85rem;
   padding: .75rem;
   font-family: 'Aleo', serif;
   color: #FFF5e8;
-  margin-right: .75rem;
 }
 
 .timer {
@@ -385,13 +398,13 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   background-color:rgba(0, 0, 0, 0.5);
   position: absolute;
   margin-top: 7.813rem;
-  margin-right: .75rem;
-  right: auto;
+  right: .75rem;
   left: 0.938rem;
   padding: .75rem;
   font-family: 'Aleo', serif;
   color: #FFF5e8;
 }
+
 
 .test {
   margin-top: 3.188rem;
@@ -400,19 +413,34 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 /* @Media set up */
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1024px) {
  .goal-quote {
    margin-top:-1rem;
  }
+
+ .time-image {
+  margin-top: -3.15rem;
+  height: 90%;
+  width: 90%;
+}
+ 
+ .time-quote {
+  margin-top: 1rem;
+  right:7.25rem;
+  left: .85rem;
+  padding: .75rem;
+  }
 }
 
-@media screen and (max-width: 865px) { 
- .child {
-   right: 60px;
- }
-} 
-
 @media screen and (max-width: 768px) {
+  .brand-logo {
+    display: none !important;
+  }
+  
+  .child {
+    color: #e27d60;
+ }
+  
   .goal-quote {
     margin-top:-5rem;
   }
@@ -426,31 +454,35 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     position: absolute;
     margin-top: -5.5rem;
     left: auto;
-    right: -5rem;
+    right: -10rem;
     font-family: 'Josefin Sans', sans-serif;
-    color: #e27d60;
+    /* color: #e27d60; */
   }
+
+  
 
 }
-
- @media screen and (max-width: 690px) {
-  .goal-quote, .time-quote {
-    display: none;
+   
+@media screen and (max-width: 425px) {
+     
+  .boldP {
+    left: auto;
+    right:auto;
   }
 
-
-
+  .child {
+    color: #e27d60;
+    right: auto;
+    left: 2rem;
+  }
+  
   .goal-child{
-    /* left: -6rem;
-    right: auto; */
     font-size: 3rem;
   }
- }
 
-@media screen and (max-width: 425px) {
-  .goal-quote {
-    display: none;
-  }
+  .goal-quote, .quote, .time-quote {
+      display: none;
+    }
 
   .goal-child {
     left: 1rem;
@@ -460,15 +492,14 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
   .time-child {
     left: auto;
-    right: -3rem;
-    font-size: 2.5rem;
+    right: 5rem;
+    font-size: 2rem;
   }
 
   .page {
     margin: 3.125rem 0.125rem 3.125rem 0.125rem;
   }
  
-
   .timer {
   font-size: 100px;
   margin-left: -9rem;
@@ -479,9 +510,14 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
      padding-top: auto;
   }
 
-  /* p {
-    font-size: 1rem;
-  } */
 
-  
+
+}
+
+@media only screen and (max-width: 425px){
+  .Calendar {
+      width: 120%!important;
+      position: relative;
+      left: -10%;
+  }
 }
