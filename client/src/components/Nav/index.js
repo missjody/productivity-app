@@ -23,6 +23,13 @@ const Nav = (props) => {
     M.Sidenav.init(sidenav, {});
   })
 
+  const handleClick = () => {
+    console.log("CLICK")
+    let sidenav = slide;
+    var instance = M.Sidenav.getInstance(sidenav);
+    instance.close();
+  }
+
 
   return (
     <div>
@@ -46,11 +53,11 @@ const Nav = (props) => {
       </nav>
 
       <ul className="sidenav right" ref={el => slide = el} id="slide-out">
-        <li><Link to="/goals">My Goals</Link></li>
-        <li><Link to="/calendar">My Plan</Link></li>
-        <li><Link to="/pomodor">My Time</Link></li>
-        <li><Link to="/mysoul">My Soul</Link></li>
-        {props.isLoggedIn ? (<li><a className="nav-link" onClick={handleLogout}>Logout</a></li>) : (<li><Link to="/signup" >Sign Up/Log In</Link></li>)}
+        <li><Link to="/goals" onClick={handleClick}>My Goals</Link></li>
+        <li><Link to="/calendar" onClick={handleClick}>My Plan</Link></li>
+        <li><Link to="/pomodor" onClick={handleClick}>My Time</Link></li>
+        <li><Link to="/mysoul" onClick={handleClick}>My Soul</Link></li>
+        {props.isLoggedIn ? (<li><a className="nav-link" onClick={handleLogout}>Logout</a></li>) : (<li><Link to="/signup" onClick={handleClick} >Sign Up/Log In</Link></li>)}
       </ul>
     </div>
   );
