@@ -22,11 +22,11 @@ export default {
     console.log("ID from utils/api", TaskData)
     return axios.put("/api/goal/" + id, TaskData);
   },
-  updateTask: function(id, TaskData){
-    return axios.put('/api/goal/taskupdate/'+id, {tId:TaskData.tId, data:TaskData})
+  updateTask: function (id, TaskData) {
+    return axios.put('/api/goal/taskupdate/' + id, { tId: TaskData.tId, data: TaskData })
   },
   completeTask: function (id, TaskData) {
-    console.log("From utils/api", TaskData)
+    console.log("From utils/api COMPLETE TASK:", TaskData)
     return axios.put("/api/goal/task/" + id, TaskData);
   },
   removeTask: function (id, TaskData) {

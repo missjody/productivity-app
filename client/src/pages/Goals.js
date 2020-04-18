@@ -9,8 +9,6 @@ import userContext from '../utils/userContext'
 
 function Goals() {
     // Setting our component's initial state
-    // const [goal, setGoal] = useState([])
-    const [targetDate, setTargetDate] = useState([])
     const [formObject, setFormObject] = useState({})
     const { goals, loadGoals, user } = useContext(userContext)
     console.log("user and goals", user, goals)
@@ -51,14 +49,15 @@ function Goals() {
     };
 
     return (
-        <div className="containerGoal ">
+        <div className="containerGoal">
             <div className="test">
                 <div className="container">
+                    <div id="congrats" className="popup hidden"><center><h2><br /><br />Congrats! <br />You did it!</h2></center></div>
 
                     <Row>
                         <div className="col s-8 parent">
                             <h5 className="goal-quote" >"If you want to be happy, set a goal that commands your thoughts, liberates your energy and inspires your hopes."<br />--Andrew Carnegie</h5>
-                            <img src="./images/hand.png" className="goal-image responsive-img" />
+                            <img src="./images/hand.png" alt="writing" className="goal-image responsive-img" />
                             <h1 className="goal-child">Set a new goal</h1>
                         </div>
                     </Row>
@@ -91,7 +90,7 @@ function Goals() {
                     <div className="row">
                         {goals.map(goal => {
                             // console.log(goals.Tasks)
-                            return <GoalList goal={goal.goal} tasks={goal.Tasks} key={goal._id} goalId={goal._id} loadGoals={loadGoals} deleteGoal={deleteGoal} />
+                            return <GoalList goal={goal} tasks={goal.Tasks} key={goal._id} goalId={goal._id} loadGoals={loadGoals} deleteGoal={deleteGoal} />
                         })}
                     </div>
 

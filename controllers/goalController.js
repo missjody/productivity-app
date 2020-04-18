@@ -64,25 +64,19 @@ module.exports = {
                 res.status(400).json(err);
             });
     },
-    updateTaskDate: function(req,res){
+    updateTaskDate: function (req, res) {
         console.log(req.body.data)
         console.log(req.body.data._id)
-        db.Goal.updateOne({"_id": req.params.id, "Tasks._id": req.body.data._id}, {$set: {"Tasks.$": req.body.data}})
-        .then(data => console.log(data))
+        db.Goal.updateOne({ "_id": req.params.id, "Tasks._id": req.body.data._id }, { $set: { "Tasks.$": req.body.data } })
+            .then(data => console.log(data))
     },
     completeTask: function (req, res) {
-        console.log("task ID: ", req.body)
-        console.log("return: ", req.body.Tasks[0].completed)
+        console.log("complete task: ", req.body, " ", req.params.id)
         db.Goal
-            .update(
-                {},
-                { $set: { "Tasks.$[complete].complete": req.body.Tasks[0].completed } },
-                {
-                    arrayFilters: [{ "complete._id": { $eq: req.body._id } }],
-                    multi: true
-                })
+            .findOneAndUpdate({ _id: req.params.id }, { completeTime: Date.now() })
+            .updateOne({ "_id": req.params.id, "Tasks._id": req.body._id }, { $set: { "Tasks.$": req.body.Tasks } })
             .then(dbModel => {
-                console.log(dbModel)
+                console.log("returned:", dbModel)
                 res.json(dbModel);
             })
             .catch(err => {
