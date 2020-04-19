@@ -39,7 +39,7 @@ export default () => {
 	return (
 		user ? <Redirect to="/goals" /> : <div className="SignupForm">
 			<div className="col s-8 parent">
-				<img src="./images/keyboard.png" className="sign-image responsive-img" />
+				<img src="./images/keyboard.png" className="sign-image responsive-img" alt="An image of a womans hands resting on a computer keyboard. The photo is composed of black and teal lines striped together to render the image." />
 			</div>
 			<h4>{loginState.login ? 'Log In' : 'Sign up'}</h4>
 

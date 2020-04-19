@@ -57,7 +57,7 @@ function Goals() {
                     <Row>
                         <div className="col s-8 parent">
                             <h5 className="goal-quote" >"If you want to be happy, set a goal that commands your thoughts, liberates your energy and inspires your hopes."<br />--Andrew Carnegie</h5>
-                            <img src="./images/hand.png" alt="writing" className="goal-image responsive-img" />
+                            <img src="./images/hand.png" alt="writing" className="goal-image responsive-img" alt="An image of a woman's hands resting on a striped pad of paper on which she has written a list of todos. The photo is composed of black and plum lines striped together to render the image." />
                             <h1 className="goal-child">Set a new goal</h1>
                         </div>
                     </Row>

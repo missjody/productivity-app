@@ -1,4 +1,7 @@
-/* Overall stays the same */
+/************************ 
+Index CSS
+************************/
+
 body {
   background: #FFF5e8;
  }
@@ -12,7 +15,53 @@ html {
   color: #4B575A;
 }
 
-/* Navigation Bar CSS */
+.page {
+  margin: 3.125rem;
+}
+
+.button {
+background-color: #e59d89;
+color: #4B575A;
+margin: 0.25rem;
+font-size: 1.25rem;
+font-family: 'Josefin Sans', sans-serif;
+padding-top: .15rem;
+
+-webkit-transition: background-color .2s ease-out;
+transition: background-color .2s ease-out;
+cursor: pointer;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+background-color: #FF8781;
+}
+
+h1, h2, h3, h4, h5, hr {
+font-family: 'Josefin Sans', sans-serif;
+color: #164964;
+}
+
+p {
+font-family: 'Josefin Sans', sans-serif;
+font-size: 1.25rem;
+color: #164964;
+padding: 0.15rem;
+}
+
+.boldP {
+font-weight: bold;
+text-align:center;
+font-family: 'Aleo', serif;
+margin-top: -2.8rem;
+margin-left: -2.8rem;
+margin-right: -2.8rem;
+color: #164964;
+}
+
+/************************
+Navigation Bar CSS 
+************************/
+
 nav {
     padding: 0 40px;
     background:#E59D89;
@@ -24,11 +73,6 @@ nav ul a, nav a, nav .brand-logo {
     color: #164964;
 }
 
-
-/* #slide-out {
-  display: block";
-} */
-
 /* Side Nav */
 
 .sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
@@ -37,60 +81,19 @@ nav ul a, nav a, nav .brand-logo {
   background-color: #E59D89 !important;
 }
 
+/************************ 
+  Home Page styling 
+************************/
 
-/* Overall Style  */
-
-.page {
-    margin: 3.125rem;
-}
-
-.button {
-  background-color: #e59d89;
-  color: #4B575A;
-  margin: 0.25rem;
-  font-size: 1.25rem;
-  font-family: 'Josefin Sans', sans-serif;
-  padding-top: .15rem;
-  
-  -webkit-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out;
-  cursor: pointer;
-}
-
-.btn:hover, .btn-large:hover, .btn-small:hover {
-  background-color: #FF8781;
-}
-
-h1, h2, h3, h4, h5, hr {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #164964;
-}
-
-p {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.25rem;
-  color: #164964;
-  padding: 0.15rem;
-}
-
-.boldP {
-  font-weight: bold;
-  text-align:center;
-  font-family: 'Aleo', serif;
-  margin-top: -2.8rem;
-  margin-left: -2.8rem;
-  margin-right: -2.8rem;
-  color: #164964;
-}
-
-/* Home Page styling */
 .home-image {    
   width: 20rem;
   margin-top: 11rem;
   margin-left: 15%;
 }
 
-/* Sign In styling */
+/************************
+   Sign In styling 
+************************/
 
 button:focus {
   outline: none;
@@ -107,8 +110,9 @@ button:focus {
   margin-bottom: 3.5rem;
 }
 
-/* My Goals styling */
-
+/************************ 
+  My Goals styling 
+************************/
 
 /* Goal Image */
 
@@ -192,6 +196,23 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   padding: 0px 10px;
 }
 
+.popup {
+  width: 400px;
+  height: 400px;
+  background: #8fc870;
+  border-radius: 50%;
+  position:absolute;
+  top: 8%;
+  right: 40%;
+  margin: 0 auto;
+  z-index: 99 !important;
+}
+
+.hidden {
+  display: none; 
+}
+
+
 /* Goal List styling */
 
 .goalList {
@@ -234,7 +255,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   position: relative;
 }
 
-/* My Plan Styling */
+/************************
+   My Plan Styling 
+************************/
 
 .Calendar {
   background-color: #e27d60;
@@ -289,7 +312,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   border: 0.25px solid #0a818c !important;
 }
 
-/* My Time styling */
+/************************
+   My Time styling 
+************************/
 
 .buttonPom {
   background-color: #8fc870;
@@ -313,7 +338,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   position: absolute;
   margin-top: -6.5rem;
   left: auto;
-  right: -1.25rem;
+  right: 7rem;
   font-family: 'Josefin Sans', sans-serif;
   color: rgb(189, 198, 201);
 }
@@ -327,9 +352,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 .time-quote {
   background-color:rgba(0, 0, 0, 0.5);
   position: absolute;
-  margin-top: 7rem;
-  right:13.5rem;
-  left: .85rem;
+  margin-top: 1rem;
+  margin-right: 23.5rem;
   padding: .75rem;
   font-family: 'Aleo', serif;
   color: #FFF5e8;
@@ -343,7 +367,10 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 .gif {
   margin-left: 4.25rem;
 }
-/* My Soul styling */
+
+/************************
+   My Soul styling 
+************************/
 
 #breathCircle {
   width: 6.25rem;
@@ -382,8 +409,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 .button-child {
     position: absolute;
     margin-top: -2rem;
-    /* left: auto; */
-    /* right: 225px; */
     font-family: 'Josefin Sans', sans-serif;
     color: #4B575A;
 }
@@ -413,8 +438,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   margin-top: 3.188rem;
 }
 
-
-/* @Media set up */
+/************************ 
+  @Media set up
+************************/
 
 @media screen and (max-width: 1024px) {
  .goal-quote {
@@ -429,9 +455,22 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
  
  .time-quote {
   margin-top: 1rem;
-  right:7.25rem;
-  left: .85rem;
+  margin-right: 5.1rem;
   padding: .75rem;
+  }
+
+  .time-child {
+    position: absolute;
+    margin-top: -6.5rem;
+    left: 13rem;
+    right: -15rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(189, 198, 201);
+  }
+
+  .gif {
+      margin-left: -22rem;
+      margin-top: 10rem;
   }
 }
 
@@ -457,20 +496,20 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     position: absolute;
     margin-top: -5.5rem;
     left: auto;
-    right: -10rem;
+    right: -6rem;
     font-family: 'Josefin Sans', sans-serif;
-    /* color: #e27d60; */
   }
-
-  
-
 }
    
 @media screen and (max-width: 425px) {
      
   .boldP {
-    left: auto;
-    right:auto;
+    margin: auto;
+    width: 75%;
+  }
+
+  .buttonPom {
+    font-size: .95rem;
   }
 
   .child {
@@ -479,6 +518,17 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     left: 2rem;
   }
   
+  .dyn-button {
+    margin-left: 10rem;
+  }
+
+  .gif {
+    margin-bottom: -4rem;
+    margin-top: 7rem;
+    margin-left: -16rem;
+    width: 23rem;
+  }
+
   .goal-child{
     font-size: 3rem;
   }
@@ -505,22 +555,16 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
  
   .timer {
   font-size: 100px;
-  margin-left: -9rem;
+  margin-left: -7rem;
   }
 
   .pomPad {
-    padding-left: auto;
+        padding-left: 0rem;
      padding-top: auto;
   }
 
-
-
-}
-
-@media only screen and (max-width: 425px){
   .Calendar {
-      width: 120%!important;
-      position: relative;
-      left: -10%;
+    position: relative;
   }
+
 }

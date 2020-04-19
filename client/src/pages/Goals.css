@@ -1,3 +1,133 @@
+/************************ 
+  My Goals styling 
+************************/
+
+/* Goal Image */
+
+/* .goal-image {
+  width: 42.666rem;
+  margin-top: -7.5rem;
+}
+
+.goal-child {
+  position: absolute;
+  margin-top: -5.5rem;
+  left: -10rem;
+  right: auto;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #cbad4c;
+}
+
+.goal-quote {
+  background-color:rgba(0, 0, 0, 0.5);
+  position: absolute;
+  margin-top: 4rem;
+  margin-right: .75rem;
+  right: auto;
+  left: .85rem;
+  padding: .75rem;
+  font-family: 'Aleo', serif;
+  color: #FFF5e8;
+} */
+
+/* Goals styling */
+
+/* .blue {
+  background-color: #b47f89 !important;
+}
+
+.blue.lighten-4 {
+  background-color: #F6e1A9 !important;
+}
+
+.btn.disabled, .disabled.btn-large, .disabled.btn-small, .btn-floating.disabled, .btn-large.disabled, .btn-small.disabled, .btn-flat.disabled, .btn:disabled, .btn-large:disabled, .btn-small:disabled, .btn-floating:disabled, .btn-large:disabled, .btn-small:disabled, .btn-flat:disabled, .btn[disabled], .btn-large[disabled], .btn-small[disabled], .btn-floating[disabled], .btn-large[disabled], .btn-small[disabled], .btn-flat[disabled] {
+  background-color: #7a7376 !important;
+  color: #4b575A !important;
+}
+
+.buttonGold {
+  background-color: #deb25c;
+  color: #4B575A;
+  margin: 0.25rem;
+  font-size: 1.25rem;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: .15rem;
+
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
+}
+
+.containerGoal {
+  padding:1.25rem;
+}
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+  border-bottom: 1px solid #cbad4c;
+  font-family: 'Aleo', serif;
+}
+
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #cbad4c;
+  -webkit-box-shadow: 0 1px 0 0 #cbad4c;
+  box-shadow: 0 1px 0 0 #cbad4c;
+}
+
+
+.padding20 {
+  padding: 1.25rem !important;
+  margin: 1.875rem;
+}
+
+.pt10 {
+  padding: 0px 10px;
+} */
+
+/* Goal List styling */
+
+/* .goalList {
+  border: 2px solid #b47f89;
+  padding: 0rem 0.625rem;
+  margin: 1.25rem 0.625rem;
+}
+
+/* Task Form styling */
+
+/* .goal {
+  border: 0.125rem solid green;
+  padding: 0.313rem;
+  /* margin: 20px 0px; */
+/* }  */
+
+/* Collapsible styling */
+
+/* .collapse {
+  display: none
+}
+
+.collapse.in {
+  display: block
+}
+
+.determinate {
+  width: 0;
+  transition: width 1s ease-in-out;
+  padding: .5rem;
+  position: relative;
+  color: #fff;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.progress {
+  min-height: 2.25rem;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
 .popup {
   width: 400px;
   height: 400px;
@@ -11,4 +141,4 @@
 }
 .hidden {
   display: none; 
-}
+} */

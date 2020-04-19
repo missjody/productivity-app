@@ -171,7 +171,7 @@ class Pomodoro extends React.Component {
               <div className="col s-8 pull-s1 parent">
                 <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
             --Francesco Cirillo</h5>
-                <img src="./images/phone.png" className="time-image responsive-img" />
+                <img src="./images/phone.png" className="time-image responsive-img" alt="An image of a woman from behind, as she holds the reciever of a black office phone to her ear. The photo is composed of black and plum lines striped together to render the image." />
                 <h1 className="time-child">Live for each moment</h1>
               </div>
             </Row>
