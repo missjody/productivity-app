@@ -185,7 +185,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   -webkit-box-shadow: 0 1px 0 0 #cbad4c;
   box-shadow: 0 1px 0 0 #cbad4c;
 }
-
+/* 
 .popup {
   width: 400px;
   height: 400px;
@@ -196,7 +196,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   right: 40%;
   margin: 0 auto;
   z-index: 99 !important;
-}
+} */
 
 .hidden {
   display: none; 

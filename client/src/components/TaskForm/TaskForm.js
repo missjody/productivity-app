@@ -83,20 +83,29 @@ function TaskForm(props) {
     return (
         <div>
             <div className="row">
-                <h6>Add a Task to get started</h6>
-                <form>
-                    <input
-                        style={{ width: "60%" }}
-                        onChange={handleInputChange}
-                        name="task"
-                        placeholder="Add a Task to get started"
-                        value={formObject.task} />
-                    <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "22%", margin: "0px 20px" }}></input>
-                    <button className="btn-small button-gold"
-                        disabled={!(formObject.task)}
-                        onClick={handleTaskFormSubmit}
-                        data-name={props.goalId}>Add a Task</button>
-                </form>
+                <div className="col s12">
+                    <form>
+                        <div className="row" style={{ marginBottom: "0 !important" }}>
+                            <div className="col s12 m12 l6" style={{ marginBottom: "0 !important" }}>
+                                <input
+                                    style={{ width: "100%" }}
+                                    onChange={handleInputChange}
+                                    name="task"
+                                    placeholder="Add a Task to get started"
+                                    value={formObject.task} />
+                            </div>
+                            <div className="col s12 m12 l3">
+                                <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "100%", margin: "0px", fontSize: ".95rem" }}></input>
+                            </div>
+                            <div className="col s12 m7 m12 l3">
+                                <button className="btn-small button-gold button-margin"
+                                    disabled={!(formObject.task)}
+                                    onClick={handleTaskFormSubmit}
+                                    data-name={props.goalId}>Add&nbsp;Task</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div className="row">
                 {props.tasks.map(item => {
