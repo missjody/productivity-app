@@ -54,7 +54,7 @@ class SongSelector extends Component {
 
               <Row>
                 <div>
-                  <p className="boldP">Choose your meditation soundtrack, and keep your breath in time with the bubble:</p>
+                  <p id="boldP">Choose your meditation soundtrack, and keep your breath in time with the bubble:</p>
                 </div>
                 <div>
                   <div value={this.props.songs.indexOf(this.props.selectedSong)} onClick={this.handleSongChange.bind(this)} className="songOptions">

@@ -48,7 +48,7 @@ color: #164964;
 padding: 0.15rem;
 }
 
-.boldP {
+#boldP {
 font-weight: bold;
 text-align:center;
 font-family: 'Aleo', serif;
@@ -157,7 +157,7 @@ button:focus {
   color: #4b575A !important;
 }
 
-.buttonGold {
+.button-gold {
   background-color: #deb25c;
   color: #4B575A;
   margin: 0.25rem;
@@ -170,7 +170,7 @@ button:focus {
   cursor: pointer;
 }
 
-.containerGoal {
+#containerGoal {
   padding:1.25rem;
 }
 
@@ -184,16 +184,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   border-bottom: 1px solid #cbad4c;
   -webkit-box-shadow: 0 1px 0 0 #cbad4c;
   box-shadow: 0 1px 0 0 #cbad4c;
-}
-
-
-.padding20 {
-  padding: 1.25rem !important;
-  margin: 1.875rem;
-}
-
-.pt10 {
-  padding: 0px 10px;
 }
 
 .popup {
@@ -212,10 +202,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   display: none; 
 }
 
-
 /* Goal List styling */
 
-.goalList {
+.goal-list {
   border: 2px solid #b47f89;
   padding: 0rem 0.625rem;
   margin: 1.25rem 0.625rem;
@@ -307,7 +296,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   color: white !important;
 }
 
-
 .rbc-time-content > * + * > * {
   border: 0.25px solid #0a818c !important;
 }
@@ -316,7 +304,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
    My Time styling 
 ************************/
 
-.buttonPom {
+.button-pom {
   background-color: #8fc870;
   color: #4B575A;
   margin: 0.25rem;
@@ -329,7 +317,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   cursor: pointer;
 }
 
-.pomPad {
+.pom-pad {
   padding-left: 1rem;
    padding-top: .25rem;
 }
@@ -393,7 +381,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   transition: 0.5s;
 }
 
-.songOptions {
+#songOptions {
   text-align:center;
 }
 
@@ -433,7 +421,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   color: #FFF5e8;
 }
 
-
 .test {
   margin-top: 3.188rem;
 }
@@ -445,13 +432,13 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 @media screen and (max-width: 1024px) {
  .goal-quote {
    margin-top:-1rem;
- }
+  }
 
  .time-image {
   margin-top: -3.15rem;
   height: 90%;
   width: 90%;
-}
+  }
  
  .time-quote {
   margin-top: 1rem;
@@ -503,12 +490,12 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
    
 @media screen and (max-width: 425px) {
      
-  .boldP {
+  #boldP {
     margin: auto;
     width: 75%;
   }
 
-  .buttonPom {
+  .button-pom {
     font-size: .95rem;
   }
 
@@ -558,7 +545,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   margin-left: -7rem;
   }
 
-  .pomPad {
+  .pom-pad {
         padding-left: 0rem;
      padding-top: auto;
   }

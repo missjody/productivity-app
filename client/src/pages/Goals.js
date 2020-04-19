@@ -49,7 +49,7 @@ function Goals() {
     };
 
     return (
-        <div className="containerGoal">
+        <div id="containerGoal">
             <div className="test">
                 <div className="container">
                     <div id="congrats" className="popup hidden"><center><h2><br /><br />Congrats! <br />You did it!</h2></center></div>
@@ -78,7 +78,7 @@ function Goals() {
                                     </div>
                                     <div className="col s12 m5">
                                         <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "200px", margin: "0px 10px" }} />
-                                        <button className="waves-effect waves-light btn-small buttonGold"
+                                        <button className="waves-effect waves-light btn-small button-gold"
                                             disabled={!(formObject.goal)}
                                             onClick={handleFormSubmit}>
                                             Submit Goal</button>
