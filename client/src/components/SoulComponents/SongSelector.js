@@ -57,7 +57,7 @@ class SongSelector extends Component {
                   <p id="boldP">Choose your meditation soundtrack, and keep your breath in time with the bubble:</p>
                 </div>
                 <div>
-                  <div value={this.props.songs.indexOf(this.props.selectedSong)} onClick={this.handleSongChange.bind(this)} className="songOptions">
+                  <div value={this.props.songs.indexOf(this.props.selectedSong)} onClick={this.handleSongChange.bind(this)} id="songOptions">
                     {options}
                   </div>
                 </div>
