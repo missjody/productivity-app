@@ -23,7 +23,7 @@ class LongBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Long Break</p>
-        <button type="button" className="btn buttonPom" onClick={this.props.longBreak}>10 minutes</button>
+        <button type="button" className="btn button-pom" onClick={this.props.longBreak}>10 minutes</button>
       </div>
     );
   }
@@ -37,7 +37,7 @@ class Session extends React.Component {
     return (
       <div className="col s4">
         <p>Session</p>
-        <button type="button" className="btn buttonPom" onClick={this.props.session}>25 minutes</button>
+        <button type="button" className="btn button-pom" onClick={this.props.session}>25 minutes</button>
       </div>
     );
   }
@@ -52,7 +52,7 @@ class ShortBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Short Break</p>
-        <button type="button" className="btn buttonPom" onClick={this.props.shortBreak}>5 minutes</button>
+        <button type="button" className="btn button-pom" onClick={this.props.shortBreak}>5 minutes</button>
       </div>
     );
   }
@@ -66,7 +66,7 @@ class StartButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5 }}>
-      <button className="btn buttonPom" onClick={this.props.startCountDown}>Start</button>
+      <button className="btn button-pom" onClick={this.props.startCountDown}>Start</button>
       // </div>
     );
   }
@@ -76,7 +76,7 @@ class StopButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5, marginLeft: 30 }}>
-      <button className="btn buttonPom" onClick={this.props.stopCountDown}>Stop</button>
+      <button className="btn button-pom" onClick={this.props.stopCountDown}>Stop</button>
       // </div>
     );
   }
@@ -176,18 +176,18 @@ class Pomodoro extends React.Component {
               </div>
             </Row>
             <Row>
-              
+
             </Row>
 
-            <div className="goalList">
+            <div className="goal-list">
 
-              <div className="row pomPad">
+              <div className="row pom-pad">
                 <div></div>
                 <ShortBreak shortBreak={this.shortBreak} />
                 <Session session={this.session} />
                 <LongBreak longBreak={this.longBreak} />
               </div>
-              <div className="row pomPad">
+              <div className="row pom-pad">
                 {/* <div className="col s4"></div> */}
 
                 <div></div>
@@ -196,7 +196,7 @@ class Pomodoro extends React.Component {
                 </div>
                 <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
                 <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
-                <div className="col s4"> <img src="./images/Pomodor.gif" className="gif"/> </div>
+                <div className="col s4"> <img src="./images/Pomodor.gif" className="gif" /> </div>
               </div>
               <div className="row">&nbsp;</div>
             </div>

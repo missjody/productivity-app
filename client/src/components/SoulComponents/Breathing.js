@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 //gsap imports
 import { TimelineMax, Power0 } from "gsap";
 
-import "./soulStyle.css";
+// import "./soulStyle.css";
 
 
 const Breathing = (props) => {

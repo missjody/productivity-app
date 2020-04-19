@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import API from "../utils/API";
 import GoalList from "../components/GoalList"
-import "./Goals.css"
+// import "./Goals.css"
 import { Row } from "../components/Grid";
 import userContext from '../utils/userContext'
 // import moment from 'moment';
@@ -49,7 +49,7 @@ function Goals() {
     };
 
     return (
-        <div className="containerGoal">
+        <div id="containerGoal">
             <div className="test">
                 <div className="container">
                     <div id="congrats" className="popup hidden"><center><h2><br /><br />Congrats! <br />You did it!</h2></center></div>
@@ -57,7 +57,7 @@ function Goals() {
                     <Row>
                         <div className="col s-8 parent">
                             <h5 className="goal-quote" >"If you want to be happy, set a goal that commands your thoughts, liberates your energy and inspires your hopes."<br />--Andrew Carnegie</h5>
-                            <img src="./images/hand.png" alt="writing" className="goal-image responsive-img" alt="An image of a woman's hands resting on a striped pad of paper on which she has written a list of todos. The photo is composed of black and plum lines striped together to render the image." />
+                            <img src="./images/hand.png" className="goal-image responsive-img" alt="An image of a woman's hands resting on a striped pad of paper on which she has written a list of todos. The photo is composed of black and plum lines striped together to render the image." />
                             <h1 className="goal-child">Set a new goal</h1>
                         </div>
                     </Row>
@@ -78,7 +78,7 @@ function Goals() {
                                     </div>
                                     <div className="col s12 m5">
                                         <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "200px", margin: "0px 10px" }} />
-                                        <button className="waves-effect waves-light btn-small buttonGold"
+                                        <button className="waves-effect waves-light btn-small button-gold"
                                             disabled={!(formObject.goal)}
                                             onClick={handleFormSubmit}>
                                             Submit Goal</button>

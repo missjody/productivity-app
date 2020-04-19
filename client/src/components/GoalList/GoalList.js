@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row } from "../Grid";
-import "./GoalList.css"
+// import "./GoalList.css"
 import Collapsible from "../collapsible/collapsible"
 
 export default function GoalList(props) {
@@ -45,8 +45,8 @@ export default function GoalList(props) {
     return (
         <Col size="sm-12 l-12">
             <Row>
-                <div className="goalList">
-                    <h5><b>Goal: {props.goal.goal}</b>   <button className="btn btn-primary buttonGold" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
+                <div className="goal-list">
+                    <h5><b>Goal: {props.goal.goal}</b>   <button className="btn btn-primary button-gold" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
                     <p>Click the progress bar to add tasks</p>
                     <Collapsible key={props.goal._id} percent={props.goal.percentage} percentage={percentage} tasks={props.tasks} goalId={props.goalId} loadGoals={props.loadGoals} formObject={props.formObject} handleTaskFormSubmit={props.handleTaskFormSubmit} handleInputChange={props.handleInputChange} />
                 </div >

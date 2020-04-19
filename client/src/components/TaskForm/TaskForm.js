@@ -92,7 +92,7 @@ function TaskForm(props) {
                         placeholder="Add a Task to get started"
                         value={formObject.task} />
                     <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "22%", margin: "0px 20px" }}></input>
-                    <button className="btn-small buttonGold"
+                    <button className="btn-small button-gold"
                         disabled={!(formObject.task)}
                         onClick={handleTaskFormSubmit}
                         data-name={props.goalId}>Add a Task</button>

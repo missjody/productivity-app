@@ -7,7 +7,7 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import userContext from "../../utils/userContext";
 import Tasks from '../Tasks';
 import API from '../../utils/API'
-import './index.css'
+// import './index.css'
 const localizer = momentLocalizer(moment);
 const DnDCalendar = withDragAndDrop(Calendar);
 const DnDtasks = withDragAndDrop(Tasks);
@@ -30,10 +30,10 @@ export default () => {
                 start: new Date(a.startDate),
                 end: new Date(a.targetDate)
             })
-            console.log("here is A: ",  a)
+            console.log("here is A: ", a)
         }))
         const tasksWID = tasks.map((a, i) => { return { ...a, id: i } })
-        
+
         setCalendarEvent({ events: tasksWID })
     }, [goals])
 
@@ -47,15 +47,15 @@ export default () => {
         ]
     })
 
-    const handleTaskChange = (vals) =>{
+    const handleTaskChange = (vals) => {
         var updatedTask = {
             _id: vals.Id,
             name: vals.title,
             startDate: vals.start,
             targetDate: vals.end
         }
-        API.updateTask(vals.goalID, updatedTask).then(res=>console.log(res)).catch(err => console.log(err))
-    console.log("handle this")
+        API.updateTask(vals.goalID, updatedTask).then(res => console.log(res)).catch(err => console.log(err))
+        console.log("handle this")
     }
 
     const onEventResize = ({ event, start, end }) => {
@@ -68,7 +68,7 @@ export default () => {
         console.log("New task RESIZE! - ", newEvents[event.id])
         handleTaskChange(newEvents[event.id])
     }
-    
+
     const onEventDrop = ({ event, start, end }) => {
 
         let newEvents = calendarEvent.events;
