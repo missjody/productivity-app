@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Row } from "../Grid";
-import "./GoalList.css"
+// import "./GoalList.css"
 import Collapsible from "../collapsible/collapsible"
 
 export default function GoalList(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TaskForm from "../TaskForm/TaskForm"
-import "./collapsible.css"
+// import "./collapsible.css"
 
 class Collapse extends Component {
     constructor() {
