@@ -175,20 +175,9 @@ class Pomodoro extends React.Component {
                 <h1 className="time-child">Live for each moment</h1>
               </div>
             </Row>
-
             <Row>
-              <div className="col s-8 pull-s1">
-                <p>In the 1980s Francesco Cirillo developed the Pomodoro Technique.</p>
-                <p>Per his website, the instructions are:<br />
-            1) Decide on your task.<br />
-            2) Set the timer.<br />
-            3) Focus on the task.<br />
-            4) Stop when the timer rings and put a checkmark on a piece of paper.<br />
-            5) If you have fewer than four checkmarks, take a short break, then go to step 2. <br />
-            6) After 4 checks take a longer break, and reset.</p>
-              </div>
+              
             </Row>
-
 
             <div className="goalList">
 
@@ -207,6 +196,7 @@ class Pomodoro extends React.Component {
                 </div>
                 <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
                 <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
+                <div className="col s4"> <img src="./images/Pomodor.gif" className="gif"/> </div>
               </div>
               <div className="row">&nbsp;</div>
             </div>

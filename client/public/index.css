@@ -4,11 +4,11 @@ Index CSS
 
 body {
   background: #FFF5e8;
-}
+ }
 
-.btn-floating, .btn-floating:hover {
-  background-color: #e59d89;
-}
+ .btn-floating, .btn-floating:hover {
+   background-color: #e59d89;
+ }
 
 html {
   font-family: 'Josefin Sans', sans-serif;
@@ -16,50 +16,50 @@ html {
 }
 
 .page {
-    margin: 3.125rem;
+  margin: 3.125rem;
 }
 
 .button {
-  background-color: #e59d89;
-  color: #4B575A;
-  margin: 0.25rem;
-  font-size: 1.25rem;
-  font-family: 'Josefin Sans', sans-serif;
-  padding-top: .15rem;
-  
-  -webkit-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out;
-  cursor: pointer;
+background-color: #e59d89;
+color: #4B575A;
+margin: 0.25rem;
+font-size: 1.25rem;
+font-family: 'Josefin Sans', sans-serif;
+padding-top: .15rem;
+
+-webkit-transition: background-color .2s ease-out;
+transition: background-color .2s ease-out;
+cursor: pointer;
 }
 
 .btn:hover, .btn-large:hover, .btn-small:hover {
-  background-color: #FF8781;
+background-color: #FF8781;
 }
 
 h1, h2, h3, h4, h5, hr {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #164964;
+font-family: 'Josefin Sans', sans-serif;
+color: #164964;
 }
 
 p {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.25rem;
-  color: #164964;
-  padding: 0.15rem;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 1.25rem;
+color: #164964;
+padding: 0.15rem;
 }
 
 .boldP {
-  font-weight: bold;
-  text-align:center;
-  font-family: 'Aleo', serif;
-  margin-top: -2.8rem;
-  margin-left: -2.8rem;
-  margin-right: -2.8rem;
-  color: #164964;
+font-weight: bold;
+text-align:center;
+font-family: 'Aleo', serif;
+margin-top: -2.8rem;
+margin-left: -2.8rem;
+margin-right: -2.8rem;
+color: #164964;
 }
 
 /************************
- Navigation Bar CSS 
+Navigation Bar CSS 
 ************************/
 
 nav {
@@ -109,7 +109,6 @@ button:focus {
   margin-top: .5rem;
   margin-bottom: 3.5rem;
 }
-
 
 /************************ 
   My Goals styling 
@@ -245,11 +244,11 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 .Calendar {
   background-color: #e27d60;
-  border: 1px solid #0a818c !important;
+  border: 0.25px solid #0a818c !important;
 }
 
 .rbc-day-bg + .rbc-day-bg {
-  border-left: 1px solid #0a818c !important;
+  border: 0.25px solid #0a818c !important;
 }
 
 .rbc-off-range-bg {
@@ -266,21 +265,20 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 }
 
 .rbc-toolbar button {
-  border: 1px solid #0a818c !important;
+  border: 0.25px solid #0a818c !important;
   font-family: 'Josefin Sans', sans-serif;
   color: white !important;
 }
 
 .rbc-header + .rbc-header {
-  border: 1px solid #0a818c !important;
+  border: 0.25px solid #0a818c !important;
 }
 
-.rbc-month-view , .rbc-header, 
+.rbc-month-view , .rbc-header, .rbc-month-row ,
 .rbc-time-content, .rbc-time-header, .rbc-overflowing, .rbc-day-slot, .rbc-time-slot,
-.rbc-time-view, .rbc-timeslot-group,  
+.rbc-time-view, .rbc-timeslot-group, .rbc-time-header-content, 
 .rbc-agenda-view table.rbc-agenda-table {
-  border-top: 1px solid #0a818c !important;
-  border-bottom: 1px solid #0a818c !important;
+  border: 0.25px solid #0a818c !important;
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button.rbc-active:focus, button.rbc-active {
@@ -294,7 +292,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 
 .rbc-time-content > * + * > * {
-  border: 1px solid #0a818c !important;
+  border: 0.25px solid #0a818c !important;
 }
 
 /************************
@@ -321,9 +319,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 .time-child {
   position: absolute;
-  margin-top: -5.5rem;
+  margin-top: -6.5rem;
   left: auto;
-  right: -3.5rem;
+  right: -1.25rem;
   font-family: 'Josefin Sans', sans-serif;
   color: rgb(189, 198, 201);
 }
@@ -348,6 +346,10 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 .timer {
   font-size: 100px;
   margin-left: -5rem;
+}
+
+.gif {
+  margin-left: 4.25rem;
 }
 
 /************************
@@ -420,7 +422,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   margin-top: 3.188rem;
 }
 
-
 /************************ 
   @Media set up
 ************************/
@@ -478,16 +479,16 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     width: 75%;
   }
 
-  .dyn-button {
-    margin-left: 10rem;
-  }
-
   .child {
     color: #e27d60;
     right: auto;
     left: 2rem;
   }
   
+  .dyn-button {
+    margin-left: 10rem;
+  }
+
   .goal-child{
     font-size: 3rem;
   }
@@ -524,6 +525,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
   .Calendar {
     position: relative;
-}
+  }
 
 }
