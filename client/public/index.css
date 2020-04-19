@@ -321,7 +321,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   position: absolute;
   margin-top: -6.5rem;
   left: auto;
-  right: -1.25rem;
+  right: 7rem;
   font-family: 'Josefin Sans', sans-serif;
   color: rgb(189, 198, 201);
 }
@@ -335,9 +335,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 .time-quote {
   background-color:rgba(0, 0, 0, 0.5);
   position: absolute;
-  margin-top: 7rem;
-  right:13.5rem;
-  left: .85rem;
+  margin-top: 1rem;
+  margin-right: 23.5rem;
   padding: .75rem;
   font-family: 'Aleo', serif;
   color: #FFF5e8;
@@ -439,9 +438,22 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
  
  .time-quote {
   margin-top: 1rem;
-  right:7.25rem;
-  left: .85rem;
+  margin-right: 5.1rem;
   padding: .75rem;
+  }
+
+  .time-child {
+    position: absolute;
+    margin-top: -6.5rem;
+    left: 13rem;
+    right: -15rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(189, 198, 201);
+  }
+
+  .gif {
+      margin-left: -22rem;
+      margin-top: 10rem;
   }
 }
 
@@ -467,7 +479,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     position: absolute;
     margin-top: -5.5rem;
     left: auto;
-    right: -10rem;
+    right: -6rem;
     font-family: 'Josefin Sans', sans-serif;
   }
 }
@@ -479,6 +491,10 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     width: 75%;
   }
 
+  .buttonPom {
+    font-size: .95rem;
+  }
+
   .child {
     color: #e27d60;
     right: auto;
@@ -487,6 +503,13 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   
   .dyn-button {
     margin-left: 10rem;
+  }
+
+  .gif {
+    margin-bottom: -4rem;
+    margin-top: 7rem;
+    margin-left: -16rem;
+    width: 23rem;
   }
 
   .goal-child{
@@ -515,11 +538,11 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
  
   .timer {
   font-size: 100px;
-  margin-left: -9rem;
+  margin-left: -7rem;
   }
 
   .pomPad {
-    padding-left: auto;
+    padding-left: 0rem;
      padding-top: auto;
   }
 
