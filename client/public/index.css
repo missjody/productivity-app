@@ -196,6 +196,23 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   padding: 0px 10px;
 }
 
+.popup {
+  width: 400px;
+  height: 400px;
+  background: #8fc870;
+  border-radius: 50%;
+  position:absolute;
+  top: 8%;
+  right: 40%;
+  margin: 0 auto;
+  z-index: 99 !important;
+}
+
+.hidden {
+  display: none; 
+}
+
+
 /* Goal List styling */
 
 .goalList {
@@ -542,7 +559,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   }
 
   .pomPad {
-    padding-left: 0rem;
+        padding-left: 0rem;
      padding-top: auto;
   }
 
