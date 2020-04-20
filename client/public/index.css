@@ -85,10 +85,15 @@ nav ul a, nav a, nav .brand-logo {
   Home Page styling 
 ************************/
 
-.home-image {    
+#homeImage {    
   width: 20rem;
-  margin-top: 11rem;
-  margin-left: 15%;
+  margin-top: -70rem;
+  margin-bottom: 4rem;
+  margin-left: 60%;
+}
+
+#homeText {
+  margin-right: 45rem;
 }
 
 /************************
@@ -434,6 +439,16 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
    margin-top:-1rem;
   }
 
+  #homeImage {    
+    width: 20rem;
+    margin-bottom: 10rem;
+    margin-left: 65%;
+  }
+  
+  #homeText {
+    margin-right: 25rem;
+  }
+
  .time-image {
   margin-top: -3.15rem;
   height: 90%;
@@ -477,6 +492,15 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   .goal-child {
     left: 2rem;
     right: auto;
+  }
+
+  #homeImage {    
+    width: 20rem;
+    margin-left: 135%;
+  }
+  
+  #homeText {
+    margin-right: 20rem;
   }
 
   .time-child {
@@ -528,6 +552,14 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     left: 1rem;
     right: auto;
     font-size: 2rem;
+  }
+
+  #homeImage {    
+  display: none;
+  }
+  
+  #homeText {
+    margin-right: 2rem;
   }
 
   .time-child {
