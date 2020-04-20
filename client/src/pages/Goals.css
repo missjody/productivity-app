@@ -1,0 +1,45 @@
+.popup {
+    width: 20rem;
+    height: 20rem;
+    background: #8fc870;
+    border-radius: 50%;
+    position: fixed;
+    top: calc(50% - 10rem);
+    right: calc(50% - 10rem);
+    z-index: 99 !important;
+  }
+  .hidden {
+    display: none; 
+  }
+  
+  .popup-image {    
+    width: 7rem;
+    margin: 0 auto;
+    padding-top: 4rem;
+    /* margin-top: 11rem;
+    margin-left: 15%; */
+  }
+  span {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #164964;
+  }
+  h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.45rem;
+    color: #164964;
+    padding: 0.15rem;
+    }
+  input::placeholder {
+    color: black;
+  }
+ 
+    @media only screen and (max-width: 1025px) {
+      .button-margin {
+        font-size: .8rem !important;
+      }
+    }
+    @media only screen and (max-width: 800px) {
+      .button-margin {
+        margin-top: 20px !important;
+      }
+    }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import API from "../utils/API";
 import GoalList from "../components/GoalList"
-// import "./Goals.css"
+import "./Goals.css"
 import { Row } from "../components/Grid";
 import userContext from '../utils/userContext'
 // import moment from 'moment';
@@ -34,6 +34,7 @@ function Goals() {
     // Then reload books from the database
     function handleFormSubmit(event) {
         event.preventDefault();
+        // console.log("DATE: ", formObject.targetDate + " 12:00:00.000Z")
         if (formObject.goal) {
             API.saveGoal({
                 goal: formObject.goal,
@@ -50,10 +51,18 @@ function Goals() {
 
     return (
         <div id="containerGoal">
+            <div id="congrats" className="popup hidden">
+                <div className="row" >
+                    <div className="col s6">&nbsp;&nbsp;<img src="./images/Surata.png" className="popup-image responsive-img"
+                        alt="Image of the Surata app's mascot, Little Sister. She has a high brown bun, large green eyes, blushing cheeks and a sweet blue sweater." />
+                    </div>
+                    <div className="col s6">
+                        <h6><br /><br /><br />Congrats! <br />You did it!</h6>
+                    </div>
+                </div>
+            </div>
             <div className="test">
                 <div className="container">
-                    <div id="congrats" className="popup hidden"><center><h2><br /><br />Congrats! <br />You did it!</h2></center></div>
-
                     <Row>
                         <div className="col s-8 parent">
                             <h5 className="goal-quote" >"If you want to be happy, set a goal that commands your thoughts, liberates your energy and inspires your hopes."<br />--Andrew Carnegie</h5>
@@ -66,23 +75,23 @@ function Goals() {
                     <Row>
 
                         <div className="col s12">
-                            {/* <h2>Set a new goal</h2> */}
                             <form>
                                 <div className="row" >
-                                    <div className="col s12 m7">
+                                    <div className="col s12 m12 l6">
                                         <input
                                             onChange={handleInputChange}
                                             name="goal"
                                             placeholder="Enter a new goal"
                                             value={formObject.goal} />
                                     </div>
-                                    <div className="col s12 m5">
-                                        <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "200px", margin: "0px 10px" }} />
-                                        <button className="waves-effect waves-light btn-small button-gold"
+                                    <div className="col s12 m12 l3">
+                                        <input onChange={handleInputChange} type="date" name="targetDate" id="targetDate" value={formObject.targetDate} style={{ width: "100%", margin: "0px 0px", fontSize: ".95rem" }} />
+                                    </div>
+                                    <div className="col s12 m12 l3">
+                                        <button className="waves-effect waves-light btn-small button-gold button-margin "
                                             disabled={!(formObject.goal)}
                                             onClick={handleFormSubmit}>
-                                            Submit Goal</button>
-                                    </div>
+                                            Add&nbsp;Goal</button>                                    </div>
                                 </div>
                             </form>
                         </div>
