@@ -1,9 +1,21 @@
 import React from 'react'
 import { Col, Row } from "../Grid";
-// import "./GoalList.css"
 import Collapsible from "../collapsible/collapsible"
+import moment from "moment"
+
 
 export default function GoalList(props) {
+    //How many Days til the Goal is Due
+    function daysLeft(targetDate) {
+        var currentDate = moment();
+        var goalDate = moment(targetDate)
+        console.log("number of days: ", currentDate, goalDate, goalDate.diff(currentDate, "days"));
+        if (parseInt(goalDate.diff(currentDate, "days")) >= 0) {
+            return parseInt(goalDate.diff(currentDate, "days") + 1) + " days"
+        } else {
+            return "Past Due"
+        }
+    }
     //Function to get percent and display popup at 100%
     var element = document.getElementById("congrats");
     console.log("all props on goals page: ", props)
@@ -19,7 +31,7 @@ export default function GoalList(props) {
         }, 0)
         var date = new Date();
         var completeTimes = new Date(props.goal.completeTime)
-        var FIVE_MIN = 10000;
+        var FIVE_MIN = 5000;
         var percent = (count / tasks.length) * 100;
         if (tasks.length === 0) {
             return 0 + "%"
@@ -46,8 +58,10 @@ export default function GoalList(props) {
         <Col size="sm-12 l-12">
             <Row>
                 <div className="goal-list">
-                    <h5><b>Goal: {props.goal.goal}</b>   <button className="btn btn-primary button-gold" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
-                    <p>Click the progress bar to add tasks</p>
+                    <h5 style={{ paddingLeft: "5px" }}><b>Goal: {props.goal.goal}</b> <button className="btn btn-primary button-gold" onClick={() => props.deleteGoal(props.goalId)}><i className="material-icons">delete</i></button></h5>
+                    <span style={{ margin: "0px", padding: "0px 5px" }}>Due in: {daysLeft(props.goal.targetDate)}</span>
+                    <br />
+                    <span style={{ margin: "0px", padding: "0px  5px" }}>Click the progress bar to add tasks</span>
                     <Collapsible key={props.goal._id} percent={props.goal.percentage} percentage={percentage} tasks={props.tasks} goalId={props.goalId} loadGoals={props.loadGoals} formObject={props.formObject} handleTaskFormSubmit={props.handleTaskFormSubmit} handleInputChange={props.handleInputChange} />
                 </div >
             </Row>
