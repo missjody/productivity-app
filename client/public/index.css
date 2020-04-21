@@ -86,16 +86,16 @@ nav ul a, nav a, nav .brand-logo {
 ************************/
 
 #homeImage {    
-  width: 20rem;
-  margin-top: -70rem;
+  width: 30rem;
+  /* margin-top: -30rem;
   margin-bottom: 4rem;
-  margin-left: 300%;
+  margin-left: 325%; */
 }
 
-#homeText {
-  visibility: none;
-  margin-right: 45rem;
-}
+/* #homeText { */
+  /* visibility: none; */
+  /* margin-right: 45rem; */
+/* } */
 
 /************************
    Sign In styling 
@@ -347,7 +347,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   background-color:rgba(0, 0, 0, 0.5);
   position: absolute;
   margin-top: 1rem;
-  margin-right: 23.5rem;
+  margin-right: 30rem;
   padding: .75rem;
   font-family: 'Aleo', serif;
   color: #FFF5e8;
@@ -435,6 +435,12 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   @Media set up
 ************************/
 
+@media screen and (max-width: 1440px) {
+  .time-quote {
+    margin-right: 22.3rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
  .goal-quote {
    margin-top:-1rem;
@@ -496,9 +502,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   }
 
   #homeImage {    
-    width: 20rem;
-    margin-left: 135%;
-  }
+    display: none;
+    }
   
   #homeText {
     margin-right: 20rem;
@@ -510,6 +515,10 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     left: auto;
     right: -6rem;
     font-family: 'Josefin Sans', sans-serif;
+  }
+
+  .time-quote {
+    margin-right: 4.8rem;
   }
 }
    
