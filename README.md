@@ -22,10 +22,13 @@ The user is able to:
 
   * React Calendar 
 
-  * Green Sock
+  * GreenSock
+  This set of plugins and tools allows for simple creation of animated objects. Modifying a div to display as a circle we were able to use TimelineMax and Power0
+  to animate it as a breathing focus point on the page. TimelineMax allowed us to "yoyo" the div in and out at the desired rate. Power0 assists with the timing for each step of the movement.
 
   * React-Sound
-
+  The React-Sound NPM contains an awesome Sound component that allows you to easily build the ability to play and control sound clips in your code. "Dunes" is provided with a Public Domain license at (Andrewkn's freesound link)[https://freesound.org/people/Andrewkn/sounds/447511/]. "Throat Singing" is provided with an Attribution License from (Metzik's freesound link)[https://freesound.org/people/Metzik/sounds/244155/]; it has been modified into a .mp3 file. "Quartz Crystal Singing Bowls" is provided with Attribution License from (juskiddink's freesound link)[https://freesound.org/people/juskiddink/sounds/129219/]; it has been modified into a .mp3 file. 
+  
 ----- Do we want to go into deeper detail on each of the pages? -----
 ## My Goals
 
