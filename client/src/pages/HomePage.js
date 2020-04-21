@@ -13,7 +13,7 @@ const HomePage = () => {
 
     TweenMax.to(app, 0, { css: { visibility: "visible" } })
 
-    tl.staggerFrom([headlineFirst], 1, { y: 1250, ease: Power3.easeOut, delay: .8 });
+    tl.staggerFrom([headlineFirst], 1, { y: 80, ease: Power3.easeIn, delay: .8 });
 
   }, [tl]);
 
