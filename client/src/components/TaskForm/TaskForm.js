@@ -58,8 +58,6 @@ function TaskForm(props) {
             .catch(err => console.log(err));
     }
     const removeTask = (item) => {
-
-        // console.log("here", item)
         var GoalId = props.goalId;
         var TaskId = item._id;
         var pastTask = {
@@ -83,7 +81,7 @@ function TaskForm(props) {
     return (
         <div>
             <div className="row">
-                <div className="col s12">
+                <div className="col s12" style={{ paddingTop: "10px" }}>
                     <form>
                         <div className="row" style={{ marginBottom: "0 !important" }}>
                             <div className="col s12 m12 l6" style={{ marginBottom: "0 !important" }}>
@@ -110,7 +108,7 @@ function TaskForm(props) {
             <div className="row">
                 {props.tasks.map(item => {
                     return (
-                        <div className="col s12" style={{ borderBottom: "2px solid #8a8158" }}>
+                        <div key={item._id} className="col s12" style={{ borderBottom: "2px solid #8a8158" }}>
                             <h6 key={item._id} style={{ color: item.complete ? '#8a8158' : '#164964' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
                         </div>
                     )

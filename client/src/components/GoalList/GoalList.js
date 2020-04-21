@@ -9,17 +9,23 @@ export default function GoalList(props) {
     function daysLeft(targetDate) {
         var currentDate = moment();
         var goalDate = moment(targetDate)
-        console.log("number of days: ", currentDate, goalDate, goalDate.diff(currentDate, "days"));
-        if (parseInt(goalDate.diff(currentDate, "days")) >= 0) {
-            return parseInt(goalDate.diff(currentDate, "days") + 1) + " days"
+        // console.log("number of days: ", goalDate.diff(currentDate, "days", true));
+        //return the right message for days left
+        if (goalDate.diff(currentDate, "days", true) > 0) {
+            return parseInt(goalDate.diff(currentDate, "days", true) + 1) + " days"
+        } else if (goalDate.diff(currentDate, "days") === 0) {
+            return "Due Today"
         } else {
             return "Past Due"
         }
     }
-    //Function to get percent and display popup at 100%
+
+    //Element
     var element = document.getElementById("congrats");
-    console.log("all props on goals page: ", props)
+
     function percentage(tasks) {
+
+        //Count the number of complete tasks
         var count = tasks.reduce((accumulator, goal) => {
             if (goal.complete) {
                 return accumulator + 1
@@ -29,27 +35,27 @@ export default function GoalList(props) {
             }
 
         }, 0)
+
+        //Variables for Function Dates
         var date = new Date();
         var completeTimes = new Date(props.goal.completeTime)
-        var FIVE_MIN = 5000;
+        var FIVE_SEC = 5000;
         var percent = (count / tasks.length) * 100;
+
+        //Return Percent, If 100% and within 5 seconds of completion time ==congrats
         if (tasks.length === 0) {
             return 0 + "%"
-        } else if ((count / tasks.length) * 100 === 100 && (date - completeTimes) <= FIVE_MIN) {
-            // var percent = (count / tasks.length) * 100;
+        } else if ((count / tasks.length) * 100 === 100 && (date - completeTimes) <= FIVE_SEC) {
             console.log("Goal is 100%:  ", percent)
             setTimeout(function () {
-                console.log("something")
                 element.classList.remove("hidden");
             }, 500);
             setTimeout(function () {
-                console.log("remove something")
                 element.classList.add("hidden");
-            }, 5000);
+            }, 4000);
             return parseInt(percent) + "%"
         }
         else {
-            // var percent = (count / tasks.length) * 100;
             return parseInt(percent) + "%"
         }
 
