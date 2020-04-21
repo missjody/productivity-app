@@ -7,7 +7,7 @@ module.exports = {
     findAll: function (req, res) {
         db.Goal
             .find()
-            .sort({ date: -1 })
+            .sort({ createdAt: -1 })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
@@ -16,7 +16,7 @@ module.exports = {
         console.log('NWA Straight outta compton')
         db.Goal
             .find({ author: req.user._id })
-            .sort({ date: -1 })
+            .sort({ createdAt: -1 })
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
