@@ -11,13 +11,12 @@ function Goals() {
     // Setting our component's initial state
     const [formObject, setFormObject] = useState({})
     const { goals, loadGoals, user } = useContext(userContext)
-    console.log("user and goals", user, goals)
 
     useEffect(() => {
         loadGoals()
     }, [])
 
-    // Deletes a book from the database with a given id, then reloads books from the db
+    // Deletes a goal and reload
     function deleteGoal(id) {
         API.deleteGoal(id)
             .then(res => loadGoals())
@@ -30,15 +29,15 @@ function Goals() {
         setFormObject({ ...formObject, [name]: value })
     };
 
-    // When the form is submitted, use the API.saveBook method to save the book data
-    // Then reload books from the database
+    // Handle goal submit and reload
     function handleFormSubmit(event) {
         event.preventDefault();
-        // console.log("DATE: ", formObject.targetDate + " 12:00:00.000Z")
+        var targetDateHours = formObject.targetDate + "T23:55:00.000Z"
+
         if (formObject.goal) {
             API.saveGoal({
                 goal: formObject.goal,
-                targetDate: formObject.targetDate
+                targetDate: targetDateHours
             })
                 .then(() => setFormObject({
                     goal: "",
@@ -70,10 +69,7 @@ function Goals() {
                             <h1 className="goal-child">Set a new goal</h1>
                         </div>
                     </Row>
-
-
                     <Row>
-
                         <div className="col s12">
                             <form>
                                 <div className="row" >
@@ -105,7 +101,6 @@ function Goals() {
 
                 </div>
             </div>
-
         </div>
     );
 }

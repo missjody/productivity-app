@@ -29,7 +29,6 @@ class Collapse extends Component {
                         &nbsp;{this.props.percent}&nbsp;</div>
                 </div>
                 <div id="demo" className={"collapse" + (this.state.open ? ' in' : '')}>
-                    <hr></hr>
                     <div>
                         <TaskForm tasks={this.props.tasks} goalId={this.props.goalId} loadGoals={this.props.loadGoals} formObject={this.props.formObject} handleTaskFormSubmit={this.props.handleTaskFormSubmit} handleInputChange={this.props.handleInputChange} />
                     </div>

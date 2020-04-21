@@ -37,7 +37,7 @@ const Nav = (props) => {
       <nav>
         <div className="nav-wrapper">
           <a href="#" data-target="slide-out" className="sidenav-trigger show-on-med"><i className="material-icons">menu</i></a>
-          <a href="#!" class="brand-logo" to="/">
+          <a href="#!" className="brand-logo" to="/">
             {user ? `Hi ${user.username}, Welcome To ` : ""} Surată
           </a>
 
