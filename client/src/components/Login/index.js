@@ -1,9 +1,11 @@
 import React, { useState, useContext } from 'react'
 import userContext from '../../utils/userContext';
 import { Redirect } from 'react-router-dom';
-import API from '../../utils/API'
+import API from '../../utils/API';
+import M from "materialize-css";
 
 export default () => {
+		M.AutoInit();
 	// let history = useHistory();
 	const [loginState, setLoginState] = useState({
 		username: '',
@@ -11,9 +13,9 @@ export default () => {
 		email: '',
 		login: 0
 	})
-
+	
 	const { user, setUser, setIsLoggedIn } = useContext(userContext)
-
+	
 	const handleChange = event => {
 		setLoginState({
 			...loginState,
@@ -32,7 +34,8 @@ export default () => {
 					setUser(response.data);
 				setIsLoggedIn(true)
 			}).catch(error => {
-				console.log(error)
+				console.log(error);
+				M.toast({html: `Woops!<br> Looks like your username and/or password are wrong, please try again!`, classes: 'rounded'});
 			})
 	}
 
