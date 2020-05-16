@@ -11,7 +11,7 @@ import HomePage from "./pages/HomePage";
 import Soul from "./pages/Soul";
 import userContext from './utils/userContext';
 import API from './utils/API';
-import Materialize from 'materialize-css/dist/css/materialize.min.css';
+// import Materialize from 'materialize-css/dist/css/materialize.min.css';
 
 function App() {
   const [user, setUser] = useState();
