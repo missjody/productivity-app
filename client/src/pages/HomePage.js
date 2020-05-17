@@ -1,21 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import { TweenMax, TimelineLite, Power3 } from 'gsap';
 
-
 const HomePage = () => {
-  let app = useRef(null);
-  let content = useRef(null);
-  let tl = new TimelineLite({ delay: .8 });
 
-  useEffect(() => {
-    const headlineFirst = content.children;
-    console.log("CONTENT CHILDREN", content.children)
-
-    TweenMax.to(app, 0, { css: { visibility: "visible" } })
-
-    tl.staggerFrom([headlineFirst], 1, { y: 80, ease: Power3.easeIn, delay: .8 });
-
-  }, [tl]);
 
   return (
     // <div className="row" ref={el => app = el}>
@@ -36,23 +23,40 @@ const HomePage = () => {
     //     {/* </div > */}
     //   </div>
     // </div>
+
+    /////////////////////////////////////////////////////////////////
+
     <div>
-      <div className="row" ref={el => app = el}>
-        <div ref={el => content = el}>
-          <div className="col s12 m6 xl6 right-align ">
-            <img src="./images/Surata.png" class="circle" id="surata"
-              alt="Image of the Surata app's mascot, Little Sister. She has a high brown bun, large green eyes, blushing cheeks and a sweet blue sweater." />
-          </div>
-
-          <div className="col s12 m6 xl6 left-align ">
-            <h1>Welcome to Surată</h1>
-            <h5 className="indent">The productivity app you've been waiting for.</h5>
-          </div>
+      <div className="row" >
+        {/* <div ref={el => content = el}> */}
+        <div className="col s12 m6 xl6 right-align pull-m1 pull-xl1" >
+          <img src="./images/Surata.png" class="circle responsive-img hero-image" id="surata"
+            alt="Image of the Surata app's mascot, Little Sister. She has a high brown bun, large green eyes, blushing cheeks and a sweet blue sweater." />
         </div>
-      </div >
+
+        <div className="col s12 m6 xl6 left-align pull-m1 pull-xl1 words">
+          <h3 className="text-shadow-pop-bl">
+            Taking your productivty
+          </h3>
+          <h3 className="text-shadow-pop-bl">
+            to the next step,
+          </h3>
+          <h3 className="text-shadow-pop-bl">
+            one task at a time
+          </h3>
+          <h3 className="text-shadow-pop-bl">Welcome to Surată</h3>
+
+        </div>
+      </div>
+      {/* </div > */}
 
 
-      <div className="row" id="bkgOne" >
+
+
+
+      {/* ////////////////////////////////////////////// */}
+
+      <div className="row" id="bkgOne">
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin">
           <h1>My Goals</h1>
@@ -60,7 +64,7 @@ const HomePage = () => {
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <img src="./images/hand.png" class="circle home-image"
+          <img src="./images/hand.png" class=" home-image responsive-img"
             alt="Hand writing a todo list." />
         </div>
 
@@ -70,7 +74,7 @@ const HomePage = () => {
       <div className="row" id="bkgTwo" >
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin">
-          <img class="circle home-image" src="./images/cal.png"
+          <img class=" home-image responsive-img" src="./images/cal.png"
             alt="screen shot of calendar" />
         </div>
 
@@ -89,7 +93,7 @@ const HomePage = () => {
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <img src="./images/keyboard.png" class="circle home-image"
+          <img src="./images/keyboard.png" class=" home-image responsive-img"
             alt="NEED ALT HERE." />
         </div>
 
@@ -98,8 +102,8 @@ const HomePage = () => {
 
       <div className="row">
         {/* <div ref={el => content = el}> */}
-        <div className="col s12 m6 xl6 right-align home-margin">
-          <img src="./images/soul1.png" class="circle home-image"
+        <div className="col s12 m6 xl6 right-align home-margin responsive-img">
+          <img src="./images/soul1.png" class=" home-image"
             alt="woman meditating" />
         </div>
 
@@ -110,9 +114,9 @@ const HomePage = () => {
         {/* </div> */}
       </div >
 
+    </div >
 
-
-    </div>
+    // </div >
 
   )
 
