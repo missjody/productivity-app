@@ -5,7 +5,7 @@ import API from '../../utils/API';
 import M from "materialize-css";
 
 export default () => {
-		M.AutoInit();
+	M.AutoInit();
 	// let history = useHistory();
 	const [loginState, setLoginState] = useState({
 		username: '',
@@ -13,9 +13,9 @@ export default () => {
 		email: '',
 		login: 0
 	})
-	
+
 	const { user, setUser, setIsLoggedIn } = useContext(userContext)
-	
+
 	const handleChange = event => {
 		setLoginState({
 			...loginState,
@@ -35,7 +35,7 @@ export default () => {
 				setIsLoggedIn(true)
 			}).catch(error => {
 				console.log(error);
-				M.toast({html: `Woops!<br> Looks like your username and/or password are wrong, please try again!`, classes: 'rounded'});
+				M.toast({ html: `Woops!<br> Looks like your username and/or password are wrong, please try again!`, classes: 'rounded' });
 			})
 	}
 

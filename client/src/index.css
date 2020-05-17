@@ -3,9 +3,11 @@ Index CSS
 ************************/
 
 body {
-  background: #FFF5e8;
+  background: #ff8781;
+  margin:0;
  }
 
+/*
  .btn-floating, .btn-floating:hover {
    background-color: #e59d89;
  }
@@ -14,11 +16,12 @@ html {
   font-family: 'Josefin Sans', sans-serif;
   color: #4B575A;
 }
+*/
 
 .page {
   margin: 3.125rem;
 }
-
+/*
 .button {
 background-color: #e59d89;
 color: #4B575A;
@@ -35,12 +38,14 @@ cursor: pointer;
 .btn:hover, .btn-large:hover, .btn-small:hover {
 background-color: #FF8781;
 }
+*/
 
 h1, h2, h3, h4, h5, hr {
 font-family: 'Josefin Sans', sans-serif;
-color: #164964;
+color: white;
 }
 
+/*
 p {
 font-family: 'Josefin Sans', sans-serif;
 font-size: 1.25rem;
@@ -55,41 +60,84 @@ font-family: 'Aleo', serif;
 margin-top: -2.8rem;
 margin-left: -2.8rem;
 margin-right: -2.8rem;
-color: #164964;
-}
+color: #689F38;
+} */
 
 /************************
 Navigation Bar CSS 
 ************************/
-
+ 
 nav {
     padding: 0 40px;
-    background:#E59D89;
+    background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #689f38);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2rem;
 }
+/*
+
 
 nav ul a, nav a, nav .brand-logo {
-    color: #164964;
+    color: white;
 }
 
 /* Side Nav */
-
+/* 
 .sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
 .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
-  color: #164964 !important;
+  color: #689F38 !important;
   background-color: #E59D89 !important;
-}
+} */ 
 
 /************************ 
   Home Page styling 
 ************************/
+.indent {
+  text-indent: 50px !important;
+}
 
-#homeImage {    
-  width: 30rem;
+.home-margin {
+  margin-top: 75px !important;
+}
+
+#surata {
+  border-radius: 30%;
+  height: 400px;
+  width: auto;
+  margin-bottom: 100px;
+}
+
+.home-image {    
+  border-radius: 30%;
+  height: 400px;
+  width: 500px;
+  /* width: 30rem; */
   /* margin-top: -30rem;
   margin-bottom: 4rem;
   margin-left: 325%; */
+} 
+
+#bkgOne {
+  background-color: #7ae642;
+  position: static;
+  width: 100vw;
+  padding-bottom: 100px;
+}
+
+
+#bkgTwo {
+  background-color: #1266b6;
+    position: static;
+    width: 100vw;
+    margin-top: -25px;
+    padding-bottom: 100px;
+}
+
+#bkgThree {
+  background-color: #fac134;
+  position: static;
+  width: 100vw;
+  padding-bottom: 100px;
+  margin-top: -25px;
 }
 
 /* #homeText { */
@@ -100,7 +148,7 @@ nav ul a, nav a, nav .brand-logo {
 /************************
    Sign In styling 
 ************************/
-
+/* 
 button:focus {
   outline: none;
   background-color: #e59d89;
@@ -114,14 +162,14 @@ button:focus {
 #noAuth {
   margin-top: .5rem;
   margin-bottom: 3.5rem;
-}
+} */
 
 /************************ 
   My Goals styling 
 ************************/
 
 /* Goal Image */
-
+/* 
 .goal-image {
   width: 42.666rem;
   margin-top: -7.5rem;
@@ -146,10 +194,10 @@ button:focus {
   padding: .75rem;
   font-family: 'Aleo', serif;
   color: #FFF5e8;
-}
+} */
 
 /* Goals styling */
-
+/* 
 .blue {
   background-color: #b47f89 !important;
 }
@@ -190,7 +238,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   border-bottom: 1px solid #cbad4c;
   -webkit-box-shadow: 0 1px 0 0 #cbad4c;
   box-shadow: 0 1px 0 0 #cbad4c;
-}
+} */
 /* 
 .popup {
   width: 400px;
@@ -203,37 +251,37 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   margin: 0 auto;
   z-index: 99 !important;
 } */
-
+/* 
 .hidden {
   display: none; 
-}
+} */
 
 /* Goal List styling */
-
+/* 
 .goal-list {
   border: 2px solid #b47f89;
   padding: 0rem 0.625rem;
   margin: 1.25rem 0.625rem;
-}
+} */
 
 /* Task Form styling */
-
+/* 
 .goal {
   border: 0.125rem solid green;
   padding: 0.313rem;
   /* margin: 20px 0px; */
-}
+/* } */ 
 
 /* Collapsible styling */
 
-.collapse {
+/* .collapse {
   display: none
-}
+} */
 
-.collapse.in {
+/* .collapse.in {
   display: block
-}
-
+} */
+/* 
 .determinate {
   width: 0;
   transition: width 1s ease-in-out;
@@ -248,28 +296,32 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   min-height: 2.25rem;
   overflow: hidden;
   position: relative;
-}
+} */
 
 /************************
    My Plan Styling 
 ************************/
 
+span, a {
+ color: white !important;
+}
+
 .Calendar {
-  background-color: #e27d60;
-  border: 0.25px solid #0a818c !important;
+  background-color: #ff8781;
+  border: 0.25px solid #fac134 !important;
 }
 
 .rbc-day-bg + .rbc-day-bg {
-  border: 0.25px solid #0a818c !important;
-}
+  border: 0.25px solid #fac134 !important;
+}fac134
 
 .rbc-off-range-bg {
-  background: #74A9B6 !important;
+  background: #fac134 !important;
   
 }
 
 .rbc-today {
-  background-color: #deb25c !important;
+  background-color: #689f38 !important;
 }
 
 .rbc-toolbar {
@@ -277,39 +329,39 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 }
 
 .rbc-toolbar button {
-  border: 0.25px solid #0a818c !important;
+  border: 0.25px solid #fac134 !important;
   font-family: 'Josefin Sans', sans-serif;
   color: white !important;
 }
 
 .rbc-header + .rbc-header {
-  border: 0.25px solid #0a818c !important;
+  border: 0.25px solid #fac134 !important;
 }
 
 .rbc-month-view , .rbc-header, .rbc-month-row ,
 .rbc-time-content, .rbc-time-header, .rbc-overflowing, .rbc-day-slot, .rbc-time-slot,
 .rbc-time-view, .rbc-timeslot-group, .rbc-time-header-content, 
 .rbc-agenda-view table.rbc-agenda-table {
-  border: 0.25px solid #0a818c !important;
+  border: 0.25px solid #fac134 !important;
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button.rbc-active:focus, button.rbc-active {
-  background-color: #DEB25C !important;
+  background-color: #689f38 !important;
 }
 
 .rbc-event {
-  background-color: #0a818c !important;
+  background-color: #fac134 !important;
   color: white !important;
 }
 
 .rbc-time-content > * + * > * {
-  border: 0.25px solid #0a818c !important;
+  border: 0.25px solid #fac134 !important;
 }
 
 /************************
    My Time styling 
 ************************/
-
+/* 
 .button-pom {
   background-color: #8fc870;
   color: #4B575A;
@@ -360,12 +412,12 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 .gif {
   margin-left: 4.25rem;
-}
+} */
 
 /************************
    My Soul styling 
 ************************/
-
+/* 
 #breathCircle {
   width: 6.25rem;
   height: 6.25rem;
@@ -429,12 +481,12 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 
 .test {
   margin-top: 3.188rem;
-}
+} */
 
 /************************ 
   @Media set up
 ************************/
-
+/* 
 @media screen and (max-width: 1440px) {
   .time-quote {
     margin-right: 22.3rem;
@@ -446,10 +498,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
    margin-top:-1rem;
   }
 
-  #homeImage {    
-    width: 20rem;
-    margin-bottom: 10rem;
-    margin-left: 200%;
+  .homeImage {    
+    border-radius: 30%;
   }
   
   #homeText {
@@ -482,9 +532,15 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
       margin-top: 10rem;
   }
 }
-
+*/
 @media screen and (max-width: 768px) {
-  .brand-logo {
+ .indent {
+   text-indent: 5px !important;
+   font-size: 1em;
+ } 
+}
+  
+  /* .brand-logo {
     display: none !important;
   }
   
@@ -501,8 +557,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     right: auto;
   }
 
-  #homeImage {    
-    display: none;
+  .homeImage {    
+    border-radius: 30%;
     }
   
   #homeText {
@@ -564,8 +620,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     font-size: 2rem;
   }
 
-  #homeImage {    
-  display: none;
+  .homeImage {    
+    border-radius: 30%;
+    
   }
   
   #homeText {
@@ -577,12 +634,13 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     right: 5rem;
     font-size: 2rem;
   }
+*/
 
   .page {
     margin: 3.125rem 0.125rem 3.125rem 0.125rem;
   }
  
-  .timer {
+/*  .timer {
   font-size: 100px;
   margin-left: -7rem;
   }
@@ -596,4 +654,4 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
     position: relative;
   }
 
-}
+} */
