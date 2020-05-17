@@ -44,7 +44,7 @@ const HomePage = () => {
           <h3 className="text-shadow-pop-bl">
             one task at a time
           </h3>
-          <h3 className="text-shadow-pop-bl">Welcome to Surată</h3>
+          <h1>Welcome to Surată</h1>
 
         </div>
       </div>

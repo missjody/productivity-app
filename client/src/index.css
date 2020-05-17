@@ -233,10 +233,10 @@ button:focus {
 
 /* Goal Image */
 
-/* .goal-image {
+.goal-image {
   width: 42.666rem;
   margin-top: -7.5rem;
-} */
+}
 
 .goal-child {
   position: absolute;
@@ -244,7 +244,7 @@ button:focus {
   left: -10rem;
   right: auto;
   font-family: 'Josefin Sans', sans-serif;
-  color: #cbad4c;
+  color:white;
 }
 
 .goal-quote {
@@ -262,11 +262,11 @@ button:focus {
 /* Goals styling */
 
 .blue {
-  background-color: #b47f89 !important;
+  background-color: #7ae642!important;
 }
 
 .blue.lighten-4 {
-  background-color: #F6e1A9 !important;
+  background-color: #fac134 !important;
 }
 
 .btn.disabled, .disabled.btn-large, .disabled.btn-small, .btn-floating.disabled, .btn-large.disabled, .btn-small.disabled, .btn-flat.disabled, .btn:disabled, .btn-large:disabled, .btn-small:disabled, .btn-floating:disabled, .btn-large:disabled, .btn-small:disabled, .btn-flat:disabled, .btn[disabled], .btn-large[disabled], .btn-small[disabled], .btn-floating[disabled], .btn-large[disabled], .btn-small[disabled], .btn-flat[disabled] {
@@ -275,7 +275,7 @@ button:focus {
 }
 
 .button-gold {
-  background-color: #deb25c;
+  background-color: #FAC134;
   color: #4B575A;
   margin: 0.25rem;
   font-size: 1.25rem;
@@ -292,21 +292,21 @@ button:focus {
 }
 
 input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
-  border-bottom: 1px solid #cbad4c;
+  border-bottom: 1px solid #FAC134;
   font-family: 'Aleo', serif;
 }
 
 
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #cbad4c;
-  -webkit-box-shadow: 0 1px 0 0 #cbad4c;
-  box-shadow: 0 1px 0 0 #cbad4c;
+  border-bottom: 1px solid #FAC134;
+  -webkit-box-shadow: 0 1px 0 0 #FAC134;
+  box-shadow: 0 1px 0 0 #FAC134;
 } 
 
 .popup {
   width: 400px;
   height: 400px;
-  background: #8fc870;
+  background: #689f38;
   border-radius: 50%;
   position:absolute;
   top: 8%;
@@ -322,7 +322,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 /* Goal List styling */
 
 .goal-list {
-  border: 2px solid #b47f89;
+  border: 2px solid #689f38;
   padding: 0rem 0.625rem;
   margin: 1.25rem 0.625rem;
 } 
@@ -330,7 +330,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 /* Task Form styling */
 
 .goal {
-  border: 0.125rem solid green;
+  border: 0.125rem solid #689f38;
   padding: 0.313rem;
   /* margin: 20px 0px; */
  } 
@@ -424,7 +424,7 @@ span, a {
 /************************
    My Time styling 
 ************************/
-/* 
+
 .button-pom {
   background-color: #8fc870;
   color: #4B575A;
@@ -475,12 +475,12 @@ span, a {
 
 .gif {
   margin-left: 4.25rem;
-} */
+}
 
 /************************
    My Soul styling 
 ************************/
-/* 
+
 #breathCircle {
   width: 6.25rem;
   height: 6.25rem;
@@ -544,7 +544,7 @@ span, a {
 
 .test {
   margin-top: 3.188rem;
-} */
+}
 
 /************************ 
   @Media set up
