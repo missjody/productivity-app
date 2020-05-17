@@ -1,5 +1,7 @@
 import React from 'react';
 import { Row } from "../components/Grid";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -175,8 +177,24 @@ class Pomodoro extends React.Component {
                 <h1 className="time-child">Live for each moment</h1>
               </div>
             </Row>
-            <Row>
 
+            <Row>
+              <Carousel>
+                <div>
+                  <h2> Instructions One Image </h2>
+                  <p className="legend"> TEST ONE</p>
+                </div>
+
+                <div>
+                  <h2> Instructions Two Image</h2>
+                  <p className="legend"> TEST TWO</p>
+                </div>
+
+                <div>
+                  <h2> Instructions Three Image </h2>
+                  <p className="legend"> TEST THREE</p>
+                </div>
+              </Carousel>
             </Row>
 
             <div className="goal-list">
@@ -196,7 +214,7 @@ class Pomodoro extends React.Component {
                 </div>
                 <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
                 <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
-                <div className="col s4"> <img src="./images/Pomodor.gif" className="gif" /> </div>
+                {/* <div className="col s4"> <img src="./images/Pomodor.gif" className="gif" /> </div> */}
               </div>
               <div className="row">&nbsp;</div>
             </div>

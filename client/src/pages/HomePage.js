@@ -59,12 +59,12 @@ const HomePage = () => {
       <div className="row" id="bkgOne">
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin">
-          <h1>My Goals</h1>
+          <h1 className="text-shadow-pop-bl">My Goals</h1>
           <h4>Break down your goals into easy to accomplish tasks.</h4>
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <img src="./images/hand.png" class=" home-image responsive-img"
+          <img src="./images/hand.png" class=" circle responsive-img"
             alt="Hand writing a todo list." />
         </div>
 
@@ -74,12 +74,12 @@ const HomePage = () => {
       <div className="row" id="bkgTwo" >
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin">
-          <img class=" home-image responsive-img" src="./images/cal.png"
+          <img class=" circle responsive-img" src="./images/cal.png"
             alt="screen shot of calendar" />
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <h1>My Plan</h1>
+          <h1 className="text-shadow-pop-bl">My Plan</h1>
           <h4>Visualize your tasks using a built in calendar.</h4>
         </div>
         {/* </div> */}
@@ -88,12 +88,12 @@ const HomePage = () => {
       <div className="row" id="bkgThree" >
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin">
-          <h1>My Time</h1>
+          <h1 className="text-shadow-pop-bl">My Time</h1>
           <h4>Keep track of your time using the Pomodoro technique.</h4>
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <img src="./images/keyboard.png" class=" home-image responsive-img"
+          <img src="./images/keyboard.png" class=" circle responsive-img"
             alt="NEED ALT HERE." />
         </div>
 
@@ -102,13 +102,13 @@ const HomePage = () => {
 
       <div className="row">
         {/* <div ref={el => content = el}> */}
-        <div className="col s12 m6 xl6 right-align home-margin responsive-img">
-          <img src="./images/soul1.png" class=" home-image"
+        <div className="col s12 m6 xl6 right-align home-margin ">
+          <img src="./images/soul1.png" class=" circle responsive-img"
             alt="woman meditating" />
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <h1>My Soul</h1>
+          <h1 className="text-shadow-pop-bl">My Soul</h1>
           <h4>Don't forget: take time for yourself, just to breathe.</h4>
         </div>
         {/* </div> */}

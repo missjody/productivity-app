@@ -74,7 +74,7 @@ Navigation Bar CSS
  
 nav {
     padding: 0 40px;
-    background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #689f38);
+    background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #7ae642);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2rem;
 }
@@ -425,6 +425,14 @@ span, a {
    My Time styling 
 ************************/
 
+.carousel-root {
+  margin-bottom: -350px;
+}
+
+.carousel .slide {
+  background: #FAC134;
+  margin-bottom: 0px;
+}
 .button-pom {
   background-color: #8fc870;
   color: #4B575A;
