@@ -22,7 +22,7 @@ class SongSelector extends Component {
     let status = this.props.playStatus == "PLAYING";
     let songArray = this.props.songs;
     let options = songArray.map((song, index) =>
-      <button key={index} value={index} className="waves-effect waves-light btn btn-small button">
+      <button key={index} value={index} className="waves-effect waves-light btn btn-small button pink accent-3">
         {song.title}
       </button>
     );

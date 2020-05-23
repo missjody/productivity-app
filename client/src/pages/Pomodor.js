@@ -25,7 +25,7 @@ class LongBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Long Break</p>
-        <button type="button" className="btn button-pom" onClick={this.props.longBreak}>10 minutes</button>
+        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.longBreak}>10 minutes</button>
       </div>
     );
   }
@@ -39,7 +39,7 @@ class Session extends React.Component {
     return (
       <div className="col s4">
         <p>Session</p>
-        <button type="button" className="btn button-pom" onClick={this.props.session}>25 minutes</button>
+        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.session}>25 minutes</button>
       </div>
     );
   }
@@ -54,7 +54,7 @@ class ShortBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Short Break</p>
-        <button type="button" className="btn button-pom" onClick={this.props.shortBreak}>5 minutes</button>
+        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.shortBreak}>5 minutes</button>
       </div>
     );
   }
@@ -68,7 +68,7 @@ class StartButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5 }}>
-      <button className="btn button-pom" onClick={this.props.startCountDown}>Start</button>
+      <button className="btn button-pom pink accent-3" onClick={this.props.startCountDown}>Start</button>
       // </div>
     );
   }
@@ -78,7 +78,7 @@ class StopButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5, marginLeft: 30 }}>
-      <button className="btn button-pom" onClick={this.props.stopCountDown}>Stop</button>
+      <button className="btn button-pom pink accent-3" onClick={this.props.stopCountDown}>Stop</button>
       // </div>
     );
   }
@@ -179,7 +179,7 @@ class Pomodoro extends React.Component {
             </Row>
 
             <Row>
-              <Carousel>
+              {/* <Carousel>
                 <div>
                   <h2> Instructions One Image </h2>
                   <p className="legend"> TEST ONE</p>
@@ -194,7 +194,7 @@ class Pomodoro extends React.Component {
                   <h2> Instructions Three Image </h2>
                   <p className="legend"> TEST THREE</p>
                 </div>
-              </Carousel>
+              </Carousel> */}
             </Row>
 
             <div className="goal-list">

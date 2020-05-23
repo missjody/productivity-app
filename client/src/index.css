@@ -22,14 +22,17 @@ html {
 .page {
   margin: 3.125rem;
 }
-/*
+
 .button {
-background-color: #e59d89;
+/* background-color: #e59d89; */
 color: #4B575A;
 margin: 0.25rem;
 font-size: 1.25rem;
 font-family: 'Josefin Sans', sans-serif;
 padding-top: .15rem;
+}
+
+/*
 
 -webkit-transition: background-color .2s ease-out;
 transition: background-color .2s ease-out;
@@ -68,13 +71,13 @@ color: #689F38;
 Navigation Bar CSS 
 ************************/
 
-.tabs .indicator {
+/* .tabs .indicator {
   background-color: 
-}
+} */
  
 nav {
     padding: 0 40px;
-    background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #7ae642);
+    background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #689f38);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2rem;
 }
@@ -180,15 +183,15 @@ nav ul a, nav a, nav .brand-logo {
 } 
 
 #bkgOne {
-  background-color: #7ae642;
-  position: static;
+  background-color: #1266b6;
+    position: static;
   width: 100vw;
   padding-bottom: 100px;
 }
 
 
 #bkgTwo {
-  background-color: #1266b6;
+  background-color: #689f38;
     position: static;
     width: 100vw;
     margin-top: -25px;
@@ -211,16 +214,24 @@ nav ul a, nav a, nav .brand-logo {
 /************************
    Sign In styling 
 ************************/
+.sign-image {
+  width: 100vw;
+  margin-top: -3.1rem;
+  height: auto !important;
+}
+
+/* customImageTag {
+  width: 100vw;
+  height: 20%;
+} */
 /* 
 button:focus {
   outline: none;
   background-color: #e59d89;
 }
 
-.sign-image {
-  width: 35rem;
-  margin-top: -3rem;
-}
+
+
 
 #noAuth {
   margin-top: .5rem;
@@ -262,7 +273,7 @@ button:focus {
 /* Goals styling */
 
 .blue {
-  background-color: #7ae642!important;
+  background-color: #689f38!important;
 }
 
 .blue.lighten-4 {
@@ -379,12 +390,12 @@ span, a {
 }
 
 .rbc-off-range-bg {
-  background: #fac134 !important;
+  background: white !important;
   
 }
 
 .rbc-today {
-  background-color: #689f38 !important;
+  background-color: #7ae642 !important;
 }
 
 .rbc-toolbar {
@@ -409,7 +420,7 @@ span, a {
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button.rbc-active:focus, button.rbc-active {
-  background-color: #689f38 !important;
+  background-color: #7ae642 !important;
 }
 
 .rbc-event {
