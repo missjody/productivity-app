@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
 import { Row } from "../Grid";
+import TrackTime from "./TimeTrack";
 
 const control = (text, clickHandler) => {
   const onClick = ev => {
     ev.preventDefault();
     clickHandler();
+    TrackTime(text);
   };
 
   return (
-    <button className="waves-effect waves-light btn btn-small button dyn-button">
+    <button className="waves-effect waves-light btn btn-small button dyn-button" id={text}>
       <a href="#" onClick={onClick}>
         <p className="dynamic">{text}</p>
       </a>
