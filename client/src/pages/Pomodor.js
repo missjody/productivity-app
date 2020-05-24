@@ -1,5 +1,7 @@
 import React from 'react';
 import { Row } from "../components/Grid";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -23,7 +25,7 @@ class LongBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Long Break</p>
-        <button type="button" className="btn button-pom" onClick={this.props.longBreak}>10 minutes</button>
+        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.longBreak}>10 minutes</button>
       </div>
     );
   }
@@ -37,7 +39,7 @@ class Session extends React.Component {
     return (
       <div className="col s4">
         <p>Session</p>
-        <button type="button" className="btn button-pom" onClick={this.props.session}>25 minutes</button>
+        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.session}>25 minutes</button>
       </div>
     );
   }
@@ -52,7 +54,7 @@ class ShortBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Short Break</p>
-        <button type="button" className="btn button-pom" onClick={this.props.shortBreak}>5 minutes</button>
+        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.shortBreak}>5 minutes</button>
       </div>
     );
   }
@@ -66,7 +68,7 @@ class StartButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5 }}>
-      <button className="btn button-pom" onClick={this.props.startCountDown}>Start</button>
+      <button className="btn button-pom pink accent-3" onClick={this.props.startCountDown}>Start</button>
       // </div>
     );
   }
@@ -76,7 +78,7 @@ class StopButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5, marginLeft: 30 }}>
-      <button className="btn button-pom" onClick={this.props.stopCountDown}>Stop</button>
+      <button className="btn button-pom pink accent-3" onClick={this.props.stopCountDown}>Stop</button>
       // </div>
     );
   }
@@ -175,8 +177,24 @@ class Pomodoro extends React.Component {
                 <h1 className="time-child">Live for each moment</h1>
               </div>
             </Row>
-            <Row>
 
+            <Row>
+              {/* <Carousel>
+                <div>
+                  <h2> Instructions One Image </h2>
+                  <p className="legend"> TEST ONE</p>
+                </div>
+
+                <div>
+                  <h2> Instructions Two Image</h2>
+                  <p className="legend"> TEST TWO</p>
+                </div>
+
+                <div>
+                  <h2> Instructions Three Image </h2>
+                  <p className="legend"> TEST THREE</p>
+                </div>
+              </Carousel> */}
             </Row>
 
             <div className="goal-list">
@@ -196,7 +214,7 @@ class Pomodoro extends React.Component {
                 </div>
                 <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
                 <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
-                <div className="col s4"> <img src="./images/Pomodor.gif" className="gif" /> </div>
+                {/* <div className="col s4"> <img src="./images/Pomodor.gif" className="gif" /> </div> */}
               </div>
               <div className="row">&nbsp;</div>
             </div>

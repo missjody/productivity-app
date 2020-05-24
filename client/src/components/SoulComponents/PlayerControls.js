@@ -11,7 +11,7 @@ const control = (text, clickHandler) => {
   };
 
   return (
-    <button className="waves-effect waves-light btn btn-small button dyn-button" id={text}>
+    <button className="waves-effect waves-light btn btn-small button dyn-button pink accent-3" id={text}>
       <a href="#" onClick={onClick}>
         <p className="dynamic">{text}</p>
       </a>
