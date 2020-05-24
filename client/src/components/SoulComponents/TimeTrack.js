@@ -134,21 +134,60 @@ const TrackTime = ({text}) =>{
     let timeArr = [];
     let totalTime = [];
     console.log(now())
-    const time = (text) => {
-        if ({text} === "_Play" || "_Resume"){
-            var start = now()
-            timeArr.push(start)
-            console.log("TimeArr value: ", timeArr[0])
+    const time = ({text}) => {
+        let start;
+        let end;
+        function getStart() {
+            if ({ text } ==="_Play" || "_Resume"){
+                start = now() ;      
+            } else {
+                start = start
+            }
             console.log("start:", start)
-        } else if ({text} === "_Stop" || "_Pause"){
-            console.log("heyyyy ")
-            var end = now();
-            console.log("end: ", end)
-            timeArr.push(end-start)
-            console.log("TimeArr value at end: ", timeArr[1])
-        } else {
-            console.log ("total time is: ", totalTime);
         }
+        function getEnd() {
+            if ({ text } ==="_Stop" || "_Pause"){
+                end = now() ;      
+            }
+            console.log("end:", end)
+        }
+        getStart()
+        getEnd();            
+        // ^^ These console log on the same time so they both trigger regardless for the button
+
+        // ({text} === ("_Play"||"_Resume"))?{
+        //     start: now(),
+        // } : {
+        //     start: start,
+        //     end: now(),
+        // }
+        // console.log("start:", start);
+        // console.log("end:", end)
+        //  var timeEntry = end-start;
+        //  console.log("time Entry is: ", timeEntry)
+
+        // console.log("time spent: ", end-start)
+        // let timeEntry = (end-start);
+        // console.log(timeEntry);
+        // return (timeEntry);
+        // function getTimeEntry() {
+        //     var timeEntry = end-start;
+        // }
+        // console.log(timeEntry)
+        // getTimeEntry();
+        // if ({text} === "_Play" || "_Resume"){
+        //     var start = now()
+        //     timeArr.push(start)
+        //     console.log("TimeArr value: ", timeArr[0])
+        // } else if ({text} === "_Stop" || "_Pause"){
+        //     console.log("heyyyy ")
+        //     var end = now();
+        //     console.log("end: ", end)
+        //     timeArr.push(end-start)
+        //     console.log("TimeArr value at end: ", timeArr[1])
+        // } else {
+        //     console.log ("total time is: ", totalTime);
+        // }
     }
     time({text});
     function msToTime(time) {
@@ -166,10 +205,10 @@ const TrackTime = ({text}) =>{
     totalTime.push(time);
     var totalTimeSum = totalTime.reduce((a,b) => a+b, 0);
 
-    console.log('milliseconds total time spent - send to DB : ', totalTimeSum);
-    console.log('milliseconds total time spent - client side : ', msToTime());
-    console.log(' total time : ', totalTime);
-    console.log(' what is time : ', time);
+    // console.log('milliseconds total time spent - send to DB : ', totalTimeSum);
+    // console.log('milliseconds total time spent - client side : ', msToTime());
+    // console.log(' total time : ', totalTime);
+    // console.log(' what is time : ', time);
 
 }
 
