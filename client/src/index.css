@@ -49,13 +49,6 @@ font-family: 'Josefin Sans', sans-serif;
 color: white;
 }
 
-/*
-p {
-font-family: 'Josefin Sans', sans-serif;
-font-size: 1.25rem;
-color: #164964;
-padding: 0.15rem;
-}
 
 #boldP {
 font-weight: bold;
@@ -65,7 +58,7 @@ margin-top: -2.8rem;
 margin-left: -2.8rem;
 margin-right: -2.8rem;
 color: #689F38;
-} */
+}
 
 /************************
 Navigation Bar CSS 
@@ -471,19 +464,14 @@ span, a {
    padding-top: .25rem;
 }
 
-.time-child {
+#timeChild {
   position: absolute;
-  margin-top: -6.5rem;
-  left: auto;
-  right: 7rem;
+  margin-top: -5.5rem;
   font-family: 'Josefin Sans', sans-serif;
-  color: rgb(189, 198, 201);
 }
 
-.time-image {
-  margin-top: -3.15rem;
-  height: 65%;
-  width: 65%;
+#timeImage {
+  margin-top: -3.1rem;
 }
 
 .time-quote {
@@ -513,7 +501,7 @@ span, a {
   width: 6.25rem;
   height: 6.25rem;
   opacity: 0;
-  background: #85CBC0;
+  background: white;
   border-radius: 50%;
   margin: -36rem auto auto auto;
 }
@@ -534,9 +522,9 @@ span, a {
   text-align:center;
 }
 
-.soul-image {
-  width: 42.666rem;
-  margin-top: -3.15rem;
+#soulImage {
+  /* width: 42.666rem; */
+  margin-top: -3.1rem;
 }
 
 .parent {
@@ -553,10 +541,10 @@ span, a {
 .child {
   position: absolute;
   margin-top: -5.5rem;
-  left: auto;
-  right: -8.5rem;
+  /* left: auto;
+  right: -8.5rem; */
   font-family: 'Josefin Sans', sans-serif;
-  color: #164964;
+  /* color: #164964; */
 }
 
 .quote {

@@ -43,6 +43,7 @@ class SongSelector extends Component {
               ...transitionStyles[state]
             }}>
               <img
+                id="soulImage"
                 sizes="(max-width: 100vw) 100vw"
                 srcset={`${xsmall} 190w,
             ${small} 879w,
@@ -51,25 +52,25 @@ class SongSelector extends Component {
             ${xlarge} 2600w`}
                 src="yellowmeditate_cxfljk_c_scale,w_2600.png"
                 alt="An image of a womans hands resting on a computer keyboard. The photo is composed of black and yellow lines striped together to render the image." />
-              <Row>
-                <div className="col s-8 pull-s1 parent">
-                  <h5 className="quote" >"Meditation brings many benefits: It refreshes us, helps us settle into what’s happening now, makes us wiser and gentler, helps us cope in a world that overloads us with information and communication, and more."<br />--Gayathri Sooraj</h5>
+              <h1 className="child">My Soul</h1>
+              {/* <Row>
+                <div className="col s-8 pull-s1 parent"> */}
+              {/* <h5 className="quote" >"Meditation brings many benefits: It refreshes us, helps us settle into what’s happening now, makes us wiser and gentler, helps us cope in a world that overloads us with information and communication, and more."<br />--Gayathri Sooraj</h5> */}
 
-                  {/* <img src="./images/soul1.png" className="soul-image responsive-img" alt="A person stands against a wall in a one legged yoga pose, hands folded together in front of them. Their chin is uplifted, and they look content. The photo is composed of black and teal lines striped together to render the image." /> */}
-                  <h1 className="child">My Soul</h1>
-                </div>
-              </Row>
+              {/* <img src="./images/soul1.png" className="soul-image responsive-img" alt="A person stands against a wall in a one legged yoga pose, hands folded together in front of them. Their chin is uplifted, and they look content. The photo is composed of black and teal lines striped together to render the image." /> */}
+              {/* </div>
+              </Row> */}
 
               <Row>
-                <div className="col s-8 pull-s1">
-                  <p>We couldn't think of this application as complete without having a tool to help you "reset". Resetting yourself is as important and helpful as checking a todo off of your list.</p>
-                  <p>Take 3-5 minutes to allow your breathing to slow in time with the bubble, letting your thoughts drift by quietly, and your mind and soul a chance to rest.</p>
+                <div className="col s-6">
+                  <h4>We couldn't think of this application as complete without having a tool to help you "reset". Resetting yourself is as important and helpful as checking a todo off of your list.</h4>
+                  <h4>Take 3-5 minutes to allow your breathing to slow in time with the bubble, letting your thoughts drift by quietly, and your mind and soul a chance to rest.</h4>
                 </div>
               </Row>
 
               <Row>
                 <div>
-                  <p id="boldP">Choose your meditation soundtrack, and keep your breath in time with the bubble:</p>
+                  <h5 id="boldP">Choose your meditation soundtrack, and keep your breath in time with the bubble:</h5>
                 </div>
                 <div>
                   <div value={this.props.songs.indexOf(this.props.selectedSong)} onClick={this.handleSongChange.bind(this)} id="songOptions">
