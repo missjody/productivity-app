@@ -214,10 +214,19 @@ nav ul a, nav a, nav .brand-logo {
 /************************
    Sign In styling 
 ************************/
-.sign-image {
+#signImage {
   width: 100vw;
   margin-top: -3.1rem;
-  height: auto !important;
+  /* height: 50% !important; */
+}
+
+.form-label, .form-input, #username.form-input {
+  color: white !important;
+}
+
+::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
+  color: white !important;
+  opacity: 1;
 }
 
 /* customImageTag {
@@ -244,15 +253,15 @@ button:focus {
 
 /* Goal Image */
 
-.goal-image {
-  width: 42.666rem;
-  margin-top: -7.5rem;
+#goalImage {
+  /* width: 42.666rem; */
+  margin-top: -3.1rem;
 }
 
 .goal-child {
-  position: absolute;
+  /* position: absolute; */
   margin-top: -5.5rem;
-  left: -10rem;
+  left: -5rem;
   right: auto;
   font-family: 'Josefin Sans', sans-serif;
   color:white;
@@ -390,7 +399,7 @@ span, a {
 }
 
 .rbc-off-range-bg {
-  background: white !important;
+  background: #6CA038 !important;
   
 }
 
