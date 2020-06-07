@@ -449,7 +449,9 @@ span, a {
 }
 
 .car-img {
-  width: 50%;
+  /* border-radius: 400px; */
+  max-width: 50% !important;
+  margin-left: 20rem;
 }
 .button-pom {
   background-color: #8fc870;

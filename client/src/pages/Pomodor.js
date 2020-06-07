@@ -1,12 +1,13 @@
 import React from 'react';
 import { Row } from "../components/Grid";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import pomxsmall from "./pomxsmall.png";
 import pomsmall from "./pomsmall.png";
 import pommedium from "./pommedium.png";
 import pomlarge from "./pomlarge.png";
 import pomxlarge from "./pomxlarge.png";
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -167,6 +168,7 @@ class Pomodoro extends React.Component {
     })
   }
 
+
   render() {
     return (
       <div className="test">
@@ -188,44 +190,53 @@ class Pomodoro extends React.Component {
 
           <div>
 
-            {/* <Row> */}
-            {/* <div className="col s-8 pull-s1 parent"> */}
-            {/* <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
+            <Row>
+              {/* <div className="col s-8 pull-s1 parent"> */}
+              {/* <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
             --Francesco Cirillo</h5> */}
-            {/* <img src="./images/phone.png" className="time-image responsive-img" alt="An image of a woman from behind, as she holds the reciever of a black office phone to her ear. The photo is composed of black and plum lines striped together to render the image." /> */}
-            {/* </div> */}
-            {/* </Row> */}
+              {/* <img src="./images/phone.png" className="time-image responsive-img" alt="An image of a woman from behind, as she holds the reciever of a black office phone to her ear. The photo is composed of black and plum lines striped together to render the image." /> */}
+              {/* </div> */}
+            </Row>
 
-            {/* <Row> */}
-            <Carousel>
-              <div>
-                <img src="./images/1x/Step1.png" className="car-img" />
-              </div>
+            <Row>
+              <OwlCarousel
+                className="owl-theme"
+                loop
+                margin={10}
+                items={1}
+                center
+                nav
+              >
 
-              <div>
-                <img src="./images/1x/Step2.png" className="car-img" />
-              </div>
+                <div>
+                  <img src="./images/1x/Step1.png" className="car-img" />
+                </div>
 
-              <div>
-                <img src="./images/1x/Step3.png" className="car-img" />
-              </div>
+                <div>
+                  <img src="./images/1x/Step2.png" className="car-img" />
+                </div>
 
-
-              <div>
-                <img src="./images/1x/Step4.png" className="car-img" />
-              </div>
-
-
-              <div>
-                <img src="./images/1x/Step5.png" className="car-img" />
-              </div>
+                <div>
+                  <img src="./images/1x/Step3.png" className="car-img" />
+                </div>
 
 
-              <div>
-                <img src="./images/1x/Step6.png" className="car-img" />
-              </div>
-            </Carousel>
-            {/* </Row> */}
+                <div>
+                  <img src="./images/1x/Step4.png" className="car-img" />
+                </div>
+
+
+                <div>
+                  <img src="./images/1x/Step5.png" className="car-img" />
+                </div>
+
+
+                <div>
+                  <img src="./images/1x/Step6.png" className="car-img" />
+                </div>
+              </OwlCarousel>
+
+            </Row>
 
             <div className="goal-list">
 

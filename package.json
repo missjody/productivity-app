@@ -27,6 +27,7 @@
         "express": "^4.16.3",
         "express-session": "^1.17.0",
         "if-env": "^1.0.4",
+        "jquery": "^3.5.1",
         "materialize-css": "^1.0.0-rc.2",
         "moment": "^2.24.0",
         "mongoose": "^5.3.16",
@@ -35,7 +36,7 @@
         "passport-local": "^1.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
-        "react-responsive-carousel": "^3.2.7",
+        "react-owl-carousel": "^2.3.1",
         "react-transition-group": "^4.3.0"
     }
 }
