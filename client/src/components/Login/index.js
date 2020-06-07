@@ -3,7 +3,12 @@ import userContext from '../../utils/userContext';
 import { Redirect } from 'react-router-dom';
 import API from '../../utils/API';
 import M from "materialize-css";
-import keyboard from "./keyboard.png"
+// import keyboard from "./keyboard.png"
+import xsmall from "./xsmall.png";
+import small from "./small.png";
+import medium from "./medium.png";
+import large from "./large.png";
+import xlarge from "./xlarge.png";
 
 export default () => {
 	M.AutoInit();
@@ -42,8 +47,18 @@ export default () => {
 
 	return (
 		user ? <Redirect to="/goals" /> : <div className="SignupForm">
+			<img
+				id="signImage"
+				sizes="(max-width: 100vw) 100vw"
+				srcset={`${xsmall} 190w,
+						${small} 695w,
+						${medium} 1024w,
+						${large} 1299w,
+						${xlarge} 1538w`}
+				src="purpphone2_oqrnqz_c_scale,w_1538.png"
+				alt="" />
 			<div className="col s-8 parent">
-				<img src="./images/keyboard.png" className="sign-image" alt="An image of a womans hands resting on a computer keyboard. The photo is composed of black and teal lines striped together to render the image." />
+				{/* <img src="./images/keyboard.png" className="sign-image" alt="An image of a womans hands resting on a computer keyboard. The photo is composed of black and teal lines striped together to render the image." /> */}
 			</div>
 			<h4>{loginState.login ? 'Log In' : 'Sign up'}</h4>
 

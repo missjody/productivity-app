@@ -2,6 +2,11 @@ import React from 'react';
 import { Row } from "../components/Grid";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import pomxsmall from "./pomxsmall.png";
+import pomsmall from "./pomsmall.png";
+import pommedium from "./pommedium.png";
+import pomlarge from "./pomlarge.png";
+import pomxlarge from "./pomxlarge.png";
 
 class Timer extends React.Component {
   constructor(props) {
@@ -165,37 +170,62 @@ class Pomodoro extends React.Component {
   render() {
     return (
       <div className="test">
+
+        <img
+          id="timeImage"
+          sizes="(max-width: 100vw) 100vw"
+          srcset={`${pomxsmall} 190w,
+          ${pomsmall} 731w,
+          ${pommedium} 1047w,
+          ${pomlarge} 1318w,
+          ${pomxlarge} 1538w`}
+          src="bluehand2_pb9fpa_c_scale,w_1538.png"
+          alt="" />
+        <h1 id="timeChild">Live for each moment</h1>
+
+
         <div className="container">
 
           <div>
 
-            <Row>
-              <div className="col s-8 pull-s1 parent">
-                <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
-            --Francesco Cirillo</h5>
-                <img src="./images/phone.png" className="time-image responsive-img" alt="An image of a woman from behind, as she holds the reciever of a black office phone to her ear. The photo is composed of black and plum lines striped together to render the image." />
-                <h1 className="time-child">Live for each moment</h1>
+            {/* <Row> */}
+            {/* <div className="col s-8 pull-s1 parent"> */}
+            {/* <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
+            --Francesco Cirillo</h5> */}
+            {/* <img src="./images/phone.png" className="time-image responsive-img" alt="An image of a woman from behind, as she holds the reciever of a black office phone to her ear. The photo is composed of black and plum lines striped together to render the image." /> */}
+            {/* </div> */}
+            {/* </Row> */}
+
+            {/* <Row> */}
+            <Carousel>
+              <div>
+                <img src="./images/1x/Step1.png" className="car-img" />
               </div>
-            </Row>
 
-            <Row>
-              {/* <Carousel>
-                <div>
-                  <h2> Instructions One Image </h2>
-                  <p className="legend"> TEST ONE</p>
-                </div>
+              <div>
+                <img src="./images/1x/Step2.png" className="car-img" />
+              </div>
 
-                <div>
-                  <h2> Instructions Two Image</h2>
-                  <p className="legend"> TEST TWO</p>
-                </div>
+              <div>
+                <img src="./images/1x/Step3.png" className="car-img" />
+              </div>
 
-                <div>
-                  <h2> Instructions Three Image </h2>
-                  <p className="legend"> TEST THREE</p>
-                </div>
-              </Carousel> */}
-            </Row>
+
+              <div>
+                <img src="./images/1x/Step4.png" className="car-img" />
+              </div>
+
+
+              <div>
+                <img src="./images/1x/Step5.png" className="car-img" />
+              </div>
+
+
+              <div>
+                <img src="./images/1x/Step6.png" className="car-img" />
+              </div>
+            </Carousel>
+            {/* </Row> */}
 
             <div className="goal-list">
 

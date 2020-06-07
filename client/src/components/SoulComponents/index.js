@@ -39,7 +39,9 @@ class SoulComponent extends Component {
 
   render() {
     return (
-      <Container>
+      // <Container>
+      <div>
+
 
         <SongSelector
           songs={songs}
@@ -94,7 +96,8 @@ class SoulComponent extends Component {
             )
         )}
 
-      </Container>
+      </div>
+      // </Container>
     );
   }
 }

@@ -1,11 +1,15 @@
 .popup {
     width: 20rem;
     height: 20rem;
-    background: #8fc870;
+    background: #689f38;
     border-radius: 50%;
+    border-color: white;
+    border-style: solid;
     position: fixed;
-    top: calc(50% - 10rem);
-    right: calc(50% - 10rem);
+    /* top: calc(50% - 10rem);
+    right: calc(50% - 10rem); */
+    top: calc(50%);
+    right: calc(50%);
     z-index: 99 !important;
   }
   .hidden {
@@ -21,12 +25,12 @@
   }
   span {
     font-family: 'Josefin Sans', sans-serif;
-    color: #164964;
+    color: white;
   }
   h6 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.45rem;
-    color: #164964;
+    color: white;
     padding: 0.15rem;
     }
   input::placeholder {

@@ -44,18 +44,11 @@ background-color: #FF8781;
 }
 */
 
-h1, h2, h3, h4, h5, hr {
+h1, h2, h3, h4, h5, hr, p {
 font-family: 'Josefin Sans', sans-serif;
 color: white;
 }
 
-/*
-p {
-font-family: 'Josefin Sans', sans-serif;
-font-size: 1.25rem;
-color: #164964;
-padding: 0.15rem;
-}
 
 #boldP {
 font-weight: bold;
@@ -65,7 +58,7 @@ margin-top: -2.8rem;
 margin-left: -2.8rem;
 margin-right: -2.8rem;
 color: #689F38;
-} */
+}
 
 /************************
 Navigation Bar CSS 
@@ -93,12 +86,13 @@ nav ul a, nav a, nav .brand-logo {
 }
 
 /* Side Nav */
-/* 
+
 .sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
 .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
-  color: #689F38 !important;
-  background-color: #E59D89 !important;
-} */ 
+  /* color: #689F38 !important; */
+  background-color: #FAC134 !important;
+  font-family: 'Josefin Sans', sans-serif;
+}  
 
 /************************ 
   Home Page styling 
@@ -214,10 +208,19 @@ nav ul a, nav a, nav .brand-logo {
 /************************
    Sign In styling 
 ************************/
-.sign-image {
+#signImage {
   width: 100vw;
   margin-top: -3.1rem;
-  height: auto !important;
+  /* height: 50% !important; */
+}
+
+.form-label, .form-input, #username.form-input {
+  color: white !important;
+}
+
+::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
+  color: white !important;
+  opacity: 1;
 }
 
 /* customImageTag {
@@ -244,15 +247,15 @@ button:focus {
 
 /* Goal Image */
 
-.goal-image {
-  width: 42.666rem;
-  margin-top: -7.5rem;
+#goalImage {
+  /* width: 42.666rem; */
+  margin-top: -3.1rem;
 }
 
 .goal-child {
-  position: absolute;
+  /* position: absolute; */
   margin-top: -5.5rem;
-  left: -10rem;
+  left: -5rem;
   right: auto;
   font-family: 'Josefin Sans', sans-serif;
   color:white;
@@ -314,7 +317,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   box-shadow: 0 1px 0 0 #FAC134;
 } 
 
-.popup {
+/* .popup {
   width: 400px;
   height: 400px;
   background: #689f38;
@@ -324,11 +327,11 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   right: 40%;
   margin: 0 auto;
   z-index: 99 !important;
-} 
+}  */
 
-.hidden {
+/* .hidden {
   display: none; 
-}
+} */
 
 /* Goal List styling */
 
@@ -390,12 +393,12 @@ span, a {
 }
 
 .rbc-off-range-bg {
-  background: white !important;
+  background: #6CA038 !important;
   
 }
 
 .rbc-today {
-  background-color: #7ae642 !important;
+  background-color: #fac134 !important;
 }
 
 .rbc-toolbar {
@@ -420,7 +423,7 @@ span, a {
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button.rbc-active:focus, button.rbc-active {
-  background-color: #7ae642 !important;
+  background-color: #fac134 !important;
 }
 
 .rbc-event {
@@ -444,6 +447,10 @@ span, a {
   background: #FAC134;
   margin-bottom: 0px;
 }
+
+.car-img {
+  width: 50%;
+}
 .button-pom {
   background-color: #8fc870;
   color: #4B575A;
@@ -462,19 +469,14 @@ span, a {
    padding-top: .25rem;
 }
 
-.time-child {
+#timeChild {
   position: absolute;
-  margin-top: -6.5rem;
-  left: auto;
-  right: 7rem;
+  margin-top: -5.5rem;
   font-family: 'Josefin Sans', sans-serif;
-  color: rgb(189, 198, 201);
 }
 
-.time-image {
-  margin-top: -3.15rem;
-  height: 65%;
-  width: 65%;
+#timeImage {
+  margin-top: -3.1rem;
 }
 
 .time-quote {
@@ -504,9 +506,9 @@ span, a {
   width: 6.25rem;
   height: 6.25rem;
   opacity: 0;
-  background: #85CBC0;
+  background: white;
   border-radius: 50%;
-  margin: -36rem auto auto auto;
+  margin: -30rem auto auto auto;
 }
 
 .dynamic {
@@ -525,9 +527,9 @@ span, a {
   text-align:center;
 }
 
-.soul-image {
-  width: 42.666rem;
-  margin-top: -3.15rem;
+#soulImage {
+  /* width: 42.666rem; */
+  margin-top: -3.1rem;
 }
 
 .parent {
@@ -544,10 +546,10 @@ span, a {
 .child {
   position: absolute;
   margin-top: -5.5rem;
-  left: auto;
-  right: -8.5rem;
+  /* left: auto;
+  right: -8.5rem; */
   font-family: 'Josefin Sans', sans-serif;
-  color: #164964;
+  /* color: #164964; */
 }
 
 .quote {
