@@ -188,32 +188,44 @@ class Pomodoro extends React.Component {
 
           <div>
 
-            <Row>
-              <div className="col s-8 pull-s1 parent">
-                {/* <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
+            {/* <Row> */}
+            {/* <div className="col s-8 pull-s1 parent"> */}
+            {/* <h5 className="time-quote" >"I discovered that you could learn how to improve your effectiveness and be better able to estimate how long..."<br />
             --Francesco Cirillo</h5> */}
-                {/* <img src="./images/phone.png" className="time-image responsive-img" alt="An image of a woman from behind, as she holds the reciever of a black office phone to her ear. The photo is composed of black and plum lines striped together to render the image." /> */}
+            {/* <img src="./images/phone.png" className="time-image responsive-img" alt="An image of a woman from behind, as she holds the reciever of a black office phone to her ear. The photo is composed of black and plum lines striped together to render the image." /> */}
+            {/* </div> */}
+            {/* </Row> */}
+
+            {/* <Row> */}
+            <Carousel>
+              <div>
+                <img src="./images/1x/Step1.png" className="car-img" />
               </div>
-            </Row>
 
-            <Row>
-              {/* <Carousel>
-                <div>
-                  <h2> Instructions One Image </h2>
-                  <p className="legend"> TEST ONE</p>
-                </div>
+              <div>
+                <img src="./images/1x/Step2.png" className="car-img" />
+              </div>
 
-                <div>
-                  <h2> Instructions Two Image</h2>
-                  <p className="legend"> TEST TWO</p>
-                </div>
+              <div>
+                <img src="./images/1x/Step3.png" className="car-img" />
+              </div>
 
-                <div>
-                  <h2> Instructions Three Image </h2>
-                  <p className="legend"> TEST THREE</p>
-                </div>
-              </Carousel> */}
-            </Row>
+
+              <div>
+                <img src="./images/1x/Step4.png" className="car-img" />
+              </div>
+
+
+              <div>
+                <img src="./images/1x/Step5.png" className="car-img" />
+              </div>
+
+
+              <div>
+                <img src="./images/1x/Step6.png" className="car-img" />
+              </div>
+            </Carousel>
+            {/* </Row> */}
 
             <div className="goal-list">
 

@@ -44,7 +44,7 @@ background-color: #FF8781;
 }
 */
 
-h1, h2, h3, h4, h5, hr {
+h1, h2, h3, h4, h5, hr, p {
 font-family: 'Josefin Sans', sans-serif;
 color: white;
 }
@@ -446,6 +446,10 @@ span, a {
 .carousel .slide {
   background: #FAC134;
   margin-bottom: 0px;
+}
+
+.car-img {
+  width: 50%;
 }
 .button-pom {
   background-color: #8fc870;
