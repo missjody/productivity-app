@@ -209,30 +209,30 @@ class Pomodoro extends React.Component {
               >
 
                 <div>
-                  <img src="./images/1x/Step1.png" className="car-img" />
+                  <img src="./images/sur1.png" className="car-img" />
                 </div>
 
                 <div>
-                  <img src="./images/1x/Step2.png" className="car-img" />
+                  <img src="./images/sur2.png" className="car-img" />
                 </div>
 
                 <div>
-                  <img src="./images/1x/Step3.png" className="car-img" />
-                </div>
-
-
-                <div>
-                  <img src="./images/1x/Step4.png" className="car-img" />
+                  <img src="./images/sur3.png" className="car-img" />
                 </div>
 
 
                 <div>
-                  <img src="./images/1x/Step5.png" className="car-img" />
+                  <img src="./images/sur4.png" className="car-img" />
                 </div>
 
 
                 <div>
-                  <img src="./images/1x/Step6.png" className="car-img" />
+                  <img src="./images/sur5.png" className="car-img" />
+                </div>
+
+
+                <div>
+                  <img src="./images/sur6.png" className="car-img" />
                 </div>
               </OwlCarousel>
 
