@@ -398,7 +398,7 @@ span, a {
 }
 
 .rbc-today {
-  background-color: #7ae642 !important;
+  background-color: #fac134 !important;
 }
 
 .rbc-toolbar {
@@ -423,7 +423,7 @@ span, a {
 }
 
 .rbc-toolbar button:active:hover, .rbc-toolbar button:active:focus, .rbc-toolbar button.rbc-active:hover, .rbc-toolbar button.rbc-active:focus, button.rbc-active {
-  background-color: #7ae642 !important;
+  background-color: #fac134 !important;
 }
 
 .rbc-event {
@@ -504,7 +504,7 @@ span, a {
   opacity: 0;
   background: white;
   border-radius: 50%;
-  margin: -36rem auto auto auto;
+  margin: -30rem auto auto auto;
 }
 
 .dynamic {

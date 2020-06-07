@@ -61,24 +61,26 @@ class SongSelector extends Component {
               {/* </div>
               </Row> */}
 
-              <Row>
-                <div className="col s-6">
-                  <h4>We couldn't think of this application as complete without having a tool to help you "reset". Resetting yourself is as important and helpful as checking a todo off of your list.</h4>
-                  <h4>Take 3-5 minutes to allow your breathing to slow in time with the bubble, letting your thoughts drift by quietly, and your mind and soul a chance to rest.</h4>
-                </div>
-              </Row>
-
-              <Row>
-                <div>
-                  <h5 id="boldP">Choose your meditation soundtrack, and keep your breath in time with the bubble:</h5>
-                </div>
-                <div>
-                  <div value={this.props.songs.indexOf(this.props.selectedSong)} onClick={this.handleSongChange.bind(this)} id="songOptions">
-                    {options}
+              <div className="container">
+                <Row>
+                  <div className="col s-6">
+                    <h4>We couldn't think of this application as complete without having a tool to help you "reset". Resetting yourself is as important and helpful as checking a todo off of your list.</h4>
+                    <h4>Take 3-5 minutes to allow your breathing to slow in time with the bubble, letting your thoughts drift by quietly, and your mind and soul a chance to rest.</h4>
                   </div>
-                </div>
-              </Row>
+                </Row>
 
+                <Row>
+                  <div>
+                    <h5 id="boldP">Choose your meditation soundtrack, and keep your breath in time with the bubble:</h5>
+                  </div>
+                  <div>
+                    <div value={this.props.songs.indexOf(this.props.selectedSong)} onClick={this.handleSongChange.bind(this)} id="songOptions">
+                      {options}
+                    </div>
+                  </div>
+                </Row>
+
+              </div>
             </div>
           </div>
         )
