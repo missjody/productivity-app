@@ -109,7 +109,7 @@ function TaskForm(props) {
                 {props.tasks.map(item => {
                     return (
                         <div key={item._id} className="col s12" style={{ borderBottom: "2px solid #8a8158" }}>
-                            <h6 key={item._id} style={{ color: item.complete ? '#8a8158' : '#164964' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
+                            <h6 key={item._id} style={{ color: item.complete ? '#689f38' : '#00365F' }}>{item.name}&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => finishTask(item)}>check_circle</i>&nbsp;&nbsp;&nbsp;<i className="material-icons" onClick={() => removeTask(item)}>delete</i></h6>
                         </div>
                     )
                 })}

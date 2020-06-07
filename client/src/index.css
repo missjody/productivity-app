@@ -86,12 +86,13 @@ nav ul a, nav a, nav .brand-logo {
 }
 
 /* Side Nav */
-/* 
+
 .sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
 .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
-  color: #689F38 !important;
-  background-color: #E59D89 !important;
-} */ 
+  /* color: #689F38 !important; */
+  background-color: #FAC134 !important;
+  font-family: 'Josefin Sans', sans-serif;
+}  
 
 /************************ 
   Home Page styling 
@@ -316,7 +317,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   box-shadow: 0 1px 0 0 #FAC134;
 } 
 
-.popup {
+/* .popup {
   width: 400px;
   height: 400px;
   background: #689f38;
@@ -326,11 +327,11 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
   right: 40%;
   margin: 0 auto;
   z-index: 99 !important;
-} 
+}  */
 
-.hidden {
+/* .hidden {
   display: none; 
-}
+} */
 
 /* Goal List styling */
 

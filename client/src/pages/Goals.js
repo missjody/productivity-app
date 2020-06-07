@@ -67,7 +67,8 @@ function Goals() {
                                             ${xlarge} 1538w
                                             `}
                 src="yellowhand2_zu1ewj_c_scale,w_1538.png"
-                alt="" />
+                alt=""
+            />
             <h1 className="goal-child">Set a new goal</h1>
 
             <div id="containerGoal">
