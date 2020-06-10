@@ -543,6 +543,12 @@ span, a {
   margin-top: 3.188rem;
 }
 
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: larger;
+}
+
 /************************ 
   @Media set up
 ************************/
