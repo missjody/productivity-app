@@ -1,7 +1,6 @@
 /************************ 
 Index CSS
 ************************/
-
 body {
   background: #ff8781;
   margin:0;
@@ -56,7 +55,7 @@ nav li:target {
 .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
   background-color: #FAC134 !important;
   font-family: 'Josefin Sans', sans-serif;
-}  
+} 
 
 /************************ 
   Home Page styling 
@@ -131,10 +130,6 @@ nav li:target {
   border-radius: 30%;
   height: 400px;
   width: 500px;
-  /* width: 30rem; */
-  /* margin-top: -30rem;
-  margin-bottom: 4rem;
-  margin-left: 325%; */
 } 
 
 #bkgOne {
@@ -189,24 +184,6 @@ nav li:target {
   opacity: 1;
 }
 
-/* customImageTag {
-  width: 100vw;
-  height: 20%;
-} */
-/* 
-button:focus {
-  outline: none;
-  background-color: #e59d89;
-}
-
-
-
-
-#noAuth {
-  margin-top: .5rem;
-  margin-bottom: 3.5rem;
-} */
-
 /************************ 
   My Goals styling 
 ************************/
@@ -214,14 +191,11 @@ button:focus {
 /* Goal Image */
 
 #goalImage {
-  /* width: 42.666rem; */
   margin-top: -3.1rem;
 }
 
 .goal-child {
-  /* position: absolute; */
   margin-top: -5.5rem;
-  /* left: -5rem; */
   margin-left: 5.5rem;
   right: auto;
   font-family: 'Josefin Sans', sans-serif;
@@ -277,28 +251,11 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
   font-family: 'Aleo', serif;
 }
 
-
 input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid #FAC134;
   -webkit-box-shadow: 0 1px 0 0 #FAC134;
   box-shadow: 0 1px 0 0 #FAC134;
 } 
-
-/* .popup {
-  width: 400px;
-  height: 400px;
-  background: #689f38;
-  border-radius: 50%;
-  position:absolute;
-  top: 8%;
-  right: 40%;
-  margin: 0 auto;
-  z-index: 99 !important;
-}  */
-
-/* .hidden {
-  display: none; 
-} */
 
 /* Goal List styling */
 
@@ -313,11 +270,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 .goal {
   border: 0.125rem solid #689f38;
   padding: 0.313rem;
-  /* margin: 20px 0px; */
  } 
 
 /* Collapsible styling */
-
 .collapse {
   display: none
 }
@@ -361,7 +316,6 @@ span, a {
 
 .rbc-off-range-bg {
   background: #6CA038 !important;
-  
 }
 
 .rbc-today {
@@ -416,7 +370,6 @@ span, a {
 }
 
 .car-img {
-  /* border-radius: 400px; */
   max-width: 50% !important;
   margin-left: 20rem;
 }
@@ -427,7 +380,6 @@ span, a {
   font-size: 1.25rem;
   font-family: 'Josefin Sans', sans-serif;
   padding-top: .15rem;
-  
   -webkit-transition: background-color .2s ease-out;
   transition: background-color .2s ease-out;
   cursor: pointer;
@@ -476,8 +428,8 @@ span, a {
 
 #breathCircle {
   width: 6.25rem;
-height: 6.25rem;
-border-radius: 50%;
+  height: 6.25rem;
+  border-radius: 50%;
   padding: 20px;
   margin: -30rem auto auto auto;
   border: 1px solid #fff;
@@ -490,63 +442,53 @@ border-radius: 50%;
   text-align: center;    
   }
 
-
 @-webkit-keyframes breathing {
-0% {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 
-25% {
-  -webkit-transform: scale(2);
-  transform: scale(2);
-}
+  25% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+  }
 
-60% {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+  60% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 
-100% {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 @keyframes breathing {
-0% {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-25% {
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-}
+  25% {
+    -webkit-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+  }
 
-60% {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-}
+  60% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-100% {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 }
-}
-
-/* #breathCircle {
-  width: 6.25rem;
-  height: 6.25rem;
-  opacity: 0;
-  background: white;
-  border-radius: 50%;
-  margin: -30rem auto auto auto;
-} */
 
 .dynamic {
   color: #23282F;
@@ -565,7 +507,6 @@ border-radius: 50%;
 }
 
 #soulImage {
-  /* width: 42.666rem; */
   margin-top: -3.1rem;
 }
 
@@ -584,10 +525,7 @@ border-radius: 50%;
   position: absolute;
   margin-top: -5.5rem;
   margin-left: 5.5rem;
-  /* left: auto;
-  right: -8.5rem; */
   font-family: 'Josefin Sans', sans-serif;
-  /* color: #164964; */
 }
 
 .quote {
@@ -659,9 +597,20 @@ border-radius: 50%;
  .indent {
    text-indent: 5px !important;
    font-size: 1em;
- } 
-}
+  }
   
+  .homeImage {    
+   border-radius: 30%;
+  }
+
+  .row {
+    padding: 40px;
+  }
+}
+.page {
+  margin: 3.125rem 0.125rem 3.125rem 0.125rem;
+}
+
   /* .brand-logo {
     display: none !important;
   }
@@ -679,9 +628,6 @@ border-radius: 50%;
     right: auto;
   }
 
-  .homeImage {    
-    border-radius: 30%;
-    }
   
   #homeText {
     margin-right: 20rem;
@@ -758,9 +704,6 @@ border-radius: 50%;
   }
 */
 
-  .page {
-    margin: 3.125rem 0.125rem 3.125rem 0.125rem;
-  }
  
 /*  .timer {
   font-size: 100px;
