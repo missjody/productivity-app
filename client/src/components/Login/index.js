@@ -60,9 +60,10 @@ export default () => {
 			<div className="col s-8 parent">
 				{/* <img src="./images/keyboard.png" className="sign-image" alt="An image of a womans hands resting on a computer keyboard. The photo is composed of black and teal lines striped together to render the image." /> */}
 			</div>
-			<h4>{loginState.login ? 'Log In' : 'Sign up'}</h4>
+			
+			<h4 className="lihdr">{loginState.login ? 'Log In' : 'Sign up'}</h4>
 
-			<button className="btn btn-primary button pink accent-3" onClick={() => setLoginState({ ...loginState, login: !loginState.login })}>
+			<button className="btn btn-primary button pink accent-3 linBtn" onClick={() => setLoginState({ ...loginState, login: !loginState.login })}>
 				{loginState.login ? 'Sign up now!' : 'Log In!'}
 				{/* shortened to help button on mobile => 'New user? Sign up now!' : 'Already have an account? Log In!' */}
 			</button>

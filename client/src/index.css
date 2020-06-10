@@ -8,19 +8,8 @@ body {
   padding: 0; 
  }
 
-/*
- .btn-floating, .btn-floating:hover {
-   background-color: #e59d89;
- }
-
-html {
-  font-family: 'Josefin Sans', sans-serif;
-  color: #4B575A;
-}
-*/
-
 .page {
-  margin: 3.125rem;
+  /* margin: 3.125rem; */
 }
 
 .button {
@@ -32,23 +21,11 @@ font-family: 'Josefin Sans', sans-serif;
 padding-top: .15rem;
 }
 
-/*
-
--webkit-transition: background-color .2s ease-out;
-transition: background-color .2s ease-out;
-cursor: pointer;
-}
-
-.btn:hover, .btn-large:hover, .btn-small:hover {
-background-color: #FF8781;
-}
-*/
-
 h1, h2, h3, h4, h5, hr, p {
 font-family: 'Josefin Sans', sans-serif;
 color: white;
-}
 
+}
 
 #boldP {
 font-weight: bold;
@@ -62,34 +39,23 @@ color: #689F38;
 
 /************************
 Navigation Bar CSS 
-************************/
-
-/* .tabs .indicator {
-  background-color: 
-} */
- 
+************************/ 
 nav {
-    padding: 0 40px;
-    background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #689f38);
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2rem;
+  padding-left: 2em;
+  padding-right: 2em;
+  background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #689f38);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  width: 101%;
 }
 
 nav li:target {
   background-color: black;
 }
-/*
-
-
-nav ul a, nav a, nav .brand-logo {
-    color: white;
-}
 
 /* Side Nav */
-
 .sidenav, .sidenav .collapsible-body > ul:not(.collapsible) > li.active a,
 .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active a, .sidenav li>a {
-  /* color: #689F38 !important; */
   background-color: #FAC134 !important;
   font-family: 'Josefin Sans', sans-serif;
 }  
@@ -142,9 +108,6 @@ nav ul a, nav a, nav .brand-logo {
   }
 }
 
-
-
-
 /**********************/
 
 .words {
@@ -183,7 +146,6 @@ nav ul a, nav a, nav .brand-logo {
   padding-bottom: 100px;
 }
 
-
 #bkgTwo {
   background-color: #689f38;
     position: static;
@@ -200,22 +162,28 @@ nav ul a, nav a, nav .brand-logo {
   margin-top: -25px;
 }
 
-/* #homeText { */
-  /* visibility: none; */
-  /* margin-right: 45rem; */
-/* } */
-
 /************************
    Sign In styling 
 ************************/
 #signImage {
   width: 100vw;
   margin-top: -3.1rem;
-  /* height: 50% !important; */
+}
+
+.form-group {
+  margin-left: 5.5em;
 }
 
 .form-label, .form-input, #username.form-input {
   color: white !important;
+}
+
+.lihdr {
+  margin-left: 2.5em;
+}
+
+.linBtn {
+  margin-left: 4.5em;
 }
 
 ::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder {
