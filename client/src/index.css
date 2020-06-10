@@ -9,11 +9,10 @@ body {
  }
 
 .page {
-  /* margin: 3.125rem; */
+  margin: 3.125rem;
 }
 
 .button {
-/* background-color: #e59d89; */
 color: #4B575A;
 margin: 0.25rem;
 font-size: 1.25rem;
@@ -24,7 +23,6 @@ padding-top: .15rem;
 h1, h2, h3, h4, h5, hr, p {
 font-family: 'Josefin Sans', sans-serif;
 color: white;
-
 }
 
 #boldP {
