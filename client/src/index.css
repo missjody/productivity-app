@@ -504,14 +504,81 @@ span, a {
    My Soul styling 
 ************************/
 
+/* css breathCircle */
+
 #breathCircle {
+  width: 6.25rem;
+height: 6.25rem;
+border-radius: 50%;
+  padding: 20px;
+  margin: -30rem auto auto auto;
+  border: 1px solid #fff;
+  -webkit-animation: breathing 5s ease-out infinite normal;
+  animation: breathing 5s ease-out infinite normal;
+  font-size: 24px;
+  background: #fff;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;    
+  }
+
+
+@-webkit-keyframes breathing {
+0% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+25% {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+60% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+100% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+}
+
+@keyframes breathing {
+0% {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+25% {
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+60% {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+100% {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+}
+
+/* #breathCircle {
   width: 6.25rem;
   height: 6.25rem;
   opacity: 0;
   background: white;
   border-radius: 50%;
   margin: -30rem auto auto auto;
-}
+} */
 
 .dynamic {
   color: #23282F;
