@@ -1,5 +1,15 @@
 # Surată: Productivity Application for the Modern Human
 
+## Todos
+
+* update minus illustrations
+* UI continuity
+* check for bugs
+* UI fixes
+* outline what I was responsible for
+* redeploy
+
+
 ## Links
 
 [Presentation](https://docs.google.com/presentation/d/1SRm1DprYY_IBzjO_Dwj-uU3qPn8UIAE-iWoOJM_YxVY/edit?ts=5e9e4b57#slide=id.g83dacafeb9_0_44)
