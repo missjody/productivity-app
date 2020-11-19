@@ -3,11 +3,15 @@
 ## Todos
 
 * update minus illustrations
+
+* HomePage: Intro paragraph fixed for responsiveness; fix gap on left hand side; header changed to just gold
+
 * UI continuity
 * check for bugs
 * UI fixes
 * outline what I was responsible for
 * redeploy
+
 
 
 ## Links

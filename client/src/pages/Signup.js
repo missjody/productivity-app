@@ -38,7 +38,7 @@ export default function Users(props) {
                 <input type="text" name="username" onChange={handleInputUser} value={username} placeholder="Tell Me Your Name" ></input>
                 <input type="email" name="email" onChange={handleInputUser} value={email} placeholder="Email" ></input>
                 <input type="password" name="password" onChange={handleInputUser} value={password} placeholder="Password" ></input>
-                <button className="btn btn-primary button pink accent-3">Log In</button>
+                <button className="btn btn-primary button  white">Log In</button>
             </form>
         </div>
     )

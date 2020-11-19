@@ -5,10 +5,12 @@ body {
   background: #ff8781;
   margin:0;
   padding: 0; 
+  height: 100%;
  }
 
 .page {
-  margin: 3.125rem;
+  /* commented out 11/19 1017a */
+  /* margin: 3.125rem; */
 }
 
 .button {
@@ -28,22 +30,19 @@ color: white;
 font-weight: bold;
 text-align:center;
 font-family: 'Aleo', serif;
-margin-top: -2.8rem;
-margin-left: -2.8rem;
-margin-right: -2.8rem;
-color: #689F38;
+color: #4B575A;
 }
 
 /************************
 Navigation Bar CSS 
 ************************/ 
 nav {
-  padding-left: 2em;
-  padding-right: 2em;
-  background: linear-gradient(50deg, HSLA(43, 95%, 59%, 1), #689f38);
+  /* padding-left: 2em;
+  padding-right: 2em; */
+  background:#fac134;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
-  width: 101%;
+  width: 100%;
 }
 
 nav li:target {
@@ -56,6 +55,10 @@ nav li:target {
   background-color: #FAC134 !important;
   font-family: 'Josefin Sans', sans-serif;
 } 
+
+.brand-logo {
+  padding-left: 1rem !important;
+}
 
 /************************ 
   Home Page styling 
@@ -133,14 +136,14 @@ nav li:target {
 } 
 
 #bkgOne {
-  background-color: #1266b6;
+  background-color: #fac134;
     position: static;
   width: 100vw;
   padding-bottom: 100px;
 }
 
 #bkgTwo {
-  background-color: #689f38;
+  background-color: #1266b6;
     position: static;
     width: 100vw;
     margin-top: -25px;
@@ -148,7 +151,7 @@ nav li:target {
 }
 
 #bkgThree {
-  background-color: #fac134;
+  background-color: #bbc060;
   position: static;
   width: 100vw;
   padding-bottom: 100px;
@@ -190,9 +193,10 @@ nav li:target {
 
 /* Goal Image */
 
-#goalImage {
+/* commented out 11/19 1019a */
+/* #goalImage {
   margin-top: -3.1rem;
-}
+} */
 
 .goal-child {
   margin-top: -5.5rem;
@@ -260,7 +264,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 /* Goal List styling */
 
 .goal-list {
-  border: 2px solid #689f38;
+  border: 2px solid #bbc060;
   padding: 0rem 0.625rem;
   margin: 1.25rem 0.625rem;
 } 
@@ -268,7 +272,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):
 /* Task Form styling */
 
 .goal {
-  border: 0.125rem solid #689f38;
+  border: 0.125rem solid #bbc060;
   padding: 0.313rem;
  } 
 
@@ -308,6 +312,7 @@ span, a {
 .Calendar {
   background-color: #ff8781;
   border: 0.25px solid #fac134 !important;
+  margin: 3rem;
 }
 
 .rbc-day-bg + .rbc-day-bg {
@@ -315,11 +320,11 @@ span, a {
 }
 
 .rbc-off-range-bg {
-  background: #6CA038 !important;
+  background: #bbc060 !important;
 }
 
 .rbc-today {
-  background-color: #fac134 !important;
+  background-color: #bbc060 !important;
 }
 
 .rbc-toolbar {
@@ -397,9 +402,10 @@ span, a {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-#timeImage {
+/* commented out 11/19 1018a */
+/* #timeImage {
   margin-top: -3.1rem;
-}
+} */
 
 .time-quote {
   background-color:rgba(0, 0, 0, 0.5);
@@ -507,7 +513,8 @@ span, a {
 }
 
 #soulImage {
-  margin-top: -3.1rem;
+  margin-top: -4rem;
+  margin-left: -1rem;
 }
 
 .parent {
@@ -539,9 +546,10 @@ span, a {
   color: #FFF5e8;
 }
 
-.test {
+/* commented out 11/19 1017a */
+/* .test {
   margin-top: 3.188rem;
-}
+} */
 
 .footer {
   text-align: center;
@@ -552,15 +560,37 @@ span, a {
 /************************ 
   @Media set up
 ************************/
-/* 
+
+@media screen and (max-width: 2560px) { 
+}
+
 @media screen and (max-width: 1440px) {
-  .time-quote {
-    margin-right: 22.3rem;
-  }
 }
 
 @media screen and (max-width: 1024px) {
- .goal-quote {
+}
+
+@media screen and (max-width: 500px) {
+  .child {
+    position: absolute;
+    margin-top: -4.5rem;
+    margin-left: 5.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+}
+
+@media screen and (max-width: 375px) {
+  .child {
+    position: absolute;
+    margin-top: -3rem;
+    margin-left: 5.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+}
+}
+
+ /* .goal-quote {
    margin-top:-1rem;
   }
 
@@ -597,9 +627,9 @@ span, a {
       margin-left: -22rem;
       margin-top: 10rem;
   }
-}
-*/
-@media screen and (max-width: 768px) {
+} */
+
+/* @media screen and (max-width: 768px) {
  .indent {
    text-indent: 5px !important;
    font-size: 1em;
@@ -615,7 +645,7 @@ span, a {
 }
 .page {
   margin: 3.125rem 0.125rem 3.125rem 0.125rem;
-}
+} */
 
   /* .brand-logo {
     display: none !important;

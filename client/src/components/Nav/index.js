@@ -35,7 +35,7 @@ const Nav = (props) => {
     <div>
 
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper ">
           <a href="#" data-target="slide-out" className="sidenav-trigger show-on-med"><i className="material-icons">menu</i></a>
           <a href="/" class="brand-logo">
             {user ? `Hi ${user.username}, Welcome To ` : ""} Surată

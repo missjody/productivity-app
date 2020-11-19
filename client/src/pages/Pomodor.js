@@ -5,9 +5,9 @@ import pomsmall from "./pomsmall.png";
 import pommedium from "./pommedium.png";
 import pomlarge from "./pomlarge.png";
 import pomxlarge from "./pomxlarge.png";
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class LongBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Long Break</p>
-        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.longBreak}>10 minutes</button>
+        <button type="button" className="btn button-pom white" onClick={this.props.longBreak}>10 minutes</button>
       </div>
     );
   }
@@ -45,7 +45,7 @@ class Session extends React.Component {
     return (
       <div className="col s4">
         <p>Session</p>
-        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.session}>25 minutes</button>
+        <button type="button" className="btn button-pom white" onClick={this.props.session}>25 minutes</button>
       </div>
     );
   }
@@ -60,7 +60,7 @@ class ShortBreak extends React.Component {
     return (
       <div className="col s4">
         <p>Short Break</p>
-        <button type="button" className="btn button-pom pink accent-3" onClick={this.props.shortBreak}>5 minutes</button>
+        <button type="button" className="btn button-pom white" onClick={this.props.shortBreak}>5 minutes</button>
       </div>
     );
   }
@@ -74,7 +74,7 @@ class StartButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5 }}>
-      <button className="btn button-pom pink accent-3" onClick={this.props.startCountDown}>Start</button>
+      <button className="btn button-pom white" onClick={this.props.startCountDown}>Start</button>
       // </div>
     );
   }
@@ -84,7 +84,7 @@ class StopButton extends React.Component {
   render() {
     return (
       // <div style={{ marginRight: 5, marginLeft: 30 }}>
-      <button className="btn button-pom pink accent-3" onClick={this.props.stopCountDown}>Stop</button>
+      <button className="btn button-pom white" onClick={this.props.stopCountDown}>Stop</button>
       // </div>
     );
   }
@@ -199,43 +199,12 @@ class Pomodoro extends React.Component {
             </Row>
 
             <Row>
-              <OwlCarousel
-                className="owl-theme"
-                loop
-                margin={10}
-                items={1}
-                center
-                nav
-              >
-
-                <div>
-                  <img src="./images/sur1.png" className="car-img" />
-                </div>
-
-                <div>
-                  <img src="./images/sur2.png" className="car-img" />
-                </div>
-
-                <div>
-                  <img src="./images/sur3.png" className="car-img" />
-                </div>
-
-
-                <div>
-                  <img src="./images/sur4.png" className="car-img" />
-                </div>
-
-
-                <div>
-                  <img src="./images/sur5.png" className="car-img" />
-                </div>
-
-
-                <div>
-                  <img src="./images/sur6.png" className="car-img" />
-                </div>
-              </OwlCarousel>
-
+            <div className="col s-6">
+                    <h4>The Pomodoro Method helps with time management.</h4>
+                    <h4> Select your tasks and set the Session timer to begin.</h4>
+                    <h4>After each Session, take a Short Break. </h4>
+                    <h4>Once you have completed four Sessions, take a Long Break. </h4>
+                  </div>
             </Row>
 
             <div className="goal-list">

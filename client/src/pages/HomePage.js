@@ -5,48 +5,24 @@ const HomePage = () => {
 
 
   return (
-    // <div className="row" ref={el => app = el}>
-    //   <div ref={el => content = el}>
-
-    //     <div className="col s12 m12 push-m2 xl6 center-align" >
-    //       <h4 id="homeText">
-    //         Welcome to Surată! Your new little helper. <br /><br />
-    //     Here you can keep track of your Goals and break each goal down into Tasks.<br /><br />
-    //     Keep track of due dates with your Plan page, a calendar displaying your task todos.<br /><br />
-    //     Don't forget to take care of yourself on the My Soul portion, where you can take a moment to meditate to a desired sound track.<br /><br />
-    //       </h4>
-    //     </div>
-    //     <div className="col s12 m6 xl6" >
-    //       <img src="./images/Surata.png" className="responsive-img" id="homeImage"
-    //         alt="Image of the Surata app's mascot, Little Sister. She has a high brown bun, large green eyes, blushing cheeks and a sweet blue sweater." />
-    //     </div >
-    //     {/* </div > */}
-    //   </div>
-    // </div>
-
-    /////////////////////////////////////////////////////////////////
-
     <div>
-      <div className="row" >
+
+      <div className="row justify-content-md-center" >
         {/* <div ref={el => content = el}> */}
-        <div className="col s12 m6 xl6 right-align pull-m1 pull-xl1" >
+        {/* <div className="col s8 m4 xl4 right-align " >
           <img src="./images/Surata.png" class="circle responsive-img hero-image" id="surata"
             alt="Image of the Surata app's mascot, Little Sister. She has a high brown bun, large green eyes, blushing cheeks and a sweet blue sweater." />
-        </div>
+        </div> */}
 
-        <div className="col s12 m6 xl6 left-align pull-m1 pull-xl1 words">
-          <h3 className="text-shadow-pop-bl">
-            Taking your productivty
+        <div className="col m3 xl3"></div>
+        <div className="col s12 m6 xl6">
+          <h3 className="text-shadow-pop-bl text-center">
+            Taking your productivity to the next step, one task at a time
           </h3>
-          <h3 className="text-shadow-pop-bl">
-            to the next step,
-          </h3>
-          <h3 className="text-shadow-pop-bl">
-            one task at a time
-          </h3>
-          <h1>Welcome to Surată</h1>
+          <h1 className="text-center" >Welcome to Surată</h1>
 
         </div>
+        <div className="col m3 xl3"></div>
       </div>
       {/* </div > */}
 
