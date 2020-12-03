@@ -23,7 +23,7 @@ function App() {
     API.status()
       .then(res => {
         if (res.data.user) {
-          console.log("who are you?", res.data.user)
+          // console.log("who are you?", res.data.user)
           setIsLoggedIn(true)
           loadGoals()
         }

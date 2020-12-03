@@ -8,10 +8,10 @@ export default function Users(props) {
     // const [email, setEmail] = useState("");
     // const [password, setPassword] = useState("");
     const [UserObject, setUserObject] = useState({})
-    console.log('Create an Account!')
+    // console.log('Create an Account!')
 
     const handleInputUser = (event) => {
-        console.log(event.target.value)
+        // console.log(event.target.value)
         const { username, emai, password } = event.target
         // setUsername(event.target.value);
         // setEmail(event.target.value);
@@ -30,7 +30,7 @@ export default function Users(props) {
         })
     }
 
-    console.log(username)
+    // console.log(username)
     return (
         <div className="Login">
             <h1>Let's Get You Started!</h1>

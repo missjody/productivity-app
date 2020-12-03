@@ -9,12 +9,12 @@ class Collapse extends Component {
         this.state = { open: false };
 
     }
-    componentDidMount() {
-        console.log("prps:", this.props)
-    }
+    // componentDidMount() {
+    //     // console.log("prps:", this.props)
+    // }
 
     toggle() {
-        console.log(this.props.tasks)
+        // console.log(this.props.tasks)
         this.setState({
             open: !this.state.open
         });

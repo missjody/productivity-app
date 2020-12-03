@@ -43,7 +43,7 @@ module.exports = {
                 { new: true }
             )
             .then(dbModel => {
-                console.log(dbModel)
+                // console.log(dbModel)
                 res.json(dbModel);
             })
             .catch(err => {
@@ -57,7 +57,7 @@ module.exports = {
                 { new: true }
             )
             .then(dbModel => {
-                console.log(dbModel)
+                // console.log(dbModel)
                 res.json(dbModel);
             })
             .catch(err => {
@@ -65,18 +65,18 @@ module.exports = {
             });
     },
     updateTaskDate: function (req, res) {
-        console.log(req.body.data)
-        console.log(req.body.data._id)
+        // console.log(req.body.data)
+        // console.log(req.body.data._id)
         db.Goal.updateOne({ "_id": req.params.id, "Tasks._id": req.body.data._id }, { $set: { "Tasks.$": req.body.data } })
             .then(data => console.log(data))
     },
     completeTask: function (req, res) {
-        console.log("complete task: ", req.body, " ", req.params.id)
+        // console.log("complete task: ", req.body, " ", req.params.id)
         db.Goal
             .findOneAndUpdate({ _id: req.params.id }, { completeTime: Date.now() })
             .updateOne({ "_id": req.params.id, "Tasks._id": req.body._id }, { $set: { "Tasks.$": req.body.Tasks } })
             .then(dbModel => {
-                console.log("returned:", dbModel)
+                // console.log("returned:", dbModel)
                 res.json(dbModel);
             })
             .catch(err => {
@@ -84,7 +84,7 @@ module.exports = {
             });
     },
     removeTask: function (req, res) {
-        console.log("task ID: ", req.body._id)
+        // console.log("task ID: ", req.body._id)
         db.Goal
             .update(
                 {},
@@ -93,7 +93,7 @@ module.exports = {
                     multi: true
                 })
             .then(dbModel => {
-                console.log(dbModel)
+                // console.log(dbModel)
                 res.json(dbModel);
             })
             .catch(err => {

@@ -47,7 +47,7 @@ const HomePage = () => {
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin">
           <img className="circle responsive-img" src="./images/calendar.png"
-            alt="screen shot of calendar" />
+            alt="Screen shot of calendar" />
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
@@ -66,7 +66,7 @@ const HomePage = () => {
 
         <div className="col s12 m6 xl6 left-align home-margin">
           <img src="./images/keyboard.png" className="circle responsive-img"
-            alt="NEED ALT HERE." />
+            alt="Hands typing on a keyboard." />
         </div>
 
         {/* </div> */}
@@ -76,7 +76,7 @@ const HomePage = () => {
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin ">
           <img src="./images/soul1.png" className="circle responsive-img"
-            alt="woman meditating" />
+            alt="Person meditating" />
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">

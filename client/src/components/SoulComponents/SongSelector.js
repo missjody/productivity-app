@@ -49,7 +49,7 @@ class SongSelector extends Component {
              className="responsive-img"
                 // id="soulImage"
                 sizes="(max-width: 100vw) 100vw"
-                srcset={`${xsmall} 190w,
+                srcSet={`${xsmall} 190w,
             ${small} 879w,
             ${medium} 1308w,
             ${large} 1703w,
@@ -66,7 +66,7 @@ class SongSelector extends Component {
                     <h4>We couldn't think of this application as complete without having a tool to help you "reset". Resetting yourself is as important and helpful as checking a todo off of your list.</h4>
                     <h4>Take 3-5 minutes to allow your breathing to slow in time with the bubble, letting your thoughts drift by quietly, and your mind and soul a chance to rest.</h4>
                   </div>
-                  <div className="col s12 m2">test</div>
+                  <div className="col s12 m2"></div>
                 </Row>
 
                 <Row>

@@ -598,8 +598,12 @@ span, a {
     margin-top: -4.5rem;
     margin-left: 5.5rem;
     font-family: 'Josefin Sans', sans-serif;
-}
+  }
 
+  .pom-pad {
+    margin: 5rem;
+    
+  }
 
 }
 

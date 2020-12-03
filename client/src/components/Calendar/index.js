@@ -17,12 +17,12 @@ export default () => {
     const { goals } = useContext(userContext);
     const { setGoals } = useContext(userContext);
     const [modGoals, setModGoals] = useState(goals);
-    console.log("Goals from calendar page: ", goals);
+    // console.log("Goals from calendar page: ", goals);
     useEffect(() => {
-        console.log(goals)
+        // console.log(goals)
         const tasks = [];
         goals.map(goal => goal.Tasks.map(a => {
-            console.log(moment().toDate().toISOString());
+            // console.log(moment().toDate().toISOString());
             tasks.push({
                 title: a.name,
                 goalID: goal._id,
@@ -30,7 +30,7 @@ export default () => {
                 start: new Date(a.startDate),
                 end: new Date(a.targetDate)
             })
-            console.log("here is A: ", a)
+            // console.log("here is A: ", a)
         }))
         const tasksWID = tasks.map((a, i) => { return { ...a, id: i } })
 
@@ -55,7 +55,7 @@ export default () => {
             targetDate: vals.end
         }
         API.updateTask(vals.goalID, updatedTask).then(res => console.log(res)).catch(err => console.log(err))
-        console.log("handle this")
+        // console.log("handle this")
     }
 
     const onEventResize = ({ event, start, end }) => {
@@ -65,7 +65,7 @@ export default () => {
         setCalendarEvent({
             events: newEvents
         });
-        console.log("New task RESIZE! - ", newEvents[event.id])
+        // console.log("New task RESIZE! - ", newEvents[event.id])
         handleTaskChange(newEvents[event.id])
     }
 
@@ -77,9 +77,9 @@ export default () => {
         setCalendarEvent({
             events: newEvents
         })
-        console.log("New task DROP! - ", newEvents[event.id])
+        // console.log("New task DROP! - ", newEvents[event.id])
         handleTaskChange(newEvents[event.id])
-        console.log("drop it!")
+        // console.log("drop it!")
     }
 
     return (

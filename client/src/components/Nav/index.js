@@ -6,7 +6,7 @@ import API from "../../utils/API";
 
 const Nav = (props) => {
   const { user, goals } = useContext(userContext);
-  console.log(goals)
+  // console.log(goals)
   const handleLogout = () => {
     API.logout().then(res => {
       window.location.assign("/");
@@ -19,12 +19,12 @@ const Nav = (props) => {
 
   useEffect(() => {
     let sidenav = slide;
-    console.log("SLIDE ", sidenav)
+    // console.log("SLIDE ", sidenav)
     M.Sidenav.init(sidenav, {});
   })
 
   const handleClick = () => {
-    console.log("CLICK")
+    // console.log("CLICK")
     let sidenav = slide;
     var instance = M.Sidenav.getInstance(sidenav);
     instance.close();

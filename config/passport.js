@@ -8,12 +8,12 @@ passport.use(new LocalStrategy(
     passwordField: "password"
   },
   function (username, password, done) {
-    console.log(username, password)
+    // console.log(username, password)
     // When a user tries to sign in this code runs
     db.User.findOne({
       username: username
     }).then(function (dbUser) {
-      console.log(dbUser)
+      // console.log(dbUser)
       // If there's no user with the given email
       if (!dbUser) {
         return done(null, false, {
@@ -39,13 +39,12 @@ passport.serializeUser(function (user, cb) {
 
 // user object attaches to the request as req.user
 passport.deserializeUser((id, done) => {
-  console.log("DeserializeUser called");
+  // console.log("DeserializeUser called");
   db.User.findOne({
     _id: id
   }, "username", (err, user) => {
-    console.log("*** Deserialize user, user:");
-    console.log(user);
-    console.log("--------------");
+    // console.log
+    ("--------------");
     done(null, user);
   });
 });

@@ -37,12 +37,12 @@ const TimeTracker = () => {
         if (active == false) {
             active = true;
             start_timer();
-            console.log("timer is running");
-            console.log("timer ", timer);
+            // console.log("timer is running");
+            // console.log("timer ", timer);
         } else {
             active = false;
-            console.log("timer paused");
-            console.log("timer ", timer);
+            // console.log("timer paused");
+            // console.log("timer ", timer);
         }
     }
     return(timer)

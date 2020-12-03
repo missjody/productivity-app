@@ -35,7 +35,7 @@ export default () => {
 		//request to server to add a new username/password
 		API.loginSignup(loginState)
 			.then(response => {
-				console.log(response)
+				// console.log(response)
 				response.err ? console.log(response.msg) :
 					setUser(response.data);
 				setIsLoggedIn(true)
@@ -50,7 +50,7 @@ export default () => {
 			<img
 				id="signImage"
 				sizes="(max-width: 100vw) 100vw"
-				srcset={`${xsmall} 190w,
+				srcSet={`${xsmall} 190w,
 						${small} 695w,
 						${medium} 1024w,
 						${large} 1299w,

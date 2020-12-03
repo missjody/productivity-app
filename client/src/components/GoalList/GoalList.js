@@ -46,7 +46,7 @@ export default function GoalList(props) {
         if (tasks.length === 0) {
             return 0 + "%"
         } else if ((count / tasks.length) * 100 === 100 && (date - completeTimes) <= FIVE_SEC) {
-            console.log("Goal is 100%:  ", percent)
+            // console.log("Goal is 100%:  ", percent)
             setTimeout(function () {
                 element.classList.remove("hidden");
             }, 500);

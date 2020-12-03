@@ -168,12 +168,12 @@ class Pomodoro extends React.Component {
 
   render() {
     return (
-      <div className="test">
+      <div>
 
         <img
           id="timeImage"
           sizes="(max-width: 100vw) 100vw"
-          srcset={`${pomxsmall} 190w,
+          srcSet={`${pomxsmall} 190w,
           ${pomsmall} 731w,
           ${pommedium} 1047w,
           ${pomlarge} 1318w,
@@ -207,27 +207,24 @@ class Pomodoro extends React.Component {
             <div className="goal-list">
 
               <div className="row pom-pad">
-                <div></div>
                 <ShortBreak shortBreak={this.shortBreak} />
                 <Session session={this.session} />
                 <LongBreak longBreak={this.longBreak} />
               </div>
-              <div className="row pom-pad">
-                {/* <div className="col s4"></div> */}
 
-                <div></div>
+              <div className="row pom-pad">
+
                 <div className="col s4">
                   <StartButton startCountDown={this.startCountDown} />
                 </div>
+
                 <div className="col s4"><Timer time={this.state.time} seconds={this.state.seconds} /></div>
+
                 <div className="col s4"> <StopButton stopCountDown={this.stopCountDown} /></div>
-                {/* <div className="col s4"> <img src="./images/Pomodor.gif" className="gif" /> </div> */}
+
               </div>
-              <div className="row">&nbsp;</div>
             </div>
-            {/* <div className="row" style={{ paddingLeft: 100 }}>
-              <div className="col s4"></div>
-            </div> */}
+
           </div>
         </div>
       </div>

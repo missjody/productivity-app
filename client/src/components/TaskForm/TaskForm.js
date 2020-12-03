@@ -14,7 +14,7 @@ function TaskForm(props) {
     // Add Task and rerender page 
     function handleTaskFormSubmit(event) {
         event.preventDefault();
-        console.log("from task from", props.tasks)
+        // console.log("from task from", props.tasks)
         var GoalId = event.target.attributes.getNamedItem('data-name').value;
         if (formObject.task) {
             API.saveTask(GoalId, {
@@ -35,7 +35,7 @@ function TaskForm(props) {
     };
     const finishTask = (item) => {
 
-        console.log("here", item)
+        // console.log("here", item)
         var GoalId = props.goalId;
         var TaskId = item._id;
         var pastTask = {

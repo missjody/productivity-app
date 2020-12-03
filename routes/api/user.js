@@ -5,8 +5,8 @@ const passport = require('../../config/passport');
 
 // /api/user - get all users
 router.get("/", (req, res, next) => {
-    console.log("===== user!!======");
-    console.log(req.user);
+    // console.log("===== user!!======");
+    // console.log(req.user);
     if (req.user) {
         res.json({ user: req.user });
     } else {
@@ -40,7 +40,7 @@ router.route("/populated")
 
 router.post("/logout", (req, res) => {
     if (req.user) {
-        console.log("logout", req.user)
+        // console.log("logout", req.user)
         req.logout();
         res.send({ msg: "logging out" });
     } else {
@@ -49,7 +49,7 @@ router.post("/logout", (req, res) => {
 });
 
 router.post("/login", passport.authenticate('local'), (req, res) => {
-    console.log('logging in...')
+    // console.log('logging in...')
     res.json(req.user)
 })
 

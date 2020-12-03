@@ -72,12 +72,12 @@ class SoulComponent extends Component {
               url={this.state.currentSong.url}
               playStatus={this.state.playStatus}
               position={this.state.position}
-              onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
-              onLoad={() => console.log('Loaded')}
+              // onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
+              // onLoad={() => console.log('Loaded')}
               onPlaying={({ position }) => this.setState({ position })}
-              onPause={() => console.log('Paused')}
-              onResume={() => console.log('Resumed')}
-              onStop={() => console.log('Stopped')}
+              // onPause={() => console.log('Paused')}
+              // onResume={() => console.log('Resumed')}
+              // onStop={() => console.log('Stopped')}
               onFinishedPlaying={() => this.setState({ playStatus: Sound.status.STOPPED })}
             />
           ) : (
@@ -85,12 +85,12 @@ class SoulComponent extends Component {
                 url={this.state.currentSong.url}
                 playStatus={this.state.playStatus}
                 playFromPosition={this.state.position}
-                onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
-                onLoad={() => console.log('Loaded')}
-                onPlaying={({ position }) => console.log('Position', position)}
-                onPause={() => console.log('Paused')}
-                onResume={() => console.log('Resumed')}
-                onStop={() => console.log('Stopped')}
+                // onLoading={({ bytesLoaded, bytesTotal }) => console.log(`${bytesLoaded / bytesTotal * 100}% loaded`)}
+                // onLoad={() => console.log('Loaded')}
+                // onPlaying={({ position }) => console.log('Position', position)}
+                // onPause={() => console.log('Paused')}
+                // onResume={() => console.log('Resumed')}
+                // onStop={() => console.log('Stopped')}
                 onFinishedPlaying={() => this.setState({ playStatus: Sound.status.STOPPED })}
               />
             )

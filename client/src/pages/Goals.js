@@ -15,7 +15,7 @@ import xlarge from "./xlarge.png";
 function Goals() {
     // Setting our component's initial state
     const [formObject, setFormObject] = useState({})
-    const { goals, loadGoals, user } = useContext(userContext)
+    const { goals, loadGoals } = useContext(userContext)
 
     useEffect(() => {
         loadGoals()
@@ -59,7 +59,7 @@ function Goals() {
             <img
                 id="goalImage"
                 sizes="(max-width: 100vw) 100vw"
-                srcset={`
+                srcSet={`
                                             ${xsmall} 190w,
                                             ${small} 551w,
                                             ${medium} 833w,
