@@ -5,7 +5,7 @@ import SongSelector from './SongSelector';
 import Breathing from "./Breathing";
 
 import songs from './songs';
-import { Col, Row, Container } from "../Grid";
+import {  Row } from "../Grid";
 
 
 
@@ -51,10 +51,10 @@ class SoulComponent extends Component {
         />
 
         <Row>
-          <Col size="md-12">
+ 
             <Breathing
               playStatus={this.state.playStatus} />
-          </Col>
+
         </Row>
 
         <PlayerControls

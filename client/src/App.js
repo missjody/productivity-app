@@ -71,7 +71,7 @@ function App() {
               <NoMatch />
             </Route>
           </Switch>
-          <p className="footer">© Keeley Byerly ✶ Jody Russell ✶ Inbar Shucker 2020</p>
+          {/* <p className="footer">© Keeley Byerly ✶ Jody Russell ✶ Inbar Shucker 2020</p> */}
         </div>
       </userContext.Provider>
     </Router >

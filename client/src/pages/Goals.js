@@ -69,18 +69,11 @@ function Goals() {
                 src="yellowhand2_zu1ewj_c_scale,w_1538.png"
                 alt=""
             />
-            <h1 className="goal-child">Set a new goal</h1>
+            <h1 className="goal-child hide-on-med-and-down">Set a new goal</h1>
 
             <div id="containerGoal">
                 <div id="congrats" className="popup hidden">
-                    <div className="row" >
-                        <div className="col s6">&nbsp;&nbsp;<img src="./images/Surata.png" className="popup-image responsive-img"
-                            alt="Image of the Surata app's mascot, Little Sister. She has a high brown bun, large green eyes, blushing cheeks and a sweet blue sweater." />
-                        </div>
-                        <div className="col s6">
-                            <h6><br /><br /><br />Congrats! <br />You did it!</h6>
-                        </div>
-                    </div>
+                            <h4 id="bubbleTest"><br /><br /><br />Congrats! <br />You did it!</h4>
                 </div>
 
                 <div className="test">

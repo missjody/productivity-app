@@ -8,21 +8,17 @@ const HomePage = () => {
     <div>
 
       <div className="row justify-content-md-center" >
-        {/* <div ref={el => content = el}> */}
-        {/* <div className="col s8 m4 xl4 right-align " >
-          <img src="./images/Surata.png" class="circle responsive-img hero-image" id="surata"
-            alt="Image of the Surata app's mascot, Little Sister. She has a high brown bun, large green eyes, blushing cheeks and a sweet blue sweater." />
-        </div> */}
+      
 
-        <div className="col m3 xl3"></div>
+        <div className="col s12 m3 xl3"></div>
         <div className="col s12 m6 xl6">
-          <h3 className="text-shadow-pop-bl text-center">
+          <h3 className=" text-center">
             Taking your productivity to the next step, one task at a time
           </h3>
-          <h1 className="text-center" >Welcome to Surată</h1>
+          <h1 className=" text-shadow-pop-bl text-center" >Welcome to Surată</h1>
 
         </div>
-        <div className="col m3 xl3"></div>
+        <div className="col s12 m3 xl3"></div>
       </div>
       {/* </div > */}
 
@@ -40,7 +36,7 @@ const HomePage = () => {
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <img src="./images/hand.png" class="circle responsive-img"
+          <img src="./images/hand.png" className="circle responsive-img"
             alt="Hand writing a todo list." />
         </div>
 
@@ -50,7 +46,7 @@ const HomePage = () => {
       <div className="row" id="bkgTwo" >
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin">
-          <img class="circle responsive-img" src="./images/calendar.png"
+          <img className="circle responsive-img" src="./images/calendar.png"
             alt="screen shot of calendar" />
         </div>
 
@@ -69,7 +65,7 @@ const HomePage = () => {
         </div>
 
         <div className="col s12 m6 xl6 left-align home-margin">
-          <img src="./images/keyboard.png" class="circle responsive-img"
+          <img src="./images/keyboard.png" className="circle responsive-img"
             alt="NEED ALT HERE." />
         </div>
 
@@ -79,7 +75,7 @@ const HomePage = () => {
       <div className="row">
         {/* <div ref={el => content = el}> */}
         <div className="col s12 m6 xl6 right-align home-margin ">
-          <img src="./images/soul1.png" class="circle responsive-img"
+          <img src="./images/soul1.png" className="circle responsive-img"
             alt="woman meditating" />
         </div>
 

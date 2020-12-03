@@ -5,9 +5,6 @@ import pomsmall from "./pomsmall.png";
 import pommedium from "./pommedium.png";
 import pomlarge from "./pomlarge.png";
 import pomxlarge from "./pomxlarge.png";
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 class Timer extends React.Component {
   constructor(props) {
@@ -183,7 +180,7 @@ class Pomodoro extends React.Component {
           ${pomxlarge} 1538w`}
           src="bluehand2_pb9fpa_c_scale,w_1538.png"
           alt="" />
-        <h1 id="timeChild">Live for each moment</h1>
+        <h1 id="timeChild" className="hide-on-med-and-down">Live for each moment</h1>
 
 
         <div className="container">

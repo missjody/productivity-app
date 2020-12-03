@@ -1,4 +1,5 @@
 import React from "react";
+import { Col } from "../Grid";
 // , { useRef, useEffect } 
 //gsap imports
 // import { TimelineMax, Power0 } from "gsap";
@@ -20,11 +21,11 @@ const Breathing = (props) => {
 
 
   return (
-    < div >
+    <Col size="md-12">
       {/* heroku not updating with gsap animations */}
       {/* ref={el => breathing = el} */}
       < div id="breathCircle" style={status ? { display: "block" } : { display: "none" }}></div >
-    </div >
+    </Col>
   )
 
 }

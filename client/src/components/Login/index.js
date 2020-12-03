@@ -56,11 +56,10 @@ export default () => {
 						${large} 1299w,
 						${xlarge} 1538w`}
 				src="purpphone2_oqrnqz_c_scale,w_1538.png"
-				alt="" />
-			<div className="col s-8 parent">
-				{/* <img src="./images/keyboard.png" className="sign-image" alt="An image of a womans hands resting on a computer keyboard. The photo is composed of black and teal lines striped together to render the image." /> */}
-			</div>
-			
+				alt="An image of a womans hands resting on a computer keyboard. The photo is composed of black and teal lines striped together to render the image" />
+			{/* <div className="col s-8 parent">
+							</div>
+			 */}
 			<h4 className="lihdr">{loginState.login ? 'Log In' : 'Sign up'}</h4>
 
 			<button className="btn btn-primary button white linBtn" onClick={() => setLoginState({ ...loginState, login: !loginState.login })}>
