@@ -1,24 +1,22 @@
 # Surată: Productivity Application for the Modern Human
 
-## Todos
+## Intro
 
-* update minus illustrations
+This application was the final group project for the University of Denver Full Stack program that I attended. Since graduation I have updated the application, including: 
 
-* HomePage: Intro paragraph fixed for responsiveness; fix gap on left hand side; header changed to just gold
-
-* UI continuity
-* check for bugs
-* UI fixes
-* outline what I was responsible for
-* redeploy
-
-
+  * Redeployment after MongoDB support was removed from Heroku
+  
+  * Updating UI to remove illustrations
+  
+  * Fixed responsiveness issues
+  
+Originally, I worked on UI theming and colors, as well as writing the My Soul page using GreenSock animation and React-Sound to create a meditation experience. 
 
 ## Links
 
 [Presentation](https://docs.google.com/presentation/d/1SRm1DprYY_IBzjO_Dwj-uU3qPn8UIAE-iWoOJM_YxVY/edit?ts=5e9e4b57#slide=id.g83dacafeb9_0_44)
 
-[Heroku](http://surata-app.herokuapp.com/)
+[Heroku](https://newsurata.herokuapp.com//)
 
 [GitHub](https://github.com/Inbary-s/productivity-app)
 
